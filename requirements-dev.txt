@@ -1,0 +1,9 @@
+coveralls
+pytest
+pytest-cov
+pep8
+pyflakes
+WebTest==2.0.17
+pytest-xdist
+mock
+-r requirements.txt
