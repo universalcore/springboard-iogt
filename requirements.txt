@@ -1,1 +1,1 @@
-springboard
+-e git+git@github.com:universalcore/springboard.git@985237bab3fc4b1eb50faa9c2e05d98d906a0938#egg=springboard-feature/issue-27-make-view-logic-reusable
