@@ -15,40 +15,25 @@
             </div>
         </div>
 
-        {% set featured_pages = all_pages.filter(language=language, featured=True) %}
-        {% if featured_pages %}
-        <div class="articles latest">
-            <div class="h1">{{gettext('Latest')}}</div>
-            {% for page in featured_pages %}
+        {% for category, page in recent_content %}
+            <div class="articles">
+                {% if category %}
+                <div class="h1">
+                    <a href="{{'category'|route_url(uuid=category.uuid)}}/">{{category.title}}</a>
+                </div>
+                {% endif %}
                 <div class="listing no-pic">
                     <div class="h2"><a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a></div>
                     <p>{{page.description}}</p>
                     <div class="clr"></div>
                 </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        {% for category in all_categories.filter(language=language) %}
-            {% set category_pages = all_pages.filter(primary_category=category.uuid) %}
-            {% if category_pages %}
-            <div class="articles">
-                <div class="h1">
-                    <a href="{{'category'|route_url(uuid=category.uuid)}}/">{{category.title}}</a>
-                </div>
-                {% for page in category_pages %}
-                    <div class="listing no-pic">
-                        <div class="h2"><a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a></div>
-                        <p>{{page.description}}</p>
-                        <div class="clr"></div>
-                    </div>
-                {% endfor %}
                 <div class="clr"></div>
+                {% if category %}
                 <div class="pagination">
                     <a href="{{'category'|route_url(uuid=category.uuid)}}"><span>{{gettext('More')}}</span> {{category.title}}</a>
                 </div>
+                {% endif %}
             </div>
-            {% endif %}
         {% endfor %}
     </div>
 </div>
