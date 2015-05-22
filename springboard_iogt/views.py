@@ -15,11 +15,12 @@ class IoGTViews(SpringboardViews):
     @view_config(route_name='home',
                  renderer='springboard_iogt:templates/home.jinja2')
     def index_view(self):
-        return self.context(
-            recent_content=self.recent_content())
+        content = self.recent_content(self.language, 8)
+        content = [(c.to_object(), p.to_object()) for c, p in content]
+        return self.context(recent_content=content)
 
     @cache_region(HOUR_CACHE_REGION)
-    def _recent_content(self, language, limit):
+    def recent_content(self, language, limit):
         categories = self.all_categories.filter(
             language=language).everything()
 
@@ -52,9 +53,4 @@ class IoGTViews(SpringboardViews):
         content = content[:limit - 2]
         content.insert(randint(0, len(content)), (category1, page1))
         content.insert(randint(0, len(content)), (category2, page2))
-        return content
-
-    def recent_content(self, limit=8):
-        content = self._recent_content(self.language, limit)
-        content = [(c.to_object(), p.to_object()) for c, p in content]
         return content
