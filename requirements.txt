@@ -1,1 +1,1 @@
--e git+https://github.com/universalcore/springboard.git@feature/issue-27-make-view-logic-reusable#egg=springboard-feature/issue-27-make-view-logic-reusable
+-e git+https://github.com/universalcore/springboard.git@feature/issue-27-make-view-logic-reusable#egg=springboard-feature-issue-27-make-view-logic-reusable
