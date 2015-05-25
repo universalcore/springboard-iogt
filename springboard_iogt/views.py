@@ -1,13 +1,9 @@
 from random import randint, shuffle
 
 from pyramid.view import view_config
-from beaker.cache import cache_region
 from elasticutils import F
 
 from springboard.views.base import SpringboardViews
-
-
-HOUR_CACHE_REGION = 'hour'
 
 
 class IoGTViews(SpringboardViews):
@@ -19,7 +15,6 @@ class IoGTViews(SpringboardViews):
         content = [(c.to_object(), p.to_object()) for c, p in content]
         return self.context(recent_content=content)
 
-    @cache_region(HOUR_CACHE_REGION)
     def recent_content(self, language, limit):
         categories = self.all_categories.filter(
             language=language).everything()
