@@ -1,9 +1,12 @@
-from random import randint, shuffle
+from datetime import datetime
+from itertools import chain
 
 from pyramid.view import view_config
 from elasticutils import F
 
 from springboard.views.base import SpringboardViews
+
+from springboard_iogt.utils import randomize_query
 
 
 class IoGTViews(SpringboardViews):
@@ -11,41 +14,42 @@ class IoGTViews(SpringboardViews):
     @view_config(route_name='home',
                  renderer='springboard_iogt:templates/home.jinja2')
     def index_view(self):
-        content = self.recent_content(self.language, 8)
-        content = [(c.to_object(), p.to_object()) for c, p in content]
-        return self.context(recent_content=content)
+        return self.context(recent_content=self.recent_content())
 
-    def recent_content(self, language, limit):
-        categories = self.all_categories.filter(
-            language=language).everything()
-
-        def get_category_object(uuid):
-            if not uuid:
-                return None
-            [category] = filter(lambda c: c.uuid == uuid, categories)
-            return category
-
+    def recent_content(self):
         # get 2 most recent pages
         [page1, page2] = self.all_pages.filter(
             language=self.language).order_by('-created_at')[:2]
-        category1 = get_category_object(page1.primary_category)
-        category2 = get_category_object(page2.primary_category)
+        [category1] = (self.all_categories.filter(uuid=page1.primary_category)
+                       if page1.primary_category
+                       else None)
+        [category2] = (self.all_categories.filter(uuid=page2.primary_category)
+                       if page2.primary_category
+                       else None)
+        most_recent = [(category1, page1), (category2, page2)]
+
+        # random seed that changes hourly
+        seed = datetime.utcnow().replace(
+            minute=0, second=0, microsecond=0)
+        seed = (seed - datetime.utcfromtimestamp(0)).total_seconds()
+        seed = int(seed)
 
         # get most recent page per category
         # exclude the 2 most recent overall
-        content = []
         f = ~F(uuid=page1.uuid) & ~F(uuid=page2.uuid)
-        for category in categories:
-            try:
-                f_cat = F(primary_category=category.uuid)
-                [page] = self.all_pages.filter(f & f_cat).order_by(
-                    '-created_at')[:1]
-                content.append((category, page))
-            except ValueError:
-                pass
+        categories = self.all_categories.filter(
+            f, language=self.language)
+        categories = randomize_query(categories, seed=seed)
 
-        shuffle(content)
-        content = content[:limit - 2]
-        content.insert(randint(0, len(content)), (category1, page1))
-        content.insert(randint(0, len(content)), (category2, page2))
-        return content
+        def do_query(limit):
+            most_recent_per_category = []
+            for category in categories[:limit - 2]:
+                [page] = self.all_pages.filter(
+                    f, primary_category=category.uuid).order_by(
+                    '-created_at')[:1]
+                most_recent_per_category.append((category, page))
+
+            return [(c.to_object(), p.to_object()) for c, p
+                    in chain(most_recent, most_recent_per_category)]
+
+        return do_query

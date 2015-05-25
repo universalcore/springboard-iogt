@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        {% for category, page in recent_content %}
+        {% for category, page in recent_content(limit=8) %}
             <div class="articles">
                 {% if category %}
                 <div class="h1">
