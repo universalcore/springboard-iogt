@@ -38,20 +38,18 @@ class TestIoGTViews(SpringboardTestCase):
             created_at=(datetime.utcnow() - timedelta(hours=2)).isoformat())
         views = IoGTViews(self.mk_request())
 
-        # repeat a few times because of randomness
-        for i in range(5):
-            results = views.recent_content()(limit=2)
-            self.assertEqual(len(results), 2)
-            self.assertEqual(
-                {(category_p1.uuid, page1.uuid), (None, page2.uuid)},
-                set((c.uuid if c else None, p.uuid) for c, p in results))
-        for i in range(5):
-            results = views.recent_content()(limit=3)
-            self.assertEqual(len(results), 3)
-            self.assertEqual(
-                {(category_p1.uuid, page1.uuid), (None, page2.uuid),
-                 (category_p3.uuid, page3.uuid)},
-                set((c.uuid if c else None, p.uuid) for c, p in results))
+        results = views.recent_content()(limit=2)
+        self.assertEqual(len(results), 2)
+        self.assertEqual(
+            {(category_p1.uuid, page1.uuid), (None, page2.uuid)},
+            set((c.uuid if c else None, p.uuid) for c, p in results))
+
+        results = views.recent_content()(limit=3)
+        self.assertEqual(len(results), 3)
+        self.assertEqual(
+            {(category_p1.uuid, page1.uuid), (None, page2.uuid),
+             (category_p3.uuid, page3.uuid)},
+            set((c.uuid if c else None, p.uuid) for c, p in results))
 
     def test_index_view(self):
         [category] = self.mk_categories(self.workspace, count=1)

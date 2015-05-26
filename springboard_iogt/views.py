@@ -22,19 +22,14 @@ class IoGTViews(SpringboardViews):
         [page1, page2] = self.all_pages.filter(
             language=self.language).order_by('-created_at')[:2]
         categories = self.all_categories.filter(
-            uuid__in=filter(lambda uuid: uuid is not None,
-                            [page1.primary_category, page2.primary_category]))
+            uuid__in=filter(
+                None, [page1.primary_category, page2.primary_category]))
         categories = dict((category.uuid, category) for category in categories)
-        category1 = (categories[page1.primary_category]
-                     if page1.primary_category else None)
-        category2 = (categories[page2.primary_category]
-                     if page2.primary_category else None)
+        category1 = categories.get(page1.primary_category)
+        category2 = categories.get(page2.primary_category)
 
         # random seed that changes hourly
-        seed = datetime.utcnow().replace(
-            minute=0, second=0, microsecond=0)
-        seed = (seed - datetime.utcfromtimestamp(0)).total_seconds()
-        seed = int(seed)
+        seed = datetime.utcnow().hour
 
         # get random categories and exclude categories of 2 most recent pages
         categories = self.all_categories.filter(
