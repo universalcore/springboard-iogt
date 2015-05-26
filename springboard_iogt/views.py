@@ -59,8 +59,8 @@ class IoGTViews(SpringboardViews):
                 except ValueError:
                     pass
 
-            results = [(cat.to_object() if cat else None, page.to_object())
-                       for cat, page
+            results = [(c.to_object() if c else None, p.to_object())
+                       for c, p
                        in chain(most_recent, most_recent_per_category)]
             # randomize position of most_recent content
             random.seed(seed)

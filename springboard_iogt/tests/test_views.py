@@ -1,3 +1,5 @@
+import re
+
 from datetime import datetime, timedelta
 
 from pyramid import testing
@@ -5,6 +7,7 @@ from pyramid import testing
 from springboard.tests import SpringboardTestCase
 
 from springboard_iogt.views import IoGTViews
+from springboard_iogt.application import main
 
 
 class TestIoGTViews(SpringboardTestCase):
@@ -35,6 +38,7 @@ class TestIoGTViews(SpringboardTestCase):
             created_at=(datetime.utcnow() - timedelta(hours=2)).isoformat())
         views = IoGTViews(self.mk_request())
 
+        # repeat a few times because of randomness
         for i in range(5):
             results = views.recent_content()(limit=2)
             self.assertEqual(len(results), 2)
@@ -50,4 +54,19 @@ class TestIoGTViews(SpringboardTestCase):
                 set((c.uuid if c else None, p.uuid) for c, p in results))
 
     def test_index_view(self):
-        pass
+        [category] = self.mk_categories(self.workspace, count=1)
+        [page1, page2] = self.mk_pages(
+            self.workspace, count=2,
+            created_at=datetime.utcnow().isoformat())
+        page1 = page1.update({'primary_category': category.uuid})
+        self.workspace.save(page1, 'Update page category')
+        self.workspace.refresh_index()
+        app = self.mk_app(self.workspace, main=main)
+
+        response = app.get('/')
+        self.assertEqual(response.status_int, 200)
+        html = response.html
+        re_page_url = re.compile(r'/page/.{32}/')
+        re_category_url = re.compile(r'/category/.{32}/')
+        self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
+        self.assertEqual(len(html.find_all('a', href=re_category_url)), 2)
