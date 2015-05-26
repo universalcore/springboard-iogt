@@ -13,6 +13,11 @@ def main(global_config, **settings):
     defaults.update(settings)
 
     config = Configurator(settings=defaults)
+
+    # override springboard routes
+    config.add_route('home', '/')
+    config.scan('.views')
+
     config.include('springboard.config')
     config.override_asset(
         to_override='springboard:templates/',
