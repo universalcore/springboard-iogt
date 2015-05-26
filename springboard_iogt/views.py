@@ -3,11 +3,17 @@ from datetime import datetime
 from itertools import chain
 
 from pyramid.view import view_config
+from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 from elasticutils import F
 
 from springboard.views.base import SpringboardViews
 
-from springboard_iogt.utils import randomize_query
+from springboard_iogt.utils import randomize_query, get_redirect_url
+
+
+ONE_YEAR = 31536000
+
+PERSONAE = {'CHILD', 'TEENAGER', 'PARENT', 'WORKER'}
 
 
 class IoGTViews(SpringboardViews):
@@ -71,4 +77,18 @@ class IoGTViews(SpringboardViews):
 
     @view_config(route_name='select_persona')
     def select_persona(self):
-        pass
+        slug = self.request.matchdict['slug'].upper()
+        if slug not in PERSONAE:
+            raise HTTPNotFound
+
+        # set cookie and redirect
+        response = HTTPFound(location=get_redirect_url(self.request))
+        response.set_cookie('iogt-persona', value=slug, max_age=ONE_YEAR)
+        return response
+
+    @view_config(route_name='skip_persona_selection')
+    def skip_persona_selection(self):
+        # set cookie and redirect
+        response = HTTPFound(location=get_redirect_url(self.request))
+        response.set_cookie('iogt-persona-skip', value='1', max_age=ONE_YEAR)
+        return response
