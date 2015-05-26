@@ -63,3 +63,12 @@ class IoGTViews(SpringboardViews):
             return results
 
         return do_query
+
+    @view_config(route_name='personae',
+                 renderer='springboard_iogt:templates/personae.jinja2')
+    def personae(self):
+        return self.context()
+
+    @view_config(route_name='select_persona')
+    def select_persona(self):
+        pass
