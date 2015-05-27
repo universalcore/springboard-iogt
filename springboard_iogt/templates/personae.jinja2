@@ -4,7 +4,7 @@
 {% block content %}
 <div>
     <div>{% trans %}Which one are you?{% endtrans %}</div>
-    {% set next_url=request.referrer %}
+    {% set next_url=(request.referrer if request.referrer != request.current_route_url() else None) %}
     <div class="personae">
         {{ persona('child', _('Child'), next_url) }}
         {{ persona('teenager', _('Teenager'), next_url) }}
