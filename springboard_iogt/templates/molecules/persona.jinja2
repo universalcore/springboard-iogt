@@ -1,7 +1,7 @@
 {% macro persona(slug, display_name, next_url=None) -%}
     <div class="persona">
         <a href="{{ 'select_persona'|route_url(slug=slug) }}{% if next_url %}?{{ {'next': next_url}|urlencode }}{% endif %}">
-            <img class="persona-image" src="{{ ('springboard_iogt:static/img/%s.png' % slug)|static_url }}" alt="{{ display_name }} image">
+            <img class="persona-image" src="{{ ('springboard_iogt:static/img/persona_%s.png' % slug)|static_url }}" alt="{{ display_name }} image">
             <span class="persona-name">{{ display_name }}</span>
         </a>
     </div>

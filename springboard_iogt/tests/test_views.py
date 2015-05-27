@@ -6,7 +6,8 @@ from pyramid import testing
 
 from springboard.tests import SpringboardTestCase
 
-from springboard_iogt.views import IoGTViews
+from springboard_iogt.views import (
+    IoGTViews, PERSONAE, PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 from springboard_iogt.application import main
 
 
@@ -60,11 +61,64 @@ class TestIoGTViews(SpringboardTestCase):
         self.workspace.save(page1, 'Update page category')
         self.workspace.refresh_index()
         app = self.mk_app(self.workspace, main=main)
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
-        response = app.get('/')
+        response = app.get('/', )
         self.assertEqual(response.status_int, 200)
         html = response.html
         re_page_url = re.compile(r'/page/.{32}/')
         re_category_url = re.compile(r'/category/.{32}/')
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
         self.assertEqual(len(html.find_all('a', href=re_category_url)), 2)
+
+    def test_persona_redirect(self):
+        app = self.mk_app(self.workspace, main=main)
+
+        response = app.get('/')
+        self.assertEqual(response.status_int, 302)
+        self.assertEqual(response.location, 'http://localhost/persona/')
+
+        response = app.get('/persona/')
+        self.assertEqual(response.status_int, 200)
+
+        self.mk_pages(
+            self.workspace, count=2,
+            created_at=datetime.utcnow().isoformat())  # sets up mapping
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
+        response = app.get('/')
+        self.assertEqual(response.status_int, 200)
+
+        for slug in ('child', 'skip'):
+            app.reset()
+            response = app.get('/persona/%s/' % slug)
+            self.assertEqual(response.status_int, 302)
+            self.assertEqual(response.location, 'http://localhost/')
+
+    def test_select_persona(self):
+        app = self.mk_app(self.workspace, main=main)
+
+        response = app.get('/persona/worker/')
+        self.assertEqual(response.status_int, 302)
+        cookie = response.headers.get('Set-Cookie', '')
+        self.assertIn('%s=WORKER;' % PERSONA_COOKIE_NAME, cookie)
+
+        response = app.get('/persona/not-a-persona/', expect_errors=True)
+        self.assertEqual(response.status_int, 404)
+
+    def test_skip_persona_selection(self):
+        app = self.mk_app(self.workspace, main=main)
+        response = app.get('/persona/skip/')
+        self.assertEqual(response.status_int, 302)
+        cookie = response.headers.get('Set-Cookie', '')
+        self.assertIn(
+            '%s=%s;' % (PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE),
+            cookie)
+
+    def test_personae(self):
+        app = self.mk_app(self.workspace, main=main)
+        persona_url = re.compile(
+            '/persona/(%s)/' % '|'.join(p.lower() for p in PERSONAE))
+        skip_url = re.compile(r'/persona/skip/')
+        html = app.get('/persona/').html
+        self.assertEqual(len(html.find_all('a', href=persona_url)), 4)
+        self.assertEqual(len(html.find_all('a', href=skip_url)), 1)
