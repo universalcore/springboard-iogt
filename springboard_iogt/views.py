@@ -28,7 +28,8 @@ def persona_tween_factory(handler, registry):
 
         route = get_matching_route(request)
         if route and route.name in PERSONA_REDIRECT_ROUTES:
-            return HTTPFound(request.route_url('personae'))
+            query = {'next': request.url}
+            return HTTPFound(request.route_url('personae', _query=query))
 
         return handler(request)
 

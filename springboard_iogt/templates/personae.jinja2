@@ -4,15 +4,15 @@
 {% block content %}
 <div>
     <div>{% trans %}Which one are you?{% endtrans %}</div>
-    {% set next_url=(request.referrer if request.referrer != request.current_route_url() else None) %}
+    {% set query=({'next': request.GET['next']} if 'next' in request.GET else None) %}
     <div class="personae">
-        {{ persona('child', _('Child'), next_url) }}
-        {{ persona('teenager', _('Teenager'), next_url) }}
-        {{ persona('parent', _('Parent'), next_url) }}
-        {{ persona('worker', _('Worker'), next_url) }}
+        {{ persona('child', _('Child'), query) }}
+        {{ persona('teenager', _('Teenager'), query) }}
+        {{ persona('parent', _('Parent'), query) }}
+        {{ persona('worker', _('Worker'), query) }}
     </div>
     <div>
-        <a href="{{ 'skip_persona_selection'|route_url }}">{% trans %}Skip this{% endtrans %}</a>
+        <a href="{{ 'skip_persona_selection'|route_url(_query=query) }}">{% trans %}Skip this{% endtrans %}</a>
     </div>
 </div>
 {% endblock %}

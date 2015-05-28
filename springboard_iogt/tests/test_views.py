@@ -1,5 +1,5 @@
 import re
-
+from urllib import urlencode
 from datetime import datetime, timedelta
 
 from pyramid import testing
@@ -71,12 +71,13 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
         self.assertEqual(len(html.find_all('a', href=re_category_url)), 2)
 
-    def test_persona_redirect(self):
+    def test_persona_tween(self):
         app = self.mk_app(self.workspace, main=main)
 
         response = app.get('/')
         self.assertEqual(response.status_int, 302)
-        self.assertEqual(response.location, 'http://localhost/persona/')
+        self.assertTrue(
+            response.location.startswith('http://localhost/persona/'))
 
         response = app.get('/persona/')
         self.assertEqual(response.status_int, 200)
@@ -96,9 +97,12 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_select_persona(self):
         app = self.mk_app(self.workspace, main=main)
+        next_url = 'http://localhost/page/1234/'
+        querystring = urlencode({'next': next_url})
 
-        response = app.get('/persona/worker/')
+        response = app.get('/persona/worker/?%s' % querystring)
         self.assertEqual(response.status_int, 302)
+        self.assertEqual(response.location, next_url)
         cookie = response.headers.get('Set-Cookie', '')
         self.assertIn('%s=WORKER;' % PERSONA_COOKIE_NAME, cookie)
 
@@ -107,8 +111,12 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_skip_persona_selection(self):
         app = self.mk_app(self.workspace, main=main)
-        response = app.get('/persona/skip/')
+        next_url = 'http://localhost/page/1234/'
+        querystring = urlencode({'next': next_url})
+
+        response = app.get('/persona/skip/?%s' % querystring)
         self.assertEqual(response.status_int, 302)
+        self.assertEqual(response.location, next_url)
         cookie = response.headers.get('Set-Cookie', '')
         self.assertIn(
             '%s=%s;' % (PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE),
@@ -116,9 +124,16 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_personae(self):
         app = self.mk_app(self.workspace, main=main)
-        persona_url = re.compile(
-            '/persona/(%s)/' % '|'.join(p.lower() for p in PERSONAE))
-        skip_url = re.compile(r'/persona/skip/')
-        html = app.get('/persona/').html
-        self.assertEqual(len(html.find_all('a', href=persona_url)), 4)
-        self.assertEqual(len(html.find_all('a', href=skip_url)), 1)
+        url = 'http://localhost/page/1234/'
+        querystring = urlencode({'next': url})
+
+        html = app.get(url).follow().html
+        persona_url_tags = html.find_all(
+            'a',
+            href=r'/persona/(%s)/' % '|'.join(p.lower() for p in PERSONAE))
+        skip_url_tags = html.find_all('a', href=re.compile(r'/persona/skip/'))
+        self.assertEqual(len(persona_url_tags), 4)
+        self.assertEqual(len(skip_url_tags), 1)
+        self.assertTrue(all(querystring in tag['href']
+                            for tag in persona_url_tags))
+        self.assertTrue(querystring in skip_url_tags[0]['href'])

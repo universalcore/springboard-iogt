@@ -13,11 +13,11 @@ def randomize_query(s_obj, seed=None):
         }})
 
 
-def get_redirect_url(request, param_name='next'):
+def get_redirect_url(request, param_name='next', default_route='home'):
     redirect_url = request.GET.get(param_name)
     if redirect_url and same_origin(redirect_url, request.current_route_url()):
         return redirect_url
-    return request.route_url('home')
+    return request.route_url(default_route)
 
 
 def get_matching_route(request):
