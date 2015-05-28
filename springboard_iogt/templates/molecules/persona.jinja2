@@ -1,0 +1,8 @@
+{% macro persona(slug, display_name, query=None) -%}
+    <div class="persona">
+        <a href="{{ 'select_persona'|route_url(slug=slug, _query=query) }}">
+            <img class="persona-image" src="{{ ('springboard_iogt:static/img/persona_%s.png' % slug)|static_url }}" alt="{{ display_name }} image">
+            <span class="persona-name">{{ display_name }}</span>
+        </a>
+    </div>
+{%- endmacro %}
