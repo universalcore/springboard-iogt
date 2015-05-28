@@ -63,7 +63,7 @@ class TestIoGTViews(SpringboardTestCase):
         app = self.mk_app(self.workspace, main=main)
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
-        response = app.get('/', )
+        response = app.get('/')
         self.assertEqual(response.status_int, 200)
         html = response.html
         re_page_url = re.compile(r'/page/.{32}/')
