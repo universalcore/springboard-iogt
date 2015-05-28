@@ -128,9 +128,8 @@ class TestIoGTViews(SpringboardTestCase):
         querystring = urlencode({'next': url})
 
         html = app.get(url).follow().html
-        persona_url_tags = html.find_all(
-            'a',
-            href=r'/persona/(%s)/' % '|'.join(p.lower() for p in PERSONAE))
+        persona_url_tags = html.find_all('a', href=re.compile(
+            r'/persona/(%s)/' % '|'.join(p.lower() for p in PERSONAE)))
         skip_url_tags = html.find_all('a', href=re.compile(r'/persona/skip/'))
         self.assertEqual(len(persona_url_tags), 4)
         self.assertEqual(len(skip_url_tags), 1)
