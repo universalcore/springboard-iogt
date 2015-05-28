@@ -82,6 +82,9 @@ class TestIoGTViews(SpringboardTestCase):
         response = app.get('/persona/')
         self.assertEqual(response.status_int, 200)
 
+        response = app.get('/matches/nothing/', expect_errors=True)
+        self.assertEqual(response.status_int, 404)
+
         self.mk_pages(
             self.workspace, count=2,
             created_at=datetime.utcnow().isoformat())  # sets up mapping
