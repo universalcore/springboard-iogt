@@ -10,6 +10,9 @@ def main(global_config, **settings):
     cp = ConfigParser()
     cp.readfp(pkg_resources.resource_stream('springboard', 'defaults.ini'))
     defaults = dict(cp.items('springboard:pyramid'))
+    defaults['jinja2.filters'] += (
+        '\nrecent_pages = springboard_iogt.filters:recent_pages'
+        '\ncategory_dict = springboard_iogt.filters:category_dict')
     defaults.update(settings)
 
     config = Configurator(settings=defaults)

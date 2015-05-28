@@ -20,7 +20,7 @@ def recent_pages(s_pages, language):
     seed = datetime.utcnow().hour
     random.seed(seed)
     random.shuffle(most_recent)
-
+    print most_recent
     return [page.to_object() for page in most_recent]
 
 
