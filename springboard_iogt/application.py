@@ -16,6 +16,10 @@ def main(global_config, **settings):
 
     # override springboard routes
     config.add_route('home', '/')
+    config.add_route('personae', '/persona/')
+    config.add_route('skip_persona_selection', '/persona/skip/')
+    config.add_route('select_persona', '/persona/{slug}/')
+    config.add_tween('springboard_iogt.views.persona_tween_factory')
     config.scan('.views')
 
     config.include('springboard.config')
