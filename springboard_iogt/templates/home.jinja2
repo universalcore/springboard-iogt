@@ -2,27 +2,29 @@
 
 {% block content %}
 <div>
-    <div>
-        {% for category, page in recent_content(limit=8) %}
-            <div class="articles">
-                {% if category %}
-                <div class="h1">
-                    <a href="{{'category'|route_url(uuid=category.uuid)}}/">{{category.title}}</a>
-                </div>
-                {% endif %}
-                <div class="listing no-pic">
-                    <div class="h2"><a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a></div>
-                    <p>{{page.description}}</p>
-                    <div class="clr"></div>
-                </div>
-                <div class="clr"></div>
-                {% if category %}
-                <div class="pagination">
-                    <a href="{{'category'|route_url(uuid=category.uuid)}}"><span>{{gettext('More')}}</span> {{category.title}}</a>
-                </div>
-                {% endif %}
+    {% set pages=all_pages|recent_pages(language) %}
+    {% set categories=all_categories|category_dict(pages|map(attribute='primary_category')) %}
+
+    {% for page in pages %}
+        {% set category=categories.get(page.primary_category) %}
+        <div class="articles">
+            {% if category %}
+            <div class="h1">
+                <a href="{{'category'|route_url(uuid=category.uuid)}}/">{{category.title}}</a>
             </div>
-        {% endfor %}
-    </div>
+            {% endif %}
+            <div class="listing no-pic">
+                <div class="h2"><a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a></div>
+                <p>{{page.description}}</p>
+                <div class="clr"></div>
+            </div>
+            <div class="clr"></div>
+            {% if category %}
+            <div class="pagination">
+                <a href="{{'category'|route_url(uuid=category.uuid)}}"><span>{{gettext('More')}}</span> {{category.title}}</a>
+            </div>
+            {% endif %}
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}
