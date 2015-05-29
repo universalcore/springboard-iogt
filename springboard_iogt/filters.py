@@ -5,7 +5,7 @@ from datetime import datetime
 from elasticutils import F
 
 
-def recent_pages(s_pages, language):
+def recent_pages(s_pages, language, dt=None):
     s_pages = s_pages.filter(
         language=language, featured=True).order_by('-created_at')
     # get 2 most recent pages
@@ -17,10 +17,10 @@ def recent_pages(s_pages, language):
         *[s_pages.indexes(index)[:1] for index in s_pages.get_indexes()]))
 
     # random seed that changes hourly
-    seed = datetime.utcnow().hour
+    seed = (dt or datetime.utcnow()).hour
     random.seed(seed)
     random.shuffle(most_recent)
-    print most_recent
+
     return [page.to_object() for page in most_recent]
 
 
