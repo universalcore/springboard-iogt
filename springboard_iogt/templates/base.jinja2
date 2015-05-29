@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" type="image/x-icon" href="{{'springboard:static/img/favicon.ico'|static_url}}" />
-    <title>{{ title|default("Skeleton / Universal Core") }}</title>
+    <title>{{ title|default(_("The Internet of Good Things")) }}</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta name="description" content="{{ description|default("") }}" />
     <meta name="keywords" content="{{ keywords|default("") }}" />
@@ -13,33 +13,37 @@
 <body>
     <div id="header">
         <div class="lang">
-            <div>
-                {% for code, name in languages %}
+            {% for lang_code in featured_languages %}
                 <span>
-                    <a href="/locale/?language={{code}}">{{name}}</a>
-                    {% if not forloop.last %}
-                        <span> |</span>
-                    {% endif %}
+                    <a href="{{'locale_matched'|route_url(language=lang_code) }}">{{lang_code|display_language_name}}</a>
                 </span>
-                {% endfor %}
-          </div>
+                <span> | </span>
+            {% endfor %}
+            <span><a href="{{ 'locale_change'|route_url }}">&hellip;</a></span>
         </div>
-        <div class="logo"><a href="/" class="logo"><img alt='Skeleton' src="{{ 'springboard:static/img/logo000000.png'|static_url }}" /></a></div>
-        <div class="clr"></div>
-    </div>
-    <div class="push"></div><!--/PUSH-->
-    <div id="submenu">
-        <a href="/">{{ gettext("Home") }}</a>
-        {% for nav in main_navigation_items %}
-            <span>
-            l <a href="{{'category'|route_url(uuid=nav.uuid)}}">{{nav.title}}</a>
-            </span>
-        {% endfor %}
+        <div class="logo">
+            <a href="{{ 'home'|route_url }}" class="logo"><img alt="{{ _('IoGT logo') }}" src="{{ 'springboard:static/img/logo000000.png'|static_url }}" /></a>
+        </div>
     </div>
 
     <div id="content">
         {% block content %}
         {% endblock %}
+    </div>
+
+    <div id="submenu">
+        <h2>{% trans %}Explore our sites{% endtrans %}</h2>
+        <ul>
+            <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
+        {% for nav in content_sections %}
+            <li><a href="{{ 'content_section'|route_url(uuid=nav.uuid) }}">{{ nav.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div id="footer">
+        <div>{% trans %}Powered by UNICEF{% endtrans %}</div>
     </div>
 
 </body>
