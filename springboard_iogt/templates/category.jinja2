@@ -1,7 +1,9 @@
 {% extends "base.jinja2" %}
+{% from "molecules/page_listing.jinja2" import page_listing %}
 
 {% block content %}
 <div>
+    {# TODO: content section <div class="content-section">{{ content_section }}</div> #}
     <div class="articles">
 
         <div class="h1">
@@ -9,18 +11,10 @@
         </div>
 
         {% for page in all_pages.filter(primary_category=category.uuid)[:20] %}
-            {% set has_image = page.image and page.image_host %}
-            <div class="listing {% if not has_image %}no-pic{% endif %}">
-                {% if has_image %}
-                <a href="{{'page'|route_url(uuid=page.uuid)}}">
-                    <img alt='{{page.title}}' src="{{page.image_host}}{{page.image|thumbor(45, 45)}}"/>
-                </a>
-                {% endif %}
-                <div class="h2"><a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a></div>
-                <p>{{page.description}}</p>
-                <div class="clr"></div>
-            </div>
+            {{ page_listing(page) }}
         {% endfor %}
+
+        {# TODO: pagination #}
     </div>
 </div>
 {% endblock %}

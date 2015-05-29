@@ -1,0 +1,15 @@
+{% macro page_listing(page) -%}
+    {% set has_image = page.image and page.image_host %}
+    <div class="listing">
+        {% if has_image %}
+        <a href="{{'page'|route_url(uuid=page.uuid)}}">
+            <img alt='{{page.title}}' src="{{page.image_host}}{{page.image|thumbor(45, 45)}}"/>
+        </a>
+        {% endif %}
+        <div class="h2">
+            <a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a>
+        </div>
+        <p>{{page.description}}</p>
+        <div class="clr"></div>
+    </div>
+{%- endmacro %}
