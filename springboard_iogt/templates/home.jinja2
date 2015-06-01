@@ -15,7 +15,11 @@
             </div>
         </div>
 
-        {% for category, page in recent_content(limit=8) %}
+        {% set pages=all_pages|recent_pages(language) %}
+        {% set categories=all_categories|category_dict(pages|map(attribute='primary_category')) %}
+
+        {% for page in pages %}
+            {% set category=categories.get(page.primary_category) %}
             <div class="articles">
                 {% if category %}
                 <div class="h1">

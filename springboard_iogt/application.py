@@ -10,12 +10,14 @@ def main(global_config, **settings):
     cp = ConfigParser()
     cp.readfp(pkg_resources.resource_stream('springboard', 'defaults.ini'))
     defaults = dict(cp.items('springboard:pyramid'))
+    defaults['jinja2.filters'] += (
+        '\nrecent_pages = springboard_iogt.filters:recent_pages'
+        '\ncategory_dict = springboard_iogt.filters:category_dict')
     defaults.update(settings)
 
     config = Configurator(settings=defaults)
 
-    # override springboard routes
-    config.add_route('home', '/')
+    # add to springboard routes
     config.add_route('personae', '/persona/')
     config.add_route('skip_persona_selection', '/persona/skip/')
     config.add_route('select_persona', '/persona/{slug}/')
