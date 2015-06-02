@@ -1,0 +1,12 @@
+{% macro section_banner(section, localisation) -%}
+<div id="banner">
+    {% if localisation and localisation.image_host and localisation.image %}
+        <img alt="{% trans owner=section.owner %}Brought to you by {{ owner }}{% endtrans %}" src="{{ localisation.image_host }}{{ localisation|thumbor(320) }}"/>
+    {% else %}
+        <img alt="{% trans owner=section.owner %}Brought to you by {{ owner }}{% endtrans %}" src="{{ ('springboard_iogt:static/img/banner_%s.png' % section.slug)|static_url }}" />
+    {% endif %}
+    <span>
+        {% trans owner=section.owner %}Brought to you by {{ owner }}{% endtrans %}
+    </span>
+</div>
+{%- endmacro %}

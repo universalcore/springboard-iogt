@@ -66,4 +66,9 @@ class IoGTViews(SpringboardViews):
         if not ContentSection.exists(slug, indexes):
             raise HTTPNotFound
 
-        return self.context(section=ContentSection(slug, indexes))
+        return self.context(section=ContentSection(
+            slug,
+            pages=self.all_pages,
+            categories=self.all_categories,
+            localisations=self.all_localisations
+        ))

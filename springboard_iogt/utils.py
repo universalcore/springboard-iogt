@@ -31,15 +31,16 @@ class ContentSection(object):
         _('U-report'),
     ]
 
-    def __init__(self, slug, indexes):
+    def __init__(self, slug, pages, categories, localisations):
         self.slug = slug
         i = self.__class__.SLUGS.index(slug)
         self.owner = self.__class__.OWNERS[i]
         self.title = self.__class__.TITLES[i]
+        indexes = pages.get_indexes()
         [self.index] = filter(lambda index: slug in index, indexes)
-
-    def filter(self, s_obj):
-        return s_obj.indexes(self.index)
+        self.pages = pages.indexes(self.index)
+        self.categories = categories.indexes(self.index)
+        self.localisations = localisations.indexes(self.index)
 
     @classmethod
     def exists(cls, slug, indexes):
