@@ -102,6 +102,11 @@ class TestIoGTViews(SpringboardTestCase):
         ga_data = mocked_pageview.call_args[0][2]
         self.assertIn('dimension0', ga_data)
         self.assertEqual(ga_data['dimension0'], 'WORKER')
+        self.assertEqual(ga_data['path'], '/persona/worker/')
+
+        app.get('/not/here/', expect_errors=True)
+        ga_data = mocked_pageview.call_args[0][2]
+        self.assertEqual(ga_data['path'], '/not/here/?persona=WORKER')
 
     def test_skip_persona_selection(self):
         app = self.mk_app(self.workspace, main=main)

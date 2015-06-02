@@ -3,7 +3,8 @@ from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 
 from springboard.views.base import SpringboardViews
 
-from springboard_iogt.utils import get_redirect_url, get_matching_route
+from springboard_iogt.utils import (
+    get_redirect_url, get_matching_route, update_query)
 
 
 ONE_YEAR = 31536000
@@ -18,7 +19,14 @@ def persona_tween_factory(handler, registry):
 
     def persona_tween(request):
         if PERSONA_COOKIE_NAME in request.cookies:
-            return handler(request)
+            response = handler(request)
+
+            if request.google_analytics:
+                persona = request.cookies[PERSONA_COOKIE_NAME]
+                request.google_analytics['path'] = update_query(
+                    request.google_analytics['path'], [('persona', persona)])
+
+            return response
 
         route = get_matching_route(request)
         if route and route.name in PERSONA_REDIRECT_ROUTES:
