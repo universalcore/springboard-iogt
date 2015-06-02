@@ -24,6 +24,7 @@ def main(global_config, **settings):
     config.add_route('select_persona', '/persona/{slug}/')
     config.add_tween('springboard_iogt.views.persona_tween_factory')
     config.scan('.views')
+    config.scan('.events')
 
     config.include('springboard.config')
     config.override_asset(
