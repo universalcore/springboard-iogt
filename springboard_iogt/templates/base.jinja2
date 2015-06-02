@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      dir="{{ language|language_direction }}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" type="image/x-icon" href="{{'springboard:static/img/favicon.ico'|static_url}}" />
@@ -12,10 +13,11 @@
 </head>
 <body>
     <div id="header">
-        <div class="lang">
-            {% for lang_code in featured_languages %}
+        <div class="lang align-right">
+            <span>{{ language|display_language_name }}</span><span> | </span>
+            {% for lang_code in display_languages %}
                 <span>
-                    <a href="{{'locale_matched'|route_url(language=lang_code) }}">{{lang_code|display_language_name}}</a>
+                    <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
                 </span>
                 <span> | </span>
             {% endfor %}
