@@ -46,6 +46,13 @@ class IoGTViews(SpringboardViews):
         # set cookie and redirect
         response = HTTPFound(location=get_redirect_url(self.request))
         response.set_cookie(PERSONA_COOKIE_NAME, value=slug, max_age=ONE_YEAR)
+
+        # set persona dimension value on GA
+        # NOTE: the persona dimension has to be configured with scope 'user'
+        persona_dimension_id = self.settings.get('ga.persona_dimension_id')
+        if persona_dimension_id:
+            self.request.google_analytics[persona_dimension_id] = slug
+
         return response
 
     @view_config(route_name='skip_persona_selection')
