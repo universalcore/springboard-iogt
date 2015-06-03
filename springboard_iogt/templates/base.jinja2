@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="header">
-        <div class="lang align-right">
+        <div class="lang">
             <span>{{ language|display_language_name }}</span><span> | </span>
             {% for lang_code in display_languages %}
                 <span>
@@ -34,7 +34,7 @@
     </div>
 
     <div id="submenu">
-        <h2>{% trans %}Explore our sites{% endtrans %}</h2>
+        <div class="h1">{% trans %}Explore IoGT{% endtrans %}</div>
         <ul>
             <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         {% for slug, title in content_sections %}
@@ -45,7 +45,9 @@
     </div>
 
     <div id="footer">
-        <div>{% trans %}Powered by UNICEF{% endtrans %}</div>
+        <div>&copy; {% trans %}The Internet of Good Things{% endtrans %}</div>
+        {# TODO flat page links for Terms and Contact #}
+        <div><span><a href="#">{{ _('Terms') }}</a></span><span> | </span><span><a href="#">{{ _('Contact') }}</a></span></div>
     </div>
 
 </body>
