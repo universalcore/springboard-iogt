@@ -1,5 +1,6 @@
 {% extends "base.jinja2" %}
 {% from "molecules/section_banner.jinja2" import section_banner %}
+{% from "molecules/page_listing.jinja2" import page_listing %}
 
 {% block content %}
 <div>
@@ -15,8 +16,7 @@
         <div class="articles latest">
             <div class="h1">{{ _('Latest') }}</div>
             {% for page in featured_pages %}
-                {# TODO: use page_listing macro #}
-                <div class="h2">{{ page.title }}</div>
+                {{ page_listing(page) }}
             {% endfor %}
         </div>
         {% endif %}
@@ -29,10 +29,8 @@
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ category.title }}</a>
                 </div>
                 {% for page in category_pages %}
-                    {# TODO: use page_listing macro #}
-                    <div class="h2">{{ page.title }}</div>
+                    {{ page_listing(page) }}
                 {% endfor %}
-                <div class="clr"></div>
                 <div class="pagination">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ _('See all in category') }}</a>
                 </div>
