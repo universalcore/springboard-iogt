@@ -37,8 +37,8 @@
         <h2>{% trans %}Explore our sites{% endtrans %}</h2>
         <ul>
             <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
-        {% for nav in content_sections %}
-            <li><a href="{{ 'content_section'|route_url(uuid=nav.uuid) }}">{{ nav.title }}</a>
+        {% for slug, title in content_sections %}
+            <li><a href="{{ 'content_section'|route_url(slug=slug) }}">{{ title }}</a>
             </li>
         {% endfor %}
         </ul>

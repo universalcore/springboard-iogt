@@ -3,7 +3,8 @@ from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 
 from springboard.views.base import SpringboardViews
 
-from springboard_iogt.utils import get_redirect_url, get_matching_route
+from springboard_iogt.utils import (
+    get_redirect_url, get_matching_route, ContentSection)
 
 
 ONE_YEAR = 31536000
@@ -56,3 +57,18 @@ class IoGTViews(SpringboardViews):
             PERSONA_COOKIE_NAME, value=PERSONA_SKIP_COOKIE_VALUE,
             max_age=ONE_YEAR)
         return response
+
+    @view_config(route_name='content_section',
+                 renderer='springboard_iogt:templates/content_section.jinja2')
+    def content_section(self):
+        slug = self.request.matchdict['slug']
+        indexes = self.all_pages.get_indexes()
+        if not ContentSection.exists(slug, indexes):
+            raise HTTPNotFound
+
+        return self.context(section=ContentSection(
+            slug,
+            pages=self.all_pages,
+            categories=self.all_categories,
+            localisations=self.all_localisations
+        ))
