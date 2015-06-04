@@ -10,7 +10,7 @@ install:
   - pip install -e .
 script:
   - flake8 springboard_iogt
-  - py.test springboard_iogt --cov springboard
+  - py.test springboard_iogt --cov springboard_iogt
 after_success:
   - coveralls
 deploy:

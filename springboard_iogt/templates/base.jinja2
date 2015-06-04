@@ -29,18 +29,21 @@
         {% include 'auth.jinja2' %}
     </div>
     <div class="push"></div><!--/PUSH-->
-    <div id="submenu">
-        <a href="/">{{ gettext("Home") }}</a>
-        {% for nav in main_navigation_items %}
-            <span>
-            l <a href="{{'category'|route_url(uuid=nav.uuid)}}">{{nav.title}}</a>
-            </span>
-        {% endfor %}
-    </div>
 
     <div id="content">
         {% block content %}
         {% endblock %}
+    </div>
+
+    <div id="submenu">
+        <h2>{% trans %}Explore our sites{% endtrans %}</h2>
+        <ul>
+            <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
+        {% for slug, title in content_sections %}
+            <li><a href="{{ 'content_section'|route_url(slug=slug) }}">{{ title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 
 </body>
