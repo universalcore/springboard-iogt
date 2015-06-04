@@ -30,5 +30,5 @@ class TestUtils(SpringboardTestCase):
             views.all_localisations)
         self.assertEqual(section_obj.index, 'ffl-master')
         self.assertEqual(section_obj.pages.get_indexes(), ['ffl-master'])
-        self.assertEqual(section_obj.title, 'Health advice')
+        self.assertEqual(section_obj.title, 'Facts for Life')
         self.assertEqual(section_obj.owner, 'Facts For Life')

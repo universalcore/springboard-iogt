@@ -33,21 +33,14 @@ class TestIoGTViews(SpringboardTestCase):
             featured=True)
         app = self.mk_app(self.workspace, main=main)
         re_page_url = re.compile(r'/page/.{32}/')
-        re_category_url = re.compile(r'/category/.{32}/')
+        re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
         response = app.get('/')
         self.assertEqual(response.status_int, 200)
         html = response.html
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
-        self.assertEqual(len(html.find_all('a', href=re_category_url)), 2)
-
-        page = page.update({'primary_category': None})
-        self.workspace.save(page, 'Update page category')
-        self.workspace.refresh_index()
-        html = app.get('/').html
-        self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
-        self.assertEqual(len(html.find_all('a', href=re_category_url)), 0)
+        self.assertEqual(len(html.find_all('a', href=re_section_url)), 5)
 
     def test_persona_tween(self):
         app = self.mk_app(self.workspace, main=main)
