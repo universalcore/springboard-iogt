@@ -4,7 +4,7 @@ from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 from springboard.views.base import SpringboardViews
 
 from springboard_iogt.utils import (
-    get_redirect_url, get_matching_route, ContentSection)
+    get_redirect_url, get_matching_route, update_query, ContentSection)
 
 
 ONE_YEAR = 31536000
@@ -19,7 +19,14 @@ def persona_tween_factory(handler, registry):
 
     def persona_tween(request):
         if PERSONA_COOKIE_NAME in request.cookies:
-            return handler(request)
+            response = handler(request)
+
+            if request.google_analytics:
+                persona = request.cookies[PERSONA_COOKIE_NAME]
+                request.google_analytics['path'] = update_query(
+                    request.google_analytics['path'], [('persona', persona)])
+
+            return response
 
         route = get_matching_route(request)
         if route and route.name in PERSONA_REDIRECT_ROUTES:
@@ -47,6 +54,13 @@ class IoGTViews(SpringboardViews):
         # set cookie and redirect
         response = HTTPFound(location=get_redirect_url(self.request))
         response.set_cookie(PERSONA_COOKIE_NAME, value=slug, max_age=ONE_YEAR)
+
+        # set persona dimension value on GA
+        # NOTE: the persona dimension has to be configured with scope 'user'
+        persona_dimension_id = self.settings.get('ga.persona_dimension_id')
+        if persona_dimension_id:
+            self.request.google_analytics[persona_dimension_id] = slug
+
         return response
 
     @view_config(route_name='skip_persona_selection')

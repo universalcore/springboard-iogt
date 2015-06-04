@@ -4,6 +4,8 @@ from datetime import datetime
 
 from pyramid import testing
 
+from mock import patch
+
 from springboard.tests import SpringboardTestCase
 
 from springboard_iogt.views import (
@@ -89,6 +91,23 @@ class TestIoGTViews(SpringboardTestCase):
 
         response = app.get('/persona/not-a-persona/', expect_errors=True)
         self.assertEqual(response.status_int, 404)
+
+    @patch('springboard.events.pageview.delay')
+    def test_track_persona_on_ga(self, mocked_pageview):
+        app = self.mk_app(
+            self.workspace,
+            main=main,
+            settings={'ga.profile_id': 'ID-000',
+                      'ga.persona_dimension_id': 'dimension0'})
+        app.get('/persona/worker/')
+        ga_data = mocked_pageview.call_args[0][2]
+        self.assertIn('dimension0', ga_data)
+        self.assertEqual(ga_data['dimension0'], 'WORKER')
+        self.assertEqual(ga_data['path'], '/persona/worker/')
+
+        app.get('/not/here/', expect_errors=True)
+        ga_data = mocked_pageview.call_args[0][2]
+        self.assertEqual(ga_data['path'], '/not/here/?persona=WORKER')
 
     def test_skip_persona_selection(self):
         app = self.mk_app(self.workspace, main=main)

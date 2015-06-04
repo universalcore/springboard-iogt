@@ -1,3 +1,6 @@
+from urlparse import urlparse, parse_qsl, urlunparse
+from urllib import urlencode
+
 from pyramid.interfaces import IRoutesMapper
 from pyramid.i18n import TranslationStringFactory
 
@@ -59,3 +62,10 @@ def get_matching_route(request):
     registry = request.registry
     mapper = registry.queryUtility(IRoutesMapper)
     return mapper(request)['route']
+
+
+def update_query(url, query_list):
+    parts = urlparse(url)
+    query = parse_qsl(parts.query)
+    query.extend(query_list)
+    return urlunparse(parts[:4] + (urlencode(query), ) + parts[5:])
