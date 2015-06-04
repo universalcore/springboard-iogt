@@ -44,14 +44,7 @@
 
         /* Frequently Used */
         .h1 { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
-        .comment,
-        .listing { min-height: 45px; border-bottom: 1px solid #d4d4d4; }
-        .listing:last-of-type { border: 0!important; }
-        .listing .h2,
-        .poll .fields .h2,
-        .detail .h2,
-        .flat .h2,
-        .comment .h3 { font-size: 16px; line-height: 16px; }
+        .listing { min-height: 45px; }
         .pagination { background: #eeeeee; padding: 8px 18px; }
         .auth form .btns input,
         .auth form .btns a,
@@ -65,12 +58,11 @@
         .align-right { float:right; }
 
         /* Articles */
-        .articles { padding: 0; margin: 0 0 3px 0; }
-        .articles .h1 { background: #000; }
-            .articles .listing { padding: 13px 18px; }
+        .articles { padding: 0; margin: 0; border-top: solid 1px #e4e4e4; }
+            .articles .listing { padding: 24px 24px; }
+            .articles .section-link { font-size: 14px; }
                 .articles .listing img { width: 45px; float: left; margin: 0 18px 0 0; display: block; }
                 .articles .listing .h2 { margin: 0; padding: 0; color: #000;  }
-                .articles .listing .h2 a { color: #000; }
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
                 .articles .pagination a { font-weight: bold; color: #000; }
                 .articles .no-pic .h2, .articles .no-pic p { margin-left: 0; }
@@ -85,6 +77,22 @@
                 }
                 .articles .detail img { width: 100%; margin: 14px 0; display: block; }
                 .articles .detail .date { font-size: 13px; text-transform: uppercase; color: #bbb; }
+
+        /* Facts For Life */
+        .articles .ffl a { color: #32bac2; }
+
+        /* Barefoot Law */
+        .articles .barefootlaw a { color: #6ec17c; }
+
+        /* Mariestopes */
+        .articles .mariestopes a { color: #e04a5a; }
+
+        /* Straight Talk */
+        .articles .straighttalk a { color: #c977b2; }
+
+        /* U-report */
+        .articles .ureport a { color: #f18054; }
+
 
 /*  FOOTER  */
 
