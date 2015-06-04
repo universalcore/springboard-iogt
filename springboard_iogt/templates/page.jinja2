@@ -22,9 +22,9 @@
             {% endif %}
                 <div class="meta">{{page.created_at|format_date('%d %B %Y')}}</div>
                 <div class="h2">{{page.title}}</div>
-                <div class="meta">{{page.description|markdown}}</div>
+                <div class="meta">{{page.description}}</div>
             </div>
-            <p>{{page.content|markdown}}</p>
+            <p>{{page.content}}</p>
             {% if page.linked_pages %}
                 {% set linked_pages = all_pages.filter(uuid=page.linked_pages) %}
                 {% if linked_pages %}
