@@ -1,5 +1,5 @@
 {% extends "base.jinja2" %}
-{% from "molecules/page_listing.jinja2" import page_listing %}
+{% from "molecules/page_listing.jinja2" import page_listing_with_section %}
 
 {% block content %}
 <div>
@@ -10,11 +10,10 @@
     {% for page in pages %}
         <div class="articles">
             {% if loop.first %}
-                {{ page_listing(page, "large-listing") }}
+                {{ page_listing_with_section(page, "large-listing") }}
             {% else %}
-                {{ page_listing(page) }}
+                {{ page_listing_with_section(page) }}
             {% endif %}
-            {# TODO content section link #}
         </div>
     {% endfor %}
 </div>

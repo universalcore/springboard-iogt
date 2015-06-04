@@ -24,10 +24,10 @@ class ContentSection(object):
         _('U-report'),
     ]
     TITLES = [
-        _('Your rights'),
-        _('Health advice'),
-        _('Youth'),
-        _('Sexual health'),
+        _('Ur rights'),
+        _('Facts for Life'),
+        _('TeenTalk'),
+        _('Sex+You'),
         _('U-report'),
     ]
 

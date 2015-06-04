@@ -1,14 +1,34 @@
-{% macro page_listing(page, extra_classes="") -%}
+{% macro page_listing_inner(page) -%}
     {% set has_image = page.image and page.image_host %}
-    <div class="listing {{ extra_classes }}">
-        {% if has_image %}
-        <a href="{{'page'|route_url(uuid=page.uuid)}}">
-            <img alt='{{page.title}}' src="{{page.image_host}}{{page.image|thumbor(45, 45)}}"/>
-        </a>
-        {% endif %}
-        <div class="h2">
-            <a href="{{'page'|route_url(uuid=page.uuid)}}">{{page.title}}</a>
+    {% if has_image %}
+    <a href="{{ 'page'|route_url(uuid=page.uuid) }}">
+        <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(45, 45) }}"/>
+    </a>
+    {% endif %}
+    <div class="h2">
+        <a href="{{ 'page'|route_url(uuid=page.uuid) }}">{{page.title}}</a>
+    </div>
+    <p>{{ page.description }}</p>
+    <div class="clr"></div>
+{%- endmacro %}
+
+
+{% macro page_listing(page, extra_classes="") -%}
+    {% set section_slug, section_title = page|page_content_section %}
+    <div class="listing {{ section_slug|default('', true) }} {{ extra_classes }}">
+        {{ page_listing_inner(page) }}
+    </div>
+{%- endmacro %}
+
+
+{% macro page_listing_with_section(page, extra_classes="") -%}
+    {% set section_slug, section_title = page|page_content_section %}
+    <div class="listing {{ section_slug|default('', true) }} {{ extra_classes }}">
+        {{ page_listing_inner(page) }}
+        {% if section_slug %}
+        <div class="section-link">
+            <a href="{{ 'content_section'|route_url(slug=section_slug) }}">{{ section_title }}</a>
         </div>
-        <p>{{page.description}}</p>
+        {% endif %}
     </div>
 {%- endmacro %}
