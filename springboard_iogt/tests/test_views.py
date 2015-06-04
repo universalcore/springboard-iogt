@@ -11,6 +11,7 @@ from springboard.tests import SpringboardTestCase
 from springboard_iogt.views import (
     PERSONAE, PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 from springboard_iogt.application import main
+from springboard_iogt.utils import ContentSection
 
 
 class TestIoGTViews(SpringboardTestCase):
@@ -135,3 +136,26 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertTrue(all(querystring in tag['href']
                             for tag in persona_url_tags))
         self.assertTrue(querystring in skip_url_tags[0]['href'])
+
+    def test_content_section(self):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        [page] = self.mk_pages(
+            ffl_workspace, count=1,
+            created_at=datetime.utcnow().isoformat())
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
+        })
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
+
+        response = app.get('/section/doesnotexist/', expect_errors=True)
+        self.assertEqual(response.status_int, 404)
+        response = app.get('/section/ffl/')
+        self.assertEqual(response.status_int, 200)
+
+    def test_content_section_listing(self):
+        app = self.mk_app(self.workspace, main=main)
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.SLUGS)))
+        self.assertEqual(len(section_url_tags), len(ContentSection.SLUGS))
