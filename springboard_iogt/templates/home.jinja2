@@ -7,14 +7,14 @@
     <div class="h1">{% trans %}Recommended{% endtrans %}</div>
 
     {% set pages=all_pages|recent_pages(language) %}
+    <div class="articles">
     {% for page in pages %}
-        <div class="articles">
-            {% if loop.first %}
-                {{ page_listing_with_section(page, "large-listing") }}
-            {% else %}
-                {{ page_listing_with_section(page) }}
-            {% endif %}
-        </div>
+        {% if loop.first %}
+            {{ page_listing_with_section(page, "full-image", image_first=false) }}
+        {% else %}
+            {{ page_listing_with_section(page) }}
+        {% endif %}
     {% endfor %}
+    </div>
 </div>
 {% endblock %}

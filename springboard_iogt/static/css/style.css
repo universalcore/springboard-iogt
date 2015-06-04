@@ -44,7 +44,7 @@
 
         /* Frequently Used */
         .h1 { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
-        .listing { min-height: 45px; }
+        .listing { min-height: 45px; border-top: solid 1px #e4e4e4; }
         .pagination { background: #eeeeee; padding: 8px 18px; }
         .auth form .btns input,
         .auth form .btns a,
@@ -58,10 +58,11 @@
         .align-right { float:right; }
 
         /* Articles */
-        .articles { padding: 0; margin: 0; border-top: solid 1px #e4e4e4; }
+        .articles { padding: 0; margin: 0; }
             .articles .listing { padding: 24px 24px; }
             .articles .section-link { font-size: 14px; }
-                .articles .listing img { width: 45px; float: left; margin: 0 18px 0 0; display: block; }
+                .articles .listing img { width: 40%; float: left; margin: 3px 18px 0 0; display: block; }
+                .articles .full-image img { width: 100%; margin: 14px 0 14px 0; float: none; display: block; }
                 .articles .listing .h2 { margin: 0; padding: 0; color: #000;  }
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
                 .articles .pagination a { font-weight: bold; color: #000; }
