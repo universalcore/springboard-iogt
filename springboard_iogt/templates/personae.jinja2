@@ -3,7 +3,7 @@
 
 {% block content %}
 <div>
-    <h2>{% trans %}Who are you?{% endtrans %}</h2>
+    <div class="h1">{% trans %}Who are you?{% endtrans %}</div>
     {% set query=({'next': request.GET['next']} if 'next' in request.GET else None) %}
     <div class="personae">
         {{ persona('child', _('Child'), query) }}
@@ -11,8 +11,10 @@
         {{ persona('parent', _('Parent'), query) }}
         {{ persona('worker', _('Worker'), query) }}
     </div>
-    <div class="personae-skip">
-        <a href="{{ 'skip_persona_selection'|route_url(_query=query) }}">{% trans %}Skip{% endtrans %} <span class="align-right">&gt;</span></a>
+    <div class="h1 personae-skip">
+        <a href="{{ 'skip_persona_selection'|route_url(_query=query) }}">{% trans %}Skip{% endtrans %}</a>
     </div>
 </div>
 {% endblock %}
+
+{% block menu %}{# Hide the menu #}{% endblock %}

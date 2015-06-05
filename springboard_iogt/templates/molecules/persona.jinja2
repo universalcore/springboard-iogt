@@ -3,7 +3,6 @@
         <a href="{{ 'select_persona'|route_url(slug=slug, _query=query) }}">
             <img class="persona-image" src="{{ ('springboard_iogt:static/img/persona_%s.png' % slug)|static_url }}" alt="{% trans %}{{ display_name }} image{% endtrans %}">
             <span class="persona-name">{{ display_name }}</span>
-            <span class="align-right">&gt;</span>
         </a>
     </div>
 {%- endmacro %}
