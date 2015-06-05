@@ -19,20 +19,20 @@
 
 
 {% macro page_listing(page, extra_classes="", image_first=true) -%}
-    {% set section_slug, section_title = page|page_content_section %}
-    <div class="listing {{ section_slug|default('', true) }} {{ extra_classes }}">
+    {% set section = page|content_section %}
+    <div class="listing {{ section.slug }} {{ extra_classes }}">
         {{ page_listing_inner(page, image_first=image_first) }}
     </div>
 {%- endmacro %}
 
 
 {% macro page_listing_with_section(page, extra_classes="", image_first=true) -%}
-    {% set section_slug, section_title = page|page_content_section %}
-    <div class="listing {{ section_slug|default('', true) }} {{ extra_classes }}">
+    {% set section = page|content_section %}
+    <div class="listing {{ section.slug }} {{ extra_classes }}">
         {{ page_listing_inner(page, image_first=image_first) }}
-        {% if section_slug %}
+        {% if section %}
         <div class="section-link">
-            <a href="{{ 'content_section'|route_url(slug=section_slug) }}">{{ section_title }}</a>
+            <a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
         </div>
         {% endif %}
     </div>

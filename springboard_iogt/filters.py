@@ -37,12 +37,9 @@ def category_dict(s_categories, uuids):
                 for category in categories)
 
 
-def page_content_section(page):
-    index = page.es_meta.index if page.es_meta else ''
+def content_section(obj):
+    index = obj.es_meta.index if obj.es_meta else ''
     match = CONTENT_SECTION_SLUG_RE.search(index)
     if not match:
-        return None, None
-
-    slug = match.group('slug')
-    title = ContentSection.TITLES[ContentSection.SLUGS.index(slug)]
-    return slug, title
+        return None
+    return ContentSection(match.group('slug'))

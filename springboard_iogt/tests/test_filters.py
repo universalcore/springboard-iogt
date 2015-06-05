@@ -73,13 +73,12 @@ class TestFilters(SpringboardTestCase):
         self.assertEqual(sorted(result, key=attrgetter('uuid')),
                          sorted(result2, key=attrgetter('uuid')))
 
-    def test_page_content_section(self):
+    def test_content_section(self):
         [page] = self.mk_pages(self.workspace, count=1)
-        slug, title = filters.page_content_section(page)
-        self.assertIs(slug, None)
-        self.assertIs(title, None)
+        section_obj = filters.content_section(page)
+        self.assertIs(section_obj, None)
 
         page.es_meta = Mock(index='unicore-cms-content-ffl-za-qa')
-        slug, title = filters.page_content_section(page)
-        self.assertEqual(slug, 'ffl')
-        self.assertEqual(title, 'Facts for Life')
+        section_obj = filters.content_section(page)
+        self.assertEqual(section_obj.slug, 'ffl')
+        self.assertEqual(section_obj.title, 'Facts for Life')

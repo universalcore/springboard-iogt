@@ -13,7 +13,7 @@ def main(global_config, **settings):
     defaults['jinja2.filters'] += (
         '\nrecent_pages = springboard_iogt.filters:recent_pages'
         '\ncategory_dict = springboard_iogt.filters:category_dict\n'
-        'page_content_section = springboard_iogt.filters:page_content_section')
+        'content_section = springboard_iogt.filters:content_section')
     defaults.update(settings)
 
     config = Configurator(settings=defaults)
