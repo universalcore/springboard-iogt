@@ -82,6 +82,8 @@
         /* Content section-specific */
         .section-title { line-height: 32px; font-size: 32px; color: #fff; margin: 0; padding: 24px 24px; font-weight: bold; }
         .section-title a { color: #fff; }
+        .section-banner { padding: 0; margin: 0; }
+        .section-banner img { width: 100%; padding: 0; margin: 0; display: block; }
 
         /* Facts For Life */
         .articles .ffl a { color: #32bac2; }
