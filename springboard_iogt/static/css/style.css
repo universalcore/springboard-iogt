@@ -79,20 +79,29 @@
                 .articles .detail img { width: 100%; margin: 14px 0; display: block; }
                 .articles .detail .date { font-size: 13px; text-transform: uppercase; color: #bbb; }
 
+        /* Content section-specific */
+        .section-title { line-height: 32px; font-size: 32px; color: #fff; margin: 0; padding: 24px 24px; font-weight: bold; }
+        .section-title a { color: #fff; }
+
         /* Facts For Life */
         .articles .ffl a { color: #32bac2; }
+        .section-title.ffl { background-color: #32bac2; }
 
         /* Barefoot Law */
         .articles .barefootlaw a { color: #6ec17c; }
+        .section-title.barefootlaw { background-color: #6ec17c; }
 
         /* Mariestopes */
         .articles .mariestopes a { color: #e04a5a; }
+        .section-title.mariestopes { background-color: #e04a5a; }
 
         /* Straight Talk */
         .articles .straighttalk a { color: #c977b2; }
+        .section-title.straighttalk { background-color: #c977b2; }
 
         /* U-report */
         .articles .ureport a { color: #f18054; }
+        .section-title.ureport { background-color: #f18054; }
 
 
 /*  FOOTER  */

@@ -1,12 +1,10 @@
 {% extends "base.jinja2" %}
-{% from "molecules/section_banner.jinja2" import section_banner %}
+{% from "molecules/section_heading.jinja2" import section_banner, section_title %}
 {% from "molecules/page_listing.jinja2" import page_listing %}
 
 {% block content %}
 <div>
-        <div class="h1">
-            {{ section.title }}
-        </div>
+        {{ section_title(section) }}
 
         {% set localisation=section.set_indexes(all_localisations).filter(locale=language)[0] %}
         {{ section_banner(section, localisation) }}

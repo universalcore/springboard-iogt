@@ -1,5 +1,5 @@
 {% macro section_banner(section, localisation) -%}
-<div id="banner">
+<div class="section-banner {{ section.slug }}">
     {% if localisation and localisation.image_host and localisation.image %}
         <img alt="{% trans owner=section.owner %}Brought to you by {{ owner }}{% endtrans %}" src="{{ localisation.image_host }}{{ localisation|thumbor(320) }}"/>
     {% else %}
@@ -8,5 +8,12 @@
     <span>
         {% trans owner=section.owner %}Brought to you by {{ owner }}{% endtrans %}
     </span>
+</div>
+{%- endmacro %}
+
+
+{% macro section_title(section) -%}
+<div class="h1 section-title {{ section.slug }}">
+    <a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
 </div>
 {%- endmacro %}

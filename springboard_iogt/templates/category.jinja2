@@ -1,9 +1,13 @@
 {% extends "base.jinja2" %}
 {% from "molecules/page_listing.jinja2" import page_listing %}
+{% from "molecules/section_heading.jinja2" import section_title %}
 
 {% block content %}
 <div>
-    {# TODO: content section <div class="content-section">{{ content_section }}</div> #}
+
+    {% set section = category|content_section %}
+    {{ section_title(section) }}
+
     <div class="articles">
 
         <div class="h1">
