@@ -37,8 +37,8 @@
         <div class="h1">{% trans %}Explore IoGT{% endtrans %}</div>
         <ul>
             <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
-        {% for slug, title in content_sections %}
-            <li><a href="{{ 'content_section'|route_url(slug=slug) }}">{{ title }}</a>
+        {% for section in content_sections %}
+            <li><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
             </li>
         {% endfor %}
         </ul>

@@ -23,12 +23,10 @@ class TestUtils(SpringboardTestCase):
 
         self.assertTrue(ContentSection.exists(
             'barefootlaw', views.all_pages.get_indexes()))
-        section_obj = ContentSection(
-            'ffl',
-            views.all_pages,
-            views.all_categories,
-            views.all_localisations)
-        self.assertEqual(section_obj.index, 'ffl-master')
-        self.assertEqual(section_obj.pages.get_indexes(), ['ffl-master'])
+        section_obj = ContentSection('ffl')
+        self.assertEqual(section_obj.slug, 'ffl')
+        self.assertEqual(
+            section_obj.set_indexes(views.all_pages).get_indexes(),
+            ['ffl-master'])
         self.assertEqual(section_obj.title, 'Facts for Life')
         self.assertEqual(section_obj.owner, 'Facts For Life')

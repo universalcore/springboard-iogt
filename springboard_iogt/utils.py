@@ -31,21 +31,25 @@ class ContentSection(object):
         _('U-report'),
     ]
 
-    def __init__(self, slug, pages, categories, localisations):
+    def __init__(self, slug):
         self.slug = slug
         i = self.__class__.SLUGS.index(slug)
         self.owner = self.__class__.OWNERS[i]
         self.title = self.__class__.TITLES[i]
-        indexes = pages.get_indexes()
-        [self.index] = filter(lambda index: slug in index, indexes)
-        self.pages = pages.indexes(self.index)
-        self.categories = categories.indexes(self.index)
-        self.localisations = localisations.indexes(self.index)
+
+    def set_indexes(self, s_obj):
+        indexes = s_obj.get_indexes()
+        indexes = filter(lambda index: self.slug in index, indexes)
+        return s_obj.indexes(*indexes)
 
     @classmethod
     def exists(cls, slug, indexes):
         return (slug in cls.SLUGS and
                 any([index for index in indexes if slug in index]))
+
+    @classmethod
+    def all(cls):
+        return [cls(slug) for slug in cls.SLUGS]
 
 
 def get_redirect_url(request, param_name='next', default_route='home'):

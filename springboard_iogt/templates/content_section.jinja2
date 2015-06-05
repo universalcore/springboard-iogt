@@ -8,10 +8,10 @@
             {{ section.title }}
         </div>
 
-        {% set localisation=section.localisations.filter(locale=language)[0] %}
+        {% set localisation=section.set_indexes(all_localisations).filter(locale=language)[0] %}
         {{ section_banner(section, localisation) }}
 
-        {% set featured_pages=section.pages.filter(language=language, featured=True).order_by('-created_at')[:2] %}
+        {% set featured_pages=section.set_indexes(all_pages).filter(language=language, featured=True).order_by('-created_at')[:2] %}
         {% if featured_pages %}
         <div class="articles latest">
             <div class="h1">{{ _('Latest') }}</div>
@@ -21,8 +21,8 @@
         </div>
         {% endif %}
 
-        {% for category in section.categories.filter(language=language) %}
-            {% set category_pages=section.pages.filter(primary_category=category.uuid).order_by('-created_at')[:1] %}
+        {% for category in section.set_indexes(all_categories).filter(language=language) %}
+            {% set category_pages=all_pages.filter(primary_category=category.uuid).order_by('-created_at')[:1] %}
             {% if category_pages %}
             <div class="articles">
                 <div class="h1">
