@@ -1,5 +1,6 @@
 {% extends "base.jinja2" %}
 {% from "molecules/page_listing.jinja2" import page_listing %}
+{% from "molecules/pagination.jinja2" import pagination_links %}
 {% from "molecules/section_heading.jinja2" import section_title %}
 
 {% block content %}
@@ -14,11 +15,13 @@
             {{category.title}}
         </div>
 
-        {% for page in all_pages.filter(primary_category=category.uuid)[:20] %}
-            {{ page_listing(page) }}
+        {% set page_num = request.GET.get('p', 0)|int %}
+        {% set paginator = all_pages.filter(primary_category=category.uuid)|paginate(page_num, 10) %}
+        {% for page in paginator.get_page() %}
+            {{ page_listing(page.to_object()) }}
         {% endfor %}
 
-        {# TODO: pagination #}
+        {{ pagination_links(paginator, request, page_param='p') }}
     </div>
 </div>
 {% endblock %}
