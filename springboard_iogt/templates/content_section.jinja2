@@ -14,7 +14,7 @@
         <div class="articles latest">
             <div class="h1">{{ _('Latest') }}</div>
             {% for page in featured_pages %}
-                {{ page_listing(page) }}
+                {{ page_listing(page.to_object()) }}
             {% endfor %}
         </div>
         {% endif %}
@@ -27,7 +27,7 @@
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ category.title }}</a>
                 </div>
                 {% for page in category_pages %}
-                    {{ page_listing(page) }}
+                    {{ page_listing(page.to_object()) }}
                 {% endfor %}
                 <div class="pagination">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ _('See all in category') }}</a>
