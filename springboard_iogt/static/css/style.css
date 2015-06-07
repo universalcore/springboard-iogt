@@ -43,18 +43,11 @@
     #content { background: #fff; position: relative; }
 
         /* Frequently Used */
-        .h1 { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
+        .h1,
+        .pagination { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
         .listing { min-height: 45px; border-top: solid 1px #e4e4e4; }
-        .pagination { background: #eeeeee; padding: 8px 18px; }
-        .auth form .btns input,
-        .auth form .btns a,
-        .poll .btns input,
-        .listing .more a,
-        .pagination a,
-        .addcomment form .btns input,
-        .challenge .btns input,
-        .challenge .btns a { border: 0; }
-        .pagination a.right { display: none; }
+        .pagination { border-bottom: solid 1px #e4e4e4;}
+            .pagination span { color: #b0b0b0; }
         .align-right { float:right; }
 
         /* Articles */
@@ -65,7 +58,6 @@
                 .articles .full-image img { width: 100%; margin: 14px 0 14px 0; float: none; display: block; }
                 .articles .listing .h2 { margin: 0; padding: 0; color: #000;  }
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
-                .articles .pagination a { font-weight: bold; color: #000; }
                 .articles .detail .h2 { font-weight: bold; font-size: 20px; line-height: 28px; margin-bottom: 16px; }
                 .articles .detail .meta { font-weight: bold;}
             .articles .detail { padding: 24px; }
