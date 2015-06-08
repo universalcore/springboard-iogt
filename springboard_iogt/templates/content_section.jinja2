@@ -1,38 +1,34 @@
 {% extends "base.jinja2" %}
-{% from "molecules/section_banner.jinja2" import section_banner %}
+{% from "molecules/section_heading.jinja2" import section_banner, section_title %}
+{% from "molecules/page_listing.jinja2" import page_listing %}
 
 {% block content %}
 <div>
-        <div class="h1">
-            {{ section.title }}
-        </div>
+        {{ section_title(section) }}
 
-        {% set localisation=section.localisations.filter(locale=language)[0] %}
+        {% set localisation=section.set_indexes(all_localisations).filter(locale=language)[0] %}
         {{ section_banner(section, localisation) }}
 
-        {% set featured_pages=section.pages.filter(language=language, featured=True).order_by('-created_at')[:2] %}
+        {% set featured_pages=section.set_indexes(all_pages).filter(language=language, featured=True).order_by('-created_at')[:2] %}
         {% if featured_pages %}
         <div class="articles latest">
             <div class="h1">{{ _('Latest') }}</div>
             {% for page in featured_pages %}
-                {# TODO: use page_listing macro #}
-                <div class="h2">{{ page.title }}</div>
+                {{ page_listing(page) }}
             {% endfor %}
         </div>
         {% endif %}
 
-        {% for category in section.categories.filter(language=language) %}
-            {% set category_pages=section.pages.filter(primary_category=category.uuid).order_by('-created_at')[:1] %}
+        {% for category in section.set_indexes(all_categories).filter(language=language) %}
+            {% set category_pages=all_pages.filter(primary_category=category.uuid).order_by('-created_at')[:1] %}
             {% if category_pages %}
             <div class="articles">
                 <div class="h1">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ category.title }}</a>
                 </div>
                 {% for page in category_pages %}
-                    {# TODO: use page_listing macro #}
-                    <div class="h2">{{ page.title }}</div>
+                    {{ page_listing(page) }}
                 {% endfor %}
-                <div class="clr"></div>
                 <div class="pagination">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{{ _('See all in category') }}</a>
                 </div>

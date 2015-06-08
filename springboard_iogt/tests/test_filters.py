@@ -1,6 +1,8 @@
 from operator import attrgetter
 from datetime import datetime, timedelta
 
+from mock import Mock
+
 from pyramid import testing
 
 from springboard.tests import SpringboardTestCase
@@ -70,3 +72,13 @@ class TestFilters(SpringboardTestCase):
         self.assertNotEqual(result, result2)
         self.assertEqual(sorted(result, key=attrgetter('uuid')),
                          sorted(result2, key=attrgetter('uuid')))
+
+    def test_content_section(self):
+        [page] = self.mk_pages(self.workspace, count=1)
+        section_obj = filters.content_section(page)
+        self.assertIs(section_obj, None)
+
+        page.es_meta = Mock(index='unicore-cms-content-ffl-za-qa')
+        section_obj = filters.content_section(page)
+        self.assertEqual(section_obj.slug, 'ffl')
+        self.assertEqual(section_obj.title, 'Facts for Life')

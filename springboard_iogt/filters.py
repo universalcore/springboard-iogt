@@ -1,8 +1,15 @@
+import re
 import random
 from itertools import chain
 from datetime import datetime
 
 from elasticutils import F
+
+from springboard_iogt.utils import ContentSection
+
+
+CONTENT_SECTION_SLUG_RE = re.compile(
+    r'(?P<slug>%s)' % '|'.join(ContentSection.SLUGS))
 
 
 def recent_pages(s_pages, language, dt=None):
@@ -28,3 +35,11 @@ def category_dict(s_categories, uuids):
     categories = s_categories.filter(uuid__in=filter(None, uuids))
     return dict((category.uuid, category.to_object())
                 for category in categories)
+
+
+def content_section(obj):
+    index = obj.es_meta.index if obj.es_meta else ''
+    match = CONTENT_SECTION_SLUG_RE.search(index)
+    if not match:
+        return None
+    return ContentSection(match.group('slug'))

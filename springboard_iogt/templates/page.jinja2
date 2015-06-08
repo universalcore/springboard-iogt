@@ -1,45 +1,50 @@
 {% extends "base.jinja2" %}
+{% from "molecules/section_heading.jinja2" import section_title %}
 
 {% block content %}
 <div>
+    {% set section = page|content_section %}
+    {{ section_title(section) }}
+
     <div class="articles">
 
-        <div class="h1">
-            <a href="{{'category'|route_url(uuid=category.uuid)}}">{{category.title}}</a>
-        </div>
-
-        <div class="detail">
-            {% if page.image_host and page.image %}
-            <div class="head">
-                <div class="img">
-                    <a href="{{'page'|route_url(uuid=page.uuid)}}">
-                        <img alt='{{page.title}}' src="{{page.image_host}}{{page.image|thumbor(45, 45)}}"/>
-                    </a>
-                </div>
-            {% else %}
-            <div class="head no-pic">
-            {% endif %}
-                <div class="meta">{{page.created_at|format_date('%d %B %Y')}}</div>
-                <div class="h2">{{page.title}}</div>
-                <div class="meta">{{page.description|markdown}}</div>
+        <div class="{{ section.slug }}">
+            <div class="h1">
+                <a href="{{'category'|route_url(uuid=category.uuid)}}">{% trans %}Back to category{% endtrans %}</a>
             </div>
-            <div class="clr"></div>
-            <p>{{page.content|markdown}}</p>
-            {% if page.linked_pages %}
-                {% set linked_pages = all_pages.filter(uuid=page.linked_pages) %}
-                {% if linked_pages %}
-                <div class="items">
-                    {% for linked_page in linked_pages %}
-                    <div class="item">
-                        <a href="{{'page'|route_url(uuid=linked_page.uuid)}}">
-                            &raquo; {{linked_page.title}}
+
+            <div class="detail">
+                {% set has_image = page.image_host and page.image %}
+                <div class="head{% if not has_image %} no-pic{% endif %}">
+                    <div class="h2">{{page.title}}</div>
+                    {% if has_image %}
+                    <div class="img">
+                        <a href="{{'page'|route_url(uuid=page.uuid)}}">
+                            <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}"/>
                         </a>
                     </div>
-                    {% endfor %}
+                    {% endif %}
+                    <div class="meta">{{page.description}}</div>
                 </div>
+                <p>{{page.content}}</p>
+
+                {% if page.linked_pages %}
+                    {% set linked_pages = all_pages.filter(uuid__in=page.linked_pages) %}
+                    {% if linked_pages %}
+                    <div class="items">
+                        {% for linked_page in linked_pages %}
+                        <div class="item">
+                            <a href="{{'page'|route_url(uuid=linked_page.uuid)}}">{{linked_page.title}}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 {% endif %}
-            {% endif %}
+
+            </div>
         </div>
+
     </div>
+
 </div>
 {% endblock %}
