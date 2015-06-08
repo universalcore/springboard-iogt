@@ -24,7 +24,8 @@ def persona_tween_factory(handler, registry):
             if request.google_analytics:
                 persona = request.cookies[PERSONA_COOKIE_NAME]
                 request.google_analytics['path'] = update_query(
-                    request.google_analytics['path'], [('persona', persona)])
+                    request.google_analytics.get('path', request.path),
+                    [('persona', persona)])
 
             return response
 
