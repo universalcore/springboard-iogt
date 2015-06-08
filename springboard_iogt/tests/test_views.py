@@ -152,3 +152,19 @@ class TestIoGTViews(SpringboardTestCase):
         section_url_tags = html.find_all('a', href=re.compile(
             r'/section/(%s)/' % '|'.join(ContentSection.SLUGS)))
         self.assertEqual(len(section_url_tags), len(ContentSection.SLUGS))
+
+    def test_language_visibility(self):
+        settings = {
+            'featured_languages': 'eng_GB\nlug_UG',
+            'available_languages': 'eng_GB\nlug_UG'
+        }
+        app = self.mk_app(self.workspace, main=main, settings=settings)
+        html = app.get('/does/not/exist/', expect_errors=True).html
+        lang_el = html.find('div', class_='lang')
+        self.assertIn('English', lang_el.text)
+        self.assertIn('Luganda', lang_el.text)
+
+        settings['available_languages'] = 'eng_GB'
+        app = self.mk_app(self.workspace, main=main, settings=settings)
+        html = app.get('/does/not/exist/', expect_errors=True).html
+        self.assertFalse(html.find('div', class_='lang'))
