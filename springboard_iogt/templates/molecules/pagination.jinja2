@@ -1,0 +1,16 @@
+{% macro pagination_links(paginator, request, page_param='p') -%}
+<div class="pagination">
+    {% if paginator.has_previous_page() %}
+        {% set query = {page_param: paginator.page - 1} %}
+        <a href="{{ request.current_route_url(_query=query) }}">{{ _('Previous') }}</a>
+    {% else %}
+        <span>{{ _('Previous') }}</span>
+    {% endif %}&nbsp;|&nbsp;
+    {% if paginator.has_next_page() %}
+        {% set query = {page_param: paginator.page + 1} %}
+        <a href="{{ request.current_route_url(_query=query) }}">{{ _('Next') }}</a>
+    {% else %}
+        <span>{{ _('Next') }}</span>
+    {% endif %}
+</div>
+{%- endmacro %}
