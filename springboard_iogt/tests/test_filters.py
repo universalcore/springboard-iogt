@@ -42,7 +42,7 @@ class TestFilters(SpringboardTestCase):
                 '\n'.join(ws.working_dir for ws in workspaces)
         })
         views = SpringboardViews(self.mk_request())
-        now = datetime.utcnow()
+        now = datetime.utcnow().replace(hour=2)
 
         def set_created_at(workspace, page, i):
             page = page.update({'created_at': (
