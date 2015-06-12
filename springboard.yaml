@@ -43,7 +43,7 @@ models:
         type: string
 repositories:
   unicore-cms-content-barefootlaw-za-qa: https://github.com/universalcore/unicore-cms-content-barefootlaw-za-qa
-  unicore-cms-content-ffl-ug-prod: https://github.com/universalcore/unicore-cms-content-ffl-ug-prod
-  unicore-cms-content-mariestopes-ug-prod: https://github.com/universalcore/unicore-cms-content-mariestopes-ug-prod
+  unicore-cms-content-ffl-za-qa: https://github.com/universalcore/unicore-cms-content-ffl-za-qa
+  unicore-cms-content-mariestopes-za-qa: https://github.com/universalcore/unicore-cms-content-mariestopes-za-qa
   unicore-cms-content-straighttalk-za-qa: https://github.com/universalcore/unicore-cms-content-straighttalk-za-qa
   unicore-cms-content-ureport-za-qa: https://github.com/universalcore/unicore-cms-content-ureport-za-qa
