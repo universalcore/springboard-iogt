@@ -6,4 +6,4 @@ $pip install -e "${INSTALLDIR}/${REPO}/"
 
 springboard="${VENV}/bin/springboard"
 
-$springboard bootstrap --config prod.springboard.yaml
+$springboard clone --config prod.springboard.yaml
