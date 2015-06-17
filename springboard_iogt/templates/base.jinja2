@@ -39,11 +39,11 @@
         {% block menu %}
         <div class="h1">{% trans %}Explore IoGT{% endtrans %}</div>
         <ul>
-            <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         {% for section in content_sections %}
             <li><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
             </li>
         {% endfor %}
+        <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         </ul>
         {% endblock %}
     </div>
