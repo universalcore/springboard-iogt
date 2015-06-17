@@ -22,7 +22,7 @@
                     {{ page_listing(page.to_object()) }}
                 {% endfor %}
                 {% if category_pages|length > 3 %}
-                <div class="pagination">
+                <div class="more listing {{ section.slug }}">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{% trans category_title=category.title %}More {{ category_title }}{% endtrans %}</a>
                 </div>
                 {% endif %}
