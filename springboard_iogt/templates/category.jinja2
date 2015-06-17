@@ -16,7 +16,7 @@
         </div>
 
         {% set page_num = request.GET.get('p', 0)|int %}
-        {% set paginator = all_pages.filter(primary_category=category.uuid)|paginate(page_num, 10) %}
+        {% set paginator = all_pages.filter(primary_category=category.uuid).order_by('position', '-created_at')|paginate(page_num, 10) %}
         {% for page in paginator.get_page() %}
             {{ page_listing(page.to_object()) }}
         {% endfor %}
