@@ -10,18 +10,20 @@
         {{ section_banner(section, localisation) }}
 
         {% for category in section.set_indexes(all_categories).filter(language=language).order_by('position') %}
-            {% set category_pages=all_pages.filter(primary_category=category.uuid).order_by('position', '-created_at')[:1] %}
+            {% set category_pages=all_pages.filter(primary_category=category.uuid).order_by('position', '-created_at')[:4] %}
             {% if category_pages %}
             <div class="articles">
                 <div class="h1">
                     {{ category.title }}
                 </div>
-                {% for page in category_pages %}
+                {% for page in category_pages[:3] %}
                     {{ page_listing(page.to_object()) }}
                 {% endfor %}
+                {% if category_pages|length > 3 %}
                 <div class="pagination">
                     <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{% trans category_title=category.title %}More {{ category_title }}{% endtrans %}</a>
                 </div>
+                {% endif %}
             </div>
             {% endif %}
         {% endfor %}
