@@ -20,7 +20,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.workspace = self.mk_workspace()
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
-            'unicore.content_repo_urls': self.workspace.working_dir,
+            'unicore.content_repos': self.workspace.working_dir,
         })
 
     def tearDown(self):
@@ -132,12 +132,15 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_content_section(self):
         ffl_workspace = self.mk_workspace(name='ffl')
+        [category] = self.mk_categories(
+            ffl_workspace, count=1, position=1)
         [page] = self.mk_pages(
-            ffl_workspace, count=1,
-            created_at=datetime.utcnow().isoformat())
+            ffl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category.uuid)
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
-                                                    ffl_workspace.working_dir])
+            'unicore.content_repos': '\n'.join([self.workspace.working_dir,
+                                                ffl_workspace.working_dir])
         })
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
