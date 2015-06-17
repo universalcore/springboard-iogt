@@ -72,30 +72,31 @@
                 .articles .detail img { width: 100%; margin: 24px 0; display: block; }
 
         /* Content section-specific */
-        .section-title { line-height: 32px; font-size: 32px; color: #fff; margin: 0; padding: 24px 24px; font-weight: bold; }
+        .section-title { margin: 0; padding: 12px 0 0 0; background-color: #514392; }
+            .section-title div { margin: 0; padding: 24px 24px; line-height: 32px; font-size: 32px; font-weight: bold; }
             .section-title a { color: #fff; }
         .section-banner { padding: 0; margin: 0; }
             .section-banner img { width: 100%; padding: 0; margin: 0; display: block; }
 
         /* Facts For Life */
         .articles .ffl a { color: #32bac2; }
-        .section-title.ffl { background-color: #32bac2; }
+        .section-title.ffl div { background-color: #32bac2; }
 
         /* Barefoot Law */
         .articles .barefootlaw a { color: #6ec17c; }
-        .section-title.barefootlaw { background-color: #6ec17c; }
+        .section-title.barefootlaw div { background-color: #6ec17c; }
 
         /* Mariestopes */
         .articles .mariestopes a { color: #e04a5a; }
-        .section-title.mariestopes { background-color: #e04a5a; }
+        .section-title.mariestopes div { background-color: #e04a5a; }
 
         /* Straight Talk */
         .articles .straighttalk a { color: #c977b2; }
-        .section-title.straighttalk { background-color: #c977b2; }
+        .section-title.straighttalk div { background-color: #c977b2; }
 
         /* U-report */
         .articles .ureport a { color: #f18054; }
-        .section-title.ureport { background-color: #f18054; }
+        .section-title.ureport div { background-color: #f18054; }
 
         /* Personae */
         .personae { padding: 0; margin: 0; }

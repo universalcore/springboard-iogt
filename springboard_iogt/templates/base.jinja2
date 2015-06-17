@@ -26,7 +26,9 @@
         </div>
         {% endif %}
         <div class="logo">
+            {% block logo %}
             <a href="{{ 'home'|route_url }}" class="logo"><img alt="{{ _('IoGT logo') }}" src="{{ 'springboard:static/img/logo000000.jpg'|static_url }}" /></a>
+            {% endblock %}
         </div>
     </div>
 

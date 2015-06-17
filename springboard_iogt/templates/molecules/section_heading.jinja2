@@ -11,6 +11,8 @@
 
 {% macro section_title(section) -%}
 <div class="h1 section-title {{ section.slug }}">
-    <a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
+    <div>
+        <a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
+    </div>
 </div>
 {%- endmacro %}
