@@ -10,7 +10,7 @@
 
         <div class="{{ section.slug }}">
             <div class="h1">
-                <a href="{{'category'|route_url(uuid=category.uuid)}}">{% trans %}Back to category{% endtrans %}</a>
+                <a href="{{'category'|route_url(uuid=category.uuid)}}">{{ category.title }}</a>
             </div>
 
             <div class="detail">
