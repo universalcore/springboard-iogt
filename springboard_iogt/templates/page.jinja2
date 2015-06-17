@@ -24,9 +24,9 @@
                         </a>
                     </div>
                     {% endif %}
-                    <div class="meta">{{page.description}}</div>
+                    <div class="meta">{{page.description|markdown}}</div>
                 </div>
-                <p>{{page.content}}</p>
+                <p>{{page.content|markdown}}</p>
 
                 {% if page.linked_pages %}
                     {% set linked_pages = all_pages.filter(uuid__in=page.linked_pages) %}
