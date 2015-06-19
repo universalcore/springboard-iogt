@@ -42,8 +42,8 @@ models:
         index: not_analyzed
         type: string
 repositories:
-  unicore_cms_barefootlaw_za: https://github.com/universalcore/unicore-cms-content-barefootlaw-za-qa
-  unicore_cms_ffl_za: https://github.com/universalcore/unicore-cms-content-ffl-za-qa
-  unicore_cms_mariestopes_za: https://github.com/universalcore/unicore-cms-content-mariestopes-za-qa
-  unicore_cms_straighttalk_za: https://github.com/universalcore/unicore-cms-content-straighttalk-za-qa
-  unicore_cms_ureport_za: https://github.com/universalcore/unicore-cms-content-ureport-za-qa
+  unicore_frontend_barefootlaw_za: https://github.com/universalcore/unicore-cms-content-barefootlaw-za-qa
+  unicore_frontend_ffl_za: https://github.com/universalcore/unicore-cms-content-ffl-za-qa
+  unicore_frontend_mariestopes_za: https://github.com/universalcore/unicore-cms-content-mariestopes-za-qa
+  unicore_frontend_straighttalk_za: https://github.com/universalcore/unicore-cms-content-straighttalk-za-qa
+  unicore_frontend_ureport_za: https://github.com/universalcore/unicore-cms-content-ureport-za-qa
