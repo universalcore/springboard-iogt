@@ -10,6 +10,7 @@
     html, body { margin: 0; padding: 0; background: #fff; font-size: 16px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4em; color: #666; }
     input, select, textarea { font-size: 95%; font-family: Arial, Helvetica, sans-serif; }
     a { color: #9630c8; text-decoration: none; font-weight: bold; }
+    ul {list-style: none;   margin: 0; padding: 0;}
     .clr { width: 100%; height: 0px; clear: both; display: block; }
     .purple { background: #514392; color: #fff; }
     .grey { background: #ededed; color: #666; }
@@ -100,10 +101,8 @@
 
         /* Personae */
         .personae { padding: 0; margin: 0; }
-            .personae .listing { margin: 0; padding: 0; }
-                .personae .listing a { display: block; padding: 6px 24px; }
-                .personae .listing img { width: 40px; margin: 0 6px 0 0; float: left; }
-                .personae .listing span { line-height: 40px; }
+            .personae a { display: block; padding: 0.4em 24px; }
+
 
 
 /*  FOOTER  */
