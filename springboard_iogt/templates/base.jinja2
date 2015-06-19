@@ -42,7 +42,8 @@
         <div class="h1">{% trans %}Explore IoGT{% endtrans %}</div>
         <ul>
         {% for section in content_sections %}
-            <li><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
+            {% set section_url=content_section_url_overrides.get(section.slug, 'content_section'|route_url(slug=section.slug)) %}
+            <li><a href="{{ section_url }}">{{ section.title }}</a>
             </li>
         {% endfor %}
         <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>

@@ -1,0 +1,8 @@
+{% macro link_listing(text, url, extra_classes="") -%}
+    <div class="listing link-listing {{ extra_classes }}">
+        <div class="h2">
+            <a href="{{ url }}">{{ text }}</a>
+        </div>
+        <div class="clr"></div>
+    </div>
+{%- endmacro %}
