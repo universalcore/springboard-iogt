@@ -176,5 +176,5 @@ class TestIoGTViews(SpringboardTestCase):
         app = self.mk_app(self.workspace, main=main)
         response = app.get('/about/')
         self.assertEqual(response.status_int, 200)
-        response = app.get('/about/__LOCALE__=swa_TZ', expect_errors=True)
+        response = app.get('/about/?_LOCALE_=swa_TZ', expect_errors=True)
         self.assertEqual(response.status_int, 404)
