@@ -171,3 +171,10 @@ class TestIoGTViews(SpringboardTestCase):
         app = self.mk_app(self.workspace, main=main, settings=settings)
         html = app.get('/does/not/exist/', expect_errors=True).html
         self.assertFalse(html.find('div', class_='lang'))
+
+    def test_about(self):
+        app = self.mk_app(self.workspace, main=main)
+        response = app.get('/about/')
+        self.assertEqual(response.status_int, 200)
+        response = app.get('/about/__LOCALE__=swa_TZ', expect_errors=True)
+        self.assertEqual(response.status_int, 404)
