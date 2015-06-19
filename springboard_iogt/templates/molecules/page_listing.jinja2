@@ -13,7 +13,7 @@
         <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}"/>
     </a>
     {% endif %}
-    <p>{{ page.description|markdown }}</p>
+    <div>{{ page.description|markdown }}</div>
     <div class="clr"></div>
 {%- endmacro %}
 

@@ -52,8 +52,7 @@
 
     <div id="footer">
         <div>&copy; {% trans %}The Internet of Good Things{% endtrans %}</div>
-        {# TODO flat page links for About #}
-        <div><span><a href="#">{{ _('About Internet of Good Things') }}</a></span></div>
+        <div><span><a href="{{ 'about'|route_url }}">{{ _('About Internet of Good Things') }}</a></span></div>
     </div>
 
 </body>

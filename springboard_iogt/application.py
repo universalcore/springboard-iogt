@@ -25,6 +25,7 @@ def main(global_config, **settings):
     config.add_route('personae', '/persona/')
     config.add_route('skip_persona_selection', '/persona/skip/')
     config.add_route('select_persona', '/persona/{slug}/')
+    config.add_route('about', '/about/')
     config.add_tween('springboard_iogt.views.persona_tween_factory')
     config.scan('.views')
     config.scan('.events')
