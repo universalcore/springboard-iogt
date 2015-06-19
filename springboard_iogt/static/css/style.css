@@ -29,9 +29,9 @@
 /*  SUBMENU  */
 
     #submenu .h1 { background: #514392; color: #fff; }
-    #submenu ul { list-style: none; padding: 0; margin: 0;}
-    #submenu li { line-height: 24px; padding: 14px 24px; background: #ededed; border-bottom: solid 1px #fff; }
-
+    #submenu li { background: #ededed; }
+    #submenu li a{ display: block; border-bottom: solid 1px #fff; padding: 14px 24px;}
+    #submenu p{ display: none;}
 
 /*  BANNER  */
 

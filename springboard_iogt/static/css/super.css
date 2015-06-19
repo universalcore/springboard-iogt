@@ -8,3 +8,28 @@
     .personae .teenager a{background-image: url('img/persona_teenager.png');}
     .personae .parent a{background-image: url('img/persona_parent.png');}
     .personae .worker a{background-image: url('img/persona_worker.png');}
+
+    #submenu ul li a{
+        padding: 1em 3em;
+        color: #666;
+    }
+    #submenu li { padding: 0; background: #ededed; border-bottom: solid 1px #fff; }
+    #submenu li a {
+        padding: 0;
+        background: transparent 20px 20px no-repeat;
+        background-size: 15px 15px;
+    }
+
+    #submenu p{ 
+        display: block; 
+        font-weight: 100;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #submenu .barefootlaw a{background-image: url("img/arrow_green.png")}
+    #submenu .ebola a{background-image: url("img/arrow_yellow.png");}
+    #submenu .ffl a{background-image: url("img/arrow_turquoise.png");}
+    #submenu .mariestopes a{background-image: url("img/arrow_red.png");}
+    #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
+    #submenu .ureport a{background-image: url("img/arrow_orange.png");}
