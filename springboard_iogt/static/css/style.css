@@ -99,6 +99,10 @@
         .articles .ureport a { color: #f18054; }
         .section-title.ureport div { background-color: #f18054; }
 
+        /* Ebola */
+        .articles .ebola a { color: #fdbe61; }
+        .section-title.ebola div { background-color: #fdbe61; }
+
         /* Personae */
         .personae { padding: 0; margin: 0; }
             .personae a { display: block; padding: 0.4em 24px; }
