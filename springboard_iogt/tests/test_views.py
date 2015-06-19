@@ -42,7 +42,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(response.status_int, 200)
         html = response.html
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
-        self.assertEqual(len(html.find_all('a', href=re_section_url)), 5)
+        self.assertEqual(len(html.find_all('a', href=re_section_url)), 6)
 
     def test_persona_tween(self):
         app = self.mk_app(self.workspace, main=main)

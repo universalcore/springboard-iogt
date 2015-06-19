@@ -14,6 +14,7 @@ _ = translation_string_factory
 class ContentSection(object):
     SLUGS = [
         'barefootlaw',
+        'ebola',
         'ffl',
         'mariestopes',
         'straighttalk',
@@ -21,6 +22,7 @@ class ContentSection(object):
     ]
     OWNERS = [
         _('Barefoot Law'),
+        _('Ebola Response'),
         _('Facts For Life'),
         _('Marie Stopes'),
         _('Straight Talk'),
@@ -28,6 +30,7 @@ class ContentSection(object):
     ]
     TITLES = [
         _('Ur rights'),
+        _('StopEbola'),
         _('Facts for Life'),
         _('TeenTalk'),
         _('Sex+You'),
