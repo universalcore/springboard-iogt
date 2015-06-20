@@ -5,7 +5,7 @@
 {% block content %}
 <div>
 
-    <div class="h1">{% trans %}Recommended{% endtrans %}</div>
+    <div class="h1"><div class="detail">{% trans %}Recommended{% endtrans %}</div></div>
 
     {% set pages=all_pages|recent_pages(language) %}
     <div class="articles">

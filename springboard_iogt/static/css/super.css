@@ -8,18 +8,37 @@
     .personae .teenager a{background-image: url('img/persona_teenager.png');}
     .personae .parent a{background-image: url('img/persona_parent.png');}
     .personae .worker a{background-image: url('img/persona_worker.png');}
+    
+    #submenu .h1 {
+        padding: 0;
+    }
+    #submenu .h1 .detail{
+        padding: 1em 3em;
+        background: 20px 20px no-repeat;
+        background-size: 15px 15px;
+        background-image: url("img/arrow_down_grey.png");
+    }
 
-    #submenu ul li a{
+    #content .h1 {
+        padding: 0;
+    }
+    #content .h1 .detail{
+        padding: 1em 3em;
+        background: 20px 20px no-repeat;
+        background-size: 15px 15px;
+        background-image: url("img/arrow_down_grey.png");
+    }
+
+    #submenu li { 
+        padding: 0; 
+        background: #ededed; 
+        border-bottom: solid 1px #fff; }
+    #submenu li a {
         padding: 1em 3em;
         color: #666;
-    }
-    #submenu li { padding: 0; background: #ededed; border-bottom: solid 1px #fff; }
-    #submenu li a {
-        padding: 0;
         background: transparent 20px 20px no-repeat;
         background-size: 15px 15px;
     }
-
     #submenu p{ 
         display: block; 
         font-weight: 100;
