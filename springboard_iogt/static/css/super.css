@@ -67,11 +67,10 @@
     #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
     #submenu .ureport a{background-image: url("img/arrow_orange.png");}
     
-    #content .articles .listing {border-top: 10px solid white; position: relative;}
-    #content .articles .ffl:after {background-color:#32bac2; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    #content .articles .barefootlaw:after {background-color:#6ec17c; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    #content .articles .mariestopes:after {background-color:#e04a5a; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    #content .articles .straighttalk:after {background-color:#c977b2; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    #content .articles .ureport:after {background-color:#f18054; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    #content .articles .ebola:after {background-color:#fdbe61; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
-    
+    #content .home .articles .listing {border-top: 10px solid white; position: relative;}
+    #content .home .articles .ffl:after {background-color:#32bac2; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+    #content .home .articles .barefootlaw:after {background-color:#6ec17c; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+    #content .home .articles .mariestopes:after {background-color:#e04a5a; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+    #content .home .articles .straighttalk:after {background-color:#c977b2; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+    #content .home .articles .ureport:after {background-color:#f18054; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+    #content .home .articles .ebola:after {background-color:#fdbe61; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}

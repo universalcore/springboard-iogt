@@ -6,7 +6,8 @@
 <div>
 
     <div class="h1"><div class="detail">{% trans %}Recommended{% endtrans %}</div></div>
-
+    
+    <div class="home">
     {% set pages=all_pages|recent_pages(language) %}
     <div class="articles">
     {% for page in pages %}
@@ -16,7 +17,7 @@
             {{ page_listing_with_section(page) }}
         {% endif %}
     {% endfor %}
-
+    </div>
     {# Call-to-action for FFL and Ebola #}
     {% set ffl_url=content_section_url_overrides.get('ffl') %}
     {% if ffl_url %}
