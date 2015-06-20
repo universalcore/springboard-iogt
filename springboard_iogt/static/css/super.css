@@ -74,3 +74,11 @@
     #content .home .articles .straighttalk:after {background-color:#c977b2; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
     #content .home .articles .ureport:after {background-color:#f18054; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
     #content .home .articles .ebola:after {background-color:#fdbe61; padding:0; margin:0; display:block; content: ""; width:90%; height:10px; position: absolute;right: 0;top:-10px;}
+
+    .cta .h2 a {
+        padding: 10px;
+        color: white;
+        display: block;
+        background-color: #28B0B6
+        
+    }

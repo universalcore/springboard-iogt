@@ -107,7 +107,9 @@
         .personae { padding: 0; margin: 0; }
             .personae a { display: block; padding: 0.4em 24px; }
 
+/* CALL TO ACTION */
 
+.cta .h2 {padding: 24px;}
 
 /*  FOOTER  */
 
