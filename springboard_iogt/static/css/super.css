@@ -29,6 +29,20 @@
         background-image: url("img/arrow_down_grey.png");
     }
 
+    #content .h1 .back{
+        padding: 1em 3em;
+        background: 20px 20px no-repeat;
+        background-size: 15px 15px;
+        background-image: url("img/arrow_red.png");
+    }
+    
+    #content .articles .barefootlaw .h1 .back{background-image: url("img/arrow_green_flipped.png")}
+    #content .articles .ebola .h1 .back{background-image: url("img/arrow_yellow_flipped.png");}
+    #content .articles .ffl .h1 .back{background-image: url("img/arrow_turquoise_flipped.png");}
+    #content .articles .mariestopes .h1 .back{background-image: url("img/arrow_red_flipped.png");}
+    #content .articles .straighttalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
+    #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange.png");}
+
     #submenu li { 
         padding: 0; 
         background: #ededed; 
