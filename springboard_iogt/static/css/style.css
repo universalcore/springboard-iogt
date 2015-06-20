@@ -46,7 +46,7 @@
         /* Frequently Used */
         .h1,
         .pagination { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
-        .listing { min-height: 45px; border-top: solid 1px #e4e4e4; }
+        .listing { min-height: 45px; border-bottom: solid 1px #e4e4e4; }
         .pagination { border-bottom: solid 1px #e4e4e4;}
             .pagination span { color: #b0b0b0; }
         .align-right { float:right; }
