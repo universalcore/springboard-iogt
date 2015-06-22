@@ -15,7 +15,7 @@
                 <a href="{{'category'|route_url(uuid=category.uuid)}}">{{ category.title }}</a>
             </div></div>
 
-            <div class="detail">
+            <div class="article">
                 {% set has_image = page.image_host and page.image %}
                 <div class="head{% if not has_image %} no-pic{% endif %}">
                     <div class="h2">{{page.title}}</div>

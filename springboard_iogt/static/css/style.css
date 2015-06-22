@@ -59,9 +59,10 @@
                 .articles .full-image img { width: 100%; margin: 14px 0 14px 0; float: none; display: block; }
                 .articles .listing .h2 { margin: 0; padding: 0; color: #000;  }
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
-                .articles .detail .h2 { font-weight: bold; font-size: 20px; line-height: 28px; margin-bottom: 16px; }
-                .articles .detail .meta { font-weight: bold;}
-                .articles .detail pre {
+                .articles .article{ padding: 14px 24px;}
+                .articles .article .h2 { font-weight: bold; font-size: 20px; line-height: 28px; margin-bottom: 16px; }
+                .articles .article .meta { font-weight: bold;}
+                .articles .article pre {
                     word-break: break-all; /* webkit */
                     word-wrap: break-word;
                     white-space: pre;
@@ -69,7 +70,7 @@
                     white-space: pre-wrap;
                     white-space: pre\9; /* IE7+ */
                 }
-                .articles .detail img { width: 100%; margin: 24px 0; display: block; }
+                .articles .article img { width: 100%; margin: 24px 0; display: block; }
 
         /* Content section-specific */
         .section-title { margin: 0; padding: 12px 0 0 0; background-color: #514392; }
@@ -116,6 +117,11 @@
     .cta .straighttalk .h2 a{color: #c977b2;}
     .cta .ureport .h2 a{color:#f18054;}
     .cta .ebola .h2 a{color: #fdbe61;}
+
+/* PERSONA*/
+    #content ul.personae{list-style: none; padding: 13px 0px;}
+
+
 /*  FOOTER  */
 
     #footer { padding: 24px; position: relative; }
