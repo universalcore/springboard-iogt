@@ -47,6 +47,7 @@
             <li class="{{section.slug}}"><a href="{{ section_url }}">{{ section.title }}<p>{{section.descriptor}}</p></a>
             </li>
         {% endfor %}
+            <li class="home"><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         </ul>
         {% endblock %}
     </div>
