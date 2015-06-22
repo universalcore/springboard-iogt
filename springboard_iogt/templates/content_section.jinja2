@@ -15,9 +15,9 @@
             {% set category_pages=all_pages.filter(primary_category=category.uuid).order_by('position', '-created_at')[:4] %}
             {% if category_pages %}
             <div class="articles">
-                <div class="h1">
+                <div class="h1"><div class="detail">
                     {{ category.title }}
-                </div>
+                </div></div>
                 {% for page in category_pages[:3] %}
                     {{ page_listing(page.to_object()) }}
                 {% endfor %}

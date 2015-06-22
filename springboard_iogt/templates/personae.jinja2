@@ -3,15 +3,15 @@
 
 {% block content %}
 <div>
-    <div class="h1">{% trans %}Who are you?{% endtrans %}</div>
+    <div class="h1 pad">{% trans %}Who are you?{% endtrans %}</div>
     {% set query=({'next': request.GET['next']} if 'next' in request.GET else None) %}
-    <div class="personae">
-        {{ persona('child', _('Child'), query) }}
-        {{ persona('teenager', _('Teenager'), query) }}
-        {{ persona('parent', _('Parent'), query) }}
-        {{ persona('worker', _('Worker'), query) }}
-    </div>
-    <div class="h1 personae-skip">
+    <ul class="personae">
+        <li class="child">{{ persona('child', _('Child'), query) }}</li>
+        <li class="teenager">{{ persona('teenager', _('Teenager'), query) }}</li>
+        <li class="parent">{{ persona('parent', _('Parent'), query) }}</li>
+        <li class="worker">{{ persona('worker', _('Worker'), query) }}</li>
+    </ul>
+    <div class="h1 personae-skip pad">
         <a href="{{ 'skip_persona_selection'|route_url(_query=query) }}">{% trans %}Skip{% endtrans %}</a>
     </div>
 </div>

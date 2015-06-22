@@ -11,9 +11,9 @@
     <div class="articles">
 
         <div class="{{ section.slug }}">
-            <div class="h1">
+            <div class="h1"><div class="back">
                 <a href="{{'category'|route_url(uuid=category.uuid)}}">{{ category.title }}</a>
-            </div>
+            </div></div>
 
             <div class="detail">
                 {% set has_image = page.image_host and page.image %}
