@@ -61,7 +61,6 @@
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
                 .articles .detail .h2 { font-weight: bold; font-size: 20px; line-height: 28px; margin-bottom: 16px; }
                 .articles .detail .meta { font-weight: bold;}
-            .articles .detail { padding: 24px; }
                 .articles .detail pre {
                     word-break: break-all; /* webkit */
                     word-wrap: break-word;
