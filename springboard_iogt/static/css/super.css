@@ -81,8 +81,29 @@
 
     .cta .h2 a {
         padding: 10px;
-        color: white;
         display: block;
-        background-color: #28B0B6
-        
+    }
+    .cta .ffl .h2 a{
+        color: white;
+        background-color: #32bac2;
+    }
+    .cta .barefootlaw .h2 a{
+        color: white;
+        background-color: #6ec17c;
+    }
+    .cta .mariestopes .h2 a{
+        color: white;
+        background-color: #e04a5a;
+    }
+    .cta .straighttalk .h2 a{
+        color: white;
+        background-color: #c977b2;
+    }
+    .cta .ureport .h2 a{
+        color: white;
+        background-color: #f18054;
+    }
+    .cta .ebola .h2 a{
+        color: white;
+        background-color: #fdbe61;
     }
