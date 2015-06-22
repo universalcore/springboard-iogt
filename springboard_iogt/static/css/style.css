@@ -116,6 +116,11 @@
     .cta .straighttalk .h2 a{color: #c977b2;}
     .cta .ureport .h2 a{color:#f18054;}
     .cta .ebola .h2 a{color: #fdbe61;}
+
+/* PERSONA*/
+    #content ul.personae{list-style: none;}
+
+
 /*  FOOTER  */
 
     #footer { padding: 24px; position: relative; }
