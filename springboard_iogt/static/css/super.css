@@ -1,3 +1,10 @@
+    @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+    /*  GLOBALS  */
+
+    html, body { font-size: 18px; font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; }
+    input, select, textarea { font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; }
+
     .personae li{border-bottom: solid 2px #e4e4e4; }
     .personae a {
         padding: 2em 6em;
@@ -8,7 +15,7 @@
     .personae .teenager a{background-image: url('img/persona_teenager.png');}
     .personae .parent a{background-image: url('img/persona_parent.png');}
     .personae .worker a{background-image: url('img/persona_worker.png');}
-    
+
     #submenu .h1 {
         padding: 0;
     }
@@ -35,19 +42,19 @@
         background-size: 15px 15px;
         background-image: url("img/arrow_red.png");
     }
-    
+
     #content .articles .barefootlaw .h1 .back{background-image: url("img/arrow_green_flipped.png")}
     #content .articles .ebola .h1 .back{background-image: url("img/arrow_yellow_flipped.png");}
     #content .articles .ffl .h1 .back{background-image: url("img/arrow_turquoise_flipped.png");}
     #content .articles .mariestopes .h1 .back{background-image: url("img/arrow_red_flipped.png");}
     #content .articles .straighttalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
     #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange.png");}
-    
+
     .articles .detail { padding: 24px; }
 
-    #submenu li { 
-        padding: 0; 
-        background: #ededed; 
+    #submenu li {
+        padding: 0;
+        background: #ededed;
         border-bottom: solid 1px #fff; }
     #submenu li a {
         padding: 1em 3em;
@@ -55,8 +62,8 @@
         background: transparent 20px 20px no-repeat;
         background-size: 15px 15px;
     }
-    #submenu p{ 
-        display: block; 
+    #submenu p{
+        display: block;
         font-weight: 100;
         margin: 0;
         font-size: 14px;
@@ -69,7 +76,7 @@
     #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
     #submenu .ureport a{background-image: url("img/arrow_orange.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
-    
+
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
     #content .home .articles .ffl:after {background-color:#32bac2; }
@@ -111,6 +118,6 @@
     #content .section-title.h1 {padding: 12px 0 0 0;}
 
     #content .h1.pad{padding: 14px 24px;}
-    
+
     /* PERSONA*/
     #content ul.personae{padding: 0;}
