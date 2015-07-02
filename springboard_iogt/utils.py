@@ -31,8 +31,8 @@ class ContentSection(object):
     TITLES = [
         _('U-report'),
         _('Your Rights'),
-        _('Health Talk'),
         _('My Family'),
+        _('Health Talk'),
         _('StopEbola'),
         _('Facts for Life')
     ]
