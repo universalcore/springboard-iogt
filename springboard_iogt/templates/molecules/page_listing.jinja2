@@ -2,7 +2,7 @@
     {% set has_image = page.image and page.image_host %}
     {% if image_first and has_image %}
     <a href="{{ 'page'|route_url(uuid=page.uuid) }}">
-        <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}"/>
+        <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
     </a>
     {% endif %}
     <div class="h2">
@@ -10,7 +10,7 @@
     </div>
     {% if not image_first and has_image %}
     <a href="{{ 'page'|route_url(uuid=page.uuid) }}">
-        <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}"/>
+        <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
     </a>
     {% endif %}
     <p>{{ page.description|markdown }}</p>

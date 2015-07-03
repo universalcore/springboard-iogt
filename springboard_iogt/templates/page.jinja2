@@ -22,7 +22,7 @@
                     {% if has_image %}
                     <div class="img">
                         <a href="{{'page'|route_url(uuid=page.uuid)}}">
-                            <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}"/>
+                            <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
                         </a>
                     </div>
                     {% endif %}
