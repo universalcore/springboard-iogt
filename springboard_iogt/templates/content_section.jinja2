@@ -23,7 +23,9 @@
                 {% endfor %}
                 {% if category_pages|length > 3 %}
                 <div class="more listing {{ section.slug }}">
-                    <a href="{{ 'category'|route_url(uuid=category.uuid) }}">{% trans category_title=category.title %}More {{ category_title }}{% endtrans %}</a>
+                    {% set category_url='category'|route_url(uuid=category.uuid) %}
+                    {% set category_title_link=('<a href="%s">%s</a>' % (category_url, category.title))|safe %}
+                    {% trans %}More {{ category_title_link }}{% endtrans %}
                 </div>
                 {% endif %}
             </div>
