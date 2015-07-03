@@ -21,7 +21,7 @@
     }
     #submenu .h1 .detail{
         padding: 1em 3em;
-        background: 20px 20px no-repeat;
+        background: 20px 22px no-repeat;
         background-size: 15px 15px;
         background-image: url("img/arrow_down_grey.png");
     }
@@ -31,14 +31,14 @@
     }
     #content .h1 .detail{
         padding: 1em 3em;
-        background: 20px 20px no-repeat;
+        background: 20px 22px no-repeat;
         background-size: 15px 15px;
         background-image: url("img/arrow_down_grey.png");
     }
 
     #content .h1 .back{
         padding: 1em 3em;
-        background: 20px 20px no-repeat;
+        background: 20px 22px no-repeat;
         background-size: 15px 15px;
         background-image: url("img/arrow_red.png");
     }
@@ -59,10 +59,10 @@
     #submenu li a {
         padding: 1em 3em;
         color: #666;
-        background: transparent 20px 20px no-repeat;
+        background: transparent 20px 23px no-repeat;
         background-size: 15px 15px;
     }
-    #submenu p{
+    #submenu p {
         display: block;
         font-weight: 100;
         margin: 0;
