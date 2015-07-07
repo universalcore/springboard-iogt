@@ -18,7 +18,7 @@ class TestFilters(SpringboardTestCase):
         self.workspace = self.mk_workspace()
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
-            'unicore.content_repos': self.workspace.working_dir,
+            'unicore.content_repo_urls': self.workspace.working_dir,
         })
 
     def tearDown(self):
@@ -38,7 +38,7 @@ class TestFilters(SpringboardTestCase):
                       self.mk_workspace(name='test_recent_pages-2')]
         testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
-            'unicore.content_repos':
+            'unicore.content_repo_urls':
                 '\n'.join(ws.working_dir for ws in workspaces)
         })
         views = SpringboardViews(self.mk_request())

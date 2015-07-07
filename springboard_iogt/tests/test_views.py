@@ -20,7 +20,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.workspace = self.mk_workspace()
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
-            'unicore.content_repos': self.workspace.working_dir,
+            'unicore.content_repo_urls': self.workspace.working_dir,
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
                 '\nebola = http://za.ebola.qa-hub.unicore.io/'
@@ -153,8 +153,8 @@ class TestIoGTViews(SpringboardTestCase):
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid)
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repos': '\n'.join([self.workspace.working_dir,
-                                                ffl_workspace.working_dir])
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
         })
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
