@@ -171,3 +171,45 @@ class TestIoGTViews(SpringboardTestCase):
         app = self.mk_app(self.workspace, main=main, settings=settings)
         html = app.get('/does/not/exist/', expect_errors=True).html
         self.assertFalse(html.find('div', class_='lang'))
+
+    @patch('unicore.google.tasks.pageview.delay')
+    def test_ga_page_titles(self, mock_task):
+        app = self.mk_app(
+            self.workspace, main=main,
+            settings={'ga.profile_id': 'ID-000',
+                      'ga.persona_dimension_id': 'dimension0'})
+
+        next_url = 'http://localhost/page/1234/'
+        querystring = urlencode({'next': next_url})
+
+        app.get('/persona/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Choose Persona')
+
+        app.get('/persona/worker/?%s' % querystring)
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Selected Persona')
+
+        app.get('/persona/skip/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Skip Persona Selection')
+
+    @patch('unicore.google.tasks.pageview.delay')
+    def test_section_ga_page_title(self, mock_task):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        [category] = self.mk_categories(ffl_workspace, count=1, position=1)
+        [page] = self.mk_pages(
+            ffl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category.uuid)
+        app = self.mk_app(self.workspace, main=main, settings={
+            'ga.profile_id': 'ID-000',
+            'ga.persona_dimension_id': 'dimension0',
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
+        })
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
+
+        app.get('/section/ffl/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Facts for Life')
