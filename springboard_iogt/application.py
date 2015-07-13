@@ -31,6 +31,7 @@ def main(global_config, **settings):
     config.scan('.events')
 
     config.include('springboard.config')
+    config.configure_celery(global_config['__file__'])
     config.override_asset(
         to_override='springboard:templates/',
         override_with='springboard_iogt:templates/')
