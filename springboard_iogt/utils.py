@@ -13,25 +13,28 @@ _ = translation_string_factory
 
 class ContentSection(object):
     SLUGS = [
+        'ureport',
         'barefootlaw',
-        'ffl',
         'mariestopes',
         'straighttalk',
-        'ureport'
+        'ebola',
+        'ffl'
     ]
     OWNERS = [
+        _('U-report'),
         _('Barefoot Law'),
-        _('Facts For Life'),
         _('Marie Stopes'),
         _('Straight Talk'),
-        _('U-report'),
+        _('Ebola Response'),
+        _('Facts For Life')
     ]
     TITLES = [
-        _('Ur rights'),
-        _('Facts for Life'),
-        _('TeenTalk'),
-        _('Sex+You'),
         _('U-report'),
+        _('Your Rights'),
+        _('My Family'),
+        _('Health Talk'),
+        _('StopEbola'),
+        _('Facts for Life')
     ]
 
     def __init__(self, slug):

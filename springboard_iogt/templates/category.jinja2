@@ -13,9 +13,9 @@
 
     <div class="articles">
 
-        <div class="h1">
+        <div class="h1"><div class="detail">
             {{category.title}}
-        </div>
+        </div></div>
 
         {% set page_num = request.GET.get('p', 0)|int %}
         {% set paginator = all_pages.filter(primary_category=category.uuid).order_by('position', '-created_at')|paginate(page_num, 10) %}

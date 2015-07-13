@@ -29,8 +29,9 @@
 
     #submenu .h1 { background: #514392; color: #fff; }
     #submenu ul { list-style: none; padding: 0; margin: 0;}
-    #submenu li { line-height: 24px; padding: 14px 24px; background: #ededed; border-bottom: solid 1px #fff; }
-
+    #submenu li { background: #ededed; }
+    #submenu li a{ display: block; border-bottom: solid 1px #fff; padding: 14px 24px;}
+    #submenu p{ display: none;}
 
 /*  BANNER  */
 
@@ -45,7 +46,7 @@
         /* Frequently Used */
         .h1,
         .pagination { line-height: 24px; margin: 0; padding: 14px 24px; font-weight: bold; background: #ededed; }
-        .listing { min-height: 45px; border-top: solid 1px #e4e4e4; }
+        .listing { min-height: 45px; border-bottom: solid 1px #e4e4e4; }
         .pagination { border-bottom: solid 1px #e4e4e4;}
             .pagination span { color: #b0b0b0; }
         .align-right { float:right; }
@@ -53,15 +54,15 @@
         /* Articles */
         .articles { padding: 0; margin: 0; }
             .articles .listing { padding: 24px 24px; }
-            .articles .section-link { font-size: 14px; }
+            .articles .section-link { font-size: 88%; }
                 .articles .listing img { width: 40%; float: left; margin: 3px 18px 0 0; display: block; }
                 .articles .full-image img { width: 100%; margin: 14px 0 14px 0; float: none; display: block; }
                 .articles .listing .h2 { margin: 0; padding: 0; color: #000;  }
                 .articles .listing p { margin: 0; padding: 2px 0 0 0; color: #888888; }
-                .articles .detail .h2 { font-weight: bold; font-size: 20px; line-height: 28px; margin-bottom: 16px; }
-                .articles .detail .meta { font-weight: bold;}
-            .articles .detail { padding: 24px; }
-                .articles .detail pre {
+                .articles .article{ padding: 14px 24px;}
+                .articles .article .h2 { font-weight: bold; font-size: 125%; line-height: 28px; margin-bottom: 16px; }
+                .articles .article .meta { font-weight: bold;}
+                .articles .article pre {
                     word-break: break-all; /* webkit */
                     word-wrap: break-word;
                     white-space: pre;
@@ -69,11 +70,11 @@
                     white-space: pre-wrap;
                     white-space: pre\9; /* IE7+ */
                 }
-                .articles .detail img { width: 100%; margin: 24px 0; display: block; }
+                .articles .article img { width: 100%; margin: 24px 0; display: block; }
 
         /* Content section-specific */
         .section-title { margin: 0; padding: 12px 0 0 0; background-color: #514392; }
-            .section-title div { margin: 0; padding: 24px 24px; line-height: 32px; font-size: 32px; font-weight: bold; }
+            .section-title div { margin: 0; padding: 24px 24px; line-height: 32px; font-size: 200%; font-weight: bold; }
             .section-title a { color: #fff; }
         .section-banner { padding: 0; margin: 0; }
             .section-banner img { width: 100%; padding: 0; margin: 0; display: block; }
@@ -98,12 +99,27 @@
         .articles .ureport a { color: #f18054; }
         .section-title.ureport div { background-color: #f18054; }
 
+        /* Ebola */
+        .articles .ebola a { color: #fdbe61; }
+        .section-title.ebola div { background-color: #fdbe61; }
+
         /* Personae */
         .personae { padding: 0; margin: 0; }
-            .personae .listing { margin: 0; padding: 0; }
-                .personae .listing a { display: block; padding: 6px 24px; }
-                .personae .listing img { width: 40px; margin: 0 6px 0 0; float: left; }
-                .personae .listing span { line-height: 40px; }
+            .personae a { display: block; padding: 0.4em 24px; }
+
+/* CALL TO ACTION */
+
+    .cta .h2 {padding: 24px;}
+    .cta .ffl .h2 a{color: #32bac2;}
+    .cta .ebola .h2 a{color: #fdbe61;}
+    .cta .barefootlaw .h2 a{color: #6ec17c;}
+    .cta .mariestopes .h2 a{color: #e04a5a;}
+    .cta .straighttalk .h2 a{color: #c977b2;}
+    .cta .ureport .h2 a{color:#f18054;}
+    .cta .ebola .h2 a{color: #fdbe61;}
+
+/* PERSONA*/
+    #content ul.personae{list-style: none; padding: 13px 0px;}
 
 
 /*  FOOTER  */

@@ -4,8 +4,9 @@
 {% block content %}
 <div>
 
-    <div class="h1">{% trans %}Recommended{% endtrans %}</div>
+    <div class="h1"><div class="detail">{% trans %}Recommended{% endtrans %}</div></div>
 
+    <div class="home">
     {% set pages=all_pages|recent_pages(language) %}
     <div class="articles">
     {% for page in pages %}
@@ -15,6 +16,7 @@
             {{ page_listing_with_section(page) }}
         {% endif %}
     {% endfor %}
+    </div>
     </div>
 </div>
 {% endblock %}

@@ -16,8 +16,8 @@ class TestUtils(SpringboardTestCase):
         workspace2 = self.mk_workspace(name='ffl')
         testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
-            'unicore.content_repos': '\n'.join([workspace1.working_dir,
-                                                workspace2.working_dir]),
+            'unicore.content_repo_urls': '\n'.join([workspace1.working_dir,
+                                                    workspace2.working_dir]),
         })
         views = IoGTViews(self.mk_request())
 

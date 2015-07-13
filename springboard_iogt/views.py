@@ -8,6 +8,7 @@ from unicore.content.models import Page
 
 from springboard.views.base import SpringboardViews
 
+from springboard.utils import ga_context
 from springboard_iogt.utils import (
     get_redirect_url, get_matching_route, update_query, ContentSection)
 
@@ -46,11 +47,13 @@ def persona_tween_factory(handler, registry):
 
 class IoGTViews(SpringboardViews):
 
+    @ga_context(lambda context: {'dt': 'Choose Persona', })
     @view_config(route_name='personae',
                  renderer='springboard_iogt:templates/personae.jinja2')
     def personae(self):
         return self.context()
 
+    @ga_context(lambda context: {'dt': 'Selected Persona', })
     @view_config(route_name='select_persona')
     def select_persona(self):
         slug = self.request.matchdict['slug'].upper()
@@ -69,6 +72,7 @@ class IoGTViews(SpringboardViews):
 
         return response
 
+    @ga_context(lambda context: {'dt': 'Skip Persona Selection', })
     @view_config(route_name='skip_persona_selection')
     def skip_persona_selection(self):
         # set cookie and redirect
@@ -78,6 +82,7 @@ class IoGTViews(SpringboardViews):
             max_age=ONE_YEAR)
         return response
 
+    @ga_context(lambda context: {'dt': context['section'].title, })
     @view_config(route_name='content_section',
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):

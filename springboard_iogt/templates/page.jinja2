@@ -11,18 +11,18 @@
     <div class="articles">
 
         <div class="{{ section.slug }}">
-            <div class="h1">
+            <div class="h1"><div class="back">
                 <a href="{{'category'|route_url(uuid=category.uuid)}}">{{ category.title }}</a>
-            </div>
+            </div></div>
 
-            <div class="detail">
+            <div class="article">
                 {% set has_image = page.image_host and page.image %}
                 <div class="head{% if not has_image %} no-pic{% endif %}">
                     <div class="h2">{{page.title}}</div>
                     {% if has_image %}
                     <div class="img">
                         <a href="{{'page'|route_url(uuid=page.uuid)}}">
-                            <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}"/>
+                            <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
                         </a>
                     </div>
                     {% endif %}

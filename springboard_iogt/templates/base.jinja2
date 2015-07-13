@@ -10,6 +10,7 @@
     <meta name="description" content="{{ description|default("") }}" />
     <meta name="keywords" content="{{ keywords|default("") }}" />
     <link href="{{'springboard:static/css/style.css'|static_url}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width: 20em)" href="{{'springboard:static/css/super.css'|static_url}}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="header">
@@ -39,13 +40,13 @@
 
     <div id="submenu">
         {% block menu %}
-        <div class="h1">{% trans %}Explore IoGT{% endtrans %}</div>
-        <ul>
+        <div class="h1"><div class="detail">{% trans %}Explore IoGT{% endtrans %}</div></div>
+        <ul class="options">
         {% for section in content_sections %}
-            <li><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}</a>
+            <li class="{{section.slug}}"><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}<p>{{section.descriptor}}</p></a>
             </li>
         {% endfor %}
-        <li><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
+            <li class="home"><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         </ul>
         {% endblock %}
     </div>
