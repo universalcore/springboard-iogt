@@ -93,6 +93,7 @@ class IoGTViews(SpringboardViews):
 
         return self.context(section=ContentSection(slug))
 
+    @ga_context(lambda context: {'dt': 'About', })
     @view_config(route_name='about',
                  renderer='springboard_iogt:templates/flat_page.jinja2')
     def about(self):
