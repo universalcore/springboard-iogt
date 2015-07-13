@@ -1,5 +1,10 @@
+import json
+import pkg_resources
+
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
+
+from unicore.content.models import Page
 
 from springboard.views.base import SpringboardViews
 
@@ -87,3 +92,18 @@ class IoGTViews(SpringboardViews):
             raise HTTPNotFound
 
         return self.context(section=ContentSection(slug))
+
+    @ga_context(lambda context: {'dt': 'About', })
+    @view_config(route_name='about',
+                 renderer='springboard_iogt:templates/flat_page.jinja2')
+    def about(self):
+        filename = pkg_resources.resource_filename(
+            'springboard_iogt',
+            'static/other/about-%s.json' % (self.language, ))
+
+        try:
+            with open(filename) as f:
+                page = Page(json.load(f))
+            return self.context(page=page)
+        except IOError:
+            raise HTTPNotFound

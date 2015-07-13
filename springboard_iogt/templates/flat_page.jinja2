@@ -4,12 +4,21 @@
 <div>
     <div class="articles">
 
-        <div class="h1">
-            {{page.title}}
-        </div>
+        <div class="article">
+            {% set has_image = page.image_host and page.image %}
+            <div class="head{% if not has_image %} no-pic{% endif %}">
+                <div class="h2">{{page.title}}</div>
+                {% if has_image %}
+                <div class="img">
+                    <a href="{{'flat_page'|route_url(slug=page.slug)}}">
+                        <img alt="{{page.title}}" src="{{page.image_host}}{{page.image|thumbor(140)}}"/>
+                    </a>
+                </div>
+                {% endif %}
+                <div class="meta">{{page.description|markdown}}</div>
+            </div>
+            <div>{{page.content|markdown}}</div>
 
-        <div class="detail">
-            <p>{{page.content|markdown}}</p>
         </div>
     </div>
 </div>

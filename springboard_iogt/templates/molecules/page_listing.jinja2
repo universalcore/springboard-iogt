@@ -13,7 +13,7 @@
         <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
     </a>
     {% endif %}
-    <p>{{ page.description|markdown }}</p>
+    <div>{{ page.description|markdown }}</div>
     <div class="clr"></div>
 {%- endmacro %}
 
