@@ -45,7 +45,10 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all('a', href=re_section_url)), 6)
 
     def test_persona_tween(self):
-        app = self.mk_app(self.workspace, main=main)
+        app = self.mk_app(
+            self.workspace,
+            main=main,
+            settings={'ga.profile_id': 'ID-000'})
 
         response = app.get('/')
         self.assertEqual(response.status_int, 302)

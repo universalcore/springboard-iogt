@@ -2,6 +2,7 @@ import json
 import pkg_resources
 
 from pyramid.view import view_config
+from pyramid.events import NewRequest
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 
 from unicore.content.models import Page
@@ -38,6 +39,10 @@ def persona_tween_factory(handler, registry):
         route = get_matching_route(request)
         if route and route.name in PERSONA_REDIRECT_ROUTES:
             query = {'next': request.url}
+            # Fire NewRequest event here because it won't
+            # happen unless we call handler.
+            # NOTE: A NewResponse event will be fired.
+            request.registry.notify(NewRequest(request=request))
             return HTTPFound(request.route_url('personae', _query=query))
 
         return handler(request)
