@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from urlparse import urlparse, parse_qsl, urlunparse
 from urllib import urlencode
 
@@ -12,36 +13,38 @@ _ = translation_string_factory
 
 
 class ContentSection(object):
-    SLUGS = [
-        'ureport',
-        'barefootlaw',
-        'mariestopes',
-        'straighttalk',
-        'ebola',
-        'ffl'
-    ]
-    OWNERS = [
-        _('U-report'),
-        _('Barefoot Law'),
-        _('Marie Stopes'),
-        _('Straight Talk'),
-        _('Ebola Response'),
-        _('Facts For Life')
-    ]
-    TITLES = [
-        _('U-report'),
-        _('Your Rights'),
-        _('My Family'),
-        _('Health Talk'),
-        _('StopEbola'),
-        _('Facts for Life')
-    ]
+    DATA = OrderedDict([
+        ('ureport', {
+            'owner': _('U-report'),
+            'title': _('U-report')
+        }),
+        ('barefootlaw', {
+            'owner': _('Barefoot Law'),
+            'title': _('Your Rights')
+        }),
+        ('mariestopes', {
+            'owner': _('Marie Stopes'),
+            'title': _('My Family')
+        }),
+        ('straighttalk', {
+            'owner': _('Straight Talk'),
+            'title': _('Health Talk')
+        }),
+        ('ebola', {
+            'owner': _('Ebola Response'),
+            'title': _('StopEbola')
+        }),
+        ('ffl', {
+            'owner': _('Facts For Life'),
+            'title': _('Facts for Life')
+        })
+    ])
 
     def __init__(self, slug):
         self.slug = slug
-        i = self.__class__.SLUGS.index(slug)
-        self.owner = self.__class__.OWNERS[i]
-        self.title = self.__class__.TITLES[i]
+        self.data = self.__class__.DATA[slug]
+        self.owner = self.data['owner']
+        self.title = self.data['title']
 
     def set_indexes(self, s_obj):
         indexes = s_obj.get_indexes()
@@ -50,12 +53,17 @@ class ContentSection(object):
 
     @classmethod
     def exists(cls, slug, indexes):
-        return (slug in cls.SLUGS and
-                any([index for index in indexes if slug in index]))
+        return (slug in cls.DATA and
+                any(index for index in indexes if slug in index))
 
     @classmethod
     def all(cls):
-        return [cls(slug) for slug in cls.SLUGS]
+        return [cls(slug) for slug in cls.DATA.keys()]
+
+    @classmethod
+    def known(cls, indexes):
+        return [cls(slug) for slug in cls.DATA.keys()
+                if cls.exists(slug, indexes)]
 
 
 def get_redirect_url(request, param_name='next', default_route='home'):

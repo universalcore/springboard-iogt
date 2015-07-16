@@ -9,7 +9,7 @@ from springboard_iogt.utils import ContentSection
 
 
 CONTENT_SECTION_SLUG_RE = re.compile(
-    r'(?P<slug>%s)' % '|'.join(ContentSection.SLUGS))
+    r'(?P<slug>%s)' % '|'.join(ContentSection.DATA.keys()))
 
 
 def recent_pages(s_pages, language, dt=None):
