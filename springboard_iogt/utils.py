@@ -61,7 +61,7 @@ class ContentSection(object):
         return [cls(slug) for slug in cls.DATA.keys()]
 
     @classmethod
-    def active(cls, indexes):
+    def known(cls, indexes):
         return [cls(slug) for slug in cls.DATA.keys()
                 if cls.exists(slug, indexes)]
 
