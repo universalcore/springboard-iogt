@@ -32,5 +32,5 @@ class TestUtils(SpringboardTestCase):
         self.assertEqual(section_obj.owner, 'Facts For Life')
 
         self.assertEqual(len(ContentSection.all()), len(ContentSection.DATA))
-        self.assertEqual(len(ContentSection.active(
+        self.assertEqual(len(ContentSection.known(
             indexes=['ffl', 'ureport', 'does-not-exist'])), 2)
