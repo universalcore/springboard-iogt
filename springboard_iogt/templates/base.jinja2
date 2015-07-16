@@ -21,9 +21,11 @@
                 <span>
                     <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
                 </span>
-                <span> | </span>
+                {% if not loop.last %}<span> | </span>{% endif %}
             {% endfor %}
-            <span><a href="{{ 'locale_change'|route_url }}">&hellip;</a></span>
+            {% if display_languages|length + 1 < available_languages|length %}
+            <span> | </span><span><a href="{{ 'locale_change'|route_url }}">&hellip;</a></span>
+            {% endif %}
         </div>
         {% endif %}
         <div class="logo">

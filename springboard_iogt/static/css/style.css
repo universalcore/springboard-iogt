@@ -21,7 +21,7 @@
         #header .logo a { padding: 0; margin: 0; display: block; line-height: 0; }
         #header .logo img { width: 100%; }
         #header .drop { display: none; }
-        #header .lang {width: 100%; line-height: 20px; padding: 8px 18px; display: block; background: #2d2d2d; color: #514392; }
+        #header .lang {width: 100%; line-height: 20px; padding: 9px 24px; display: block; background: #2d2d2d; color: #514392; }
             #header .lang a {color: #fff; font-weight: normal; }
 
 
