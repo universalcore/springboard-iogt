@@ -103,20 +103,17 @@
         .articles .ebola a { color: #fdbe61; }
         .section-title.ebola div { background-color: #fdbe61; }
 
+        /* Connect Smart */
+        .articles .connectsmart a { color: #6ec17c; }
+        .section-title.connectsmart div { background-color: #6ec17c; }
+
+        /* HIV */
+        .articles .hiv a { color: #c977b2; }
+        .section-title.hiv div { background-color: #c977b2; }
+
         /* Personae */
         .personae { padding: 0; margin: 0; }
             .personae a { display: block; padding: 0.4em 24px; }
-
-/* CALL TO ACTION */
-
-    .cta .h2 {padding: 24px;}
-    .cta .ffl .h2 a{color: #32bac2;}
-    .cta .ebola .h2 a{color: #fdbe61;}
-    .cta .barefootlaw .h2 a{color: #6ec17c;}
-    .cta .mariestopes .h2 a{color: #e04a5a;}
-    .cta .straighttalk .h2 a{color: #c977b2;}
-    .cta .ureport .h2 a{color:#f18054;}
-    .cta .ebola .h2 a{color: #fdbe61;}
 
 /* PERSONA*/
     #content ul.personae{list-style: none; padding: 13px 0px;}

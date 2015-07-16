@@ -37,6 +37,14 @@ class ContentSection(object):
         ('ffl', {
             'owner': _('Facts For Life'),
             'title': _('Facts for Life')
+        }),
+        ('hiv', {
+            'owner': _('HIV'),
+            'title': _('HIV')
+        }),
+        ('connectsmart', {
+            'owner': _('Connect Smart'),
+            'title': _('Connect Smart'),
         })
     ])
 
