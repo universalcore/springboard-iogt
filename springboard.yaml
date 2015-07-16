@@ -43,8 +43,9 @@ models:
         type: string
 repositories:
   unicore_frontend_barefootlaw_za: https://github.com/universalcore/unicore-cms-content-barefootlaw-za-qa
+  unicore_frontend_connectsmart_za: https://github.com/universalcore/unicore-cms-content-connectsmart-za-qa
+  unicore_frontend_ebola_tz: https://github.com/universalcore/unicore-cms-content-ebola-tz-qa
   unicore_frontend_ffl_za: https://github.com/universalcore/unicore-cms-content-ffl-za-qa
   unicore_frontend_mariestopes_za: https://github.com/universalcore/unicore-cms-content-mariestopes-za-qa
   unicore_frontend_straighttalk_za: https://github.com/universalcore/unicore-cms-content-straighttalk-za-qa
   unicore_frontend_ureport_za: https://github.com/universalcore/unicore-cms-content-ureport-za-qa
-  unicore_frontend_ebola_tz: https://github.com/universalcore/unicore-cms-content-ebola-tz-qa
