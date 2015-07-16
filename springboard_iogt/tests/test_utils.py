@@ -30,3 +30,7 @@ class TestUtils(SpringboardTestCase):
             ['ffl-master'])
         self.assertEqual(section_obj.title, 'Facts for Life')
         self.assertEqual(section_obj.owner, 'Facts For Life')
+
+        self.assertEqual(len(ContentSection.all()), len(ContentSection.DATA))
+        self.assertEqual(len(ContentSection.active(
+            indexes=['ffl', 'ureport', 'does-not-exist'])), 2)
