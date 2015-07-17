@@ -1,9 +1,10 @@
 {% extends "base.jinja2" %}
+{% from "molecules/logo.jinja2" import logo %}
 {% from "molecules/page_listing.jinja2" import page_listing %}
 {% from "molecules/pagination.jinja2" import pagination_links %}
 {% from "molecules/section_heading.jinja2" import section_title %}
 
-{% block logo %}{% endblock %}
+{% block logo %}{{ logo('long') }}{% endblock %}
 
 {% block content %}
 <div>
