@@ -49,8 +49,8 @@
     #content .articles .mariestopes .h1 .back{background-image: url("img/arrow_red_flipped.png");}
     #content .articles .straighttalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
     #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange_flipped.png");}
-    #content .articles .connectsmart .h1 .back{background-image: url("img/arrow_green_flipped.png");}
-    #content .articles .hiv .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
+    #content .articles .connectsmart .h1 .back{background-image: url("img/arrow_lightpink_flipped.png");}
+    #content .articles .hiv .h1 .back{background-image: url("img/arrow_darkgreen_flipped.png");}
 
     .articles .detail { padding: 24px; }
 
@@ -77,9 +77,9 @@
     #submenu .mariestopes a{background-image: url("img/arrow_red.png");}
     #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
     #submenu .ureport a{background-image: url("img/arrow_orange.png");}
-    #submenu .connectsmart a{background-image: url("img/arrow_green.png");}
+    #submenu .connectsmart a{background-image: url("img/arrow_lightpink.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
-    #submenu .hiv a{background-image: url("img/arrow_purple.png");}
+    #submenu .hiv a{background-image: url("img/arrow_darkgreen.png");}
 
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
