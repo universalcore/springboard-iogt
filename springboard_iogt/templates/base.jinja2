@@ -1,3 +1,5 @@
+{% from "molecules/logo.jinja2" import logo %}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -29,9 +31,7 @@
         </div>
         {% endif %}
         <div class="logo">
-            {% block logo %}
-            <a href="{{ 'home'|route_url }}" class="logo"><img alt="{{ _('IoGT logo') }}" src="{{ 'springboard:static/img/logo000000.png'|static_url }}" /></a>
-            {% endblock %}
+            {% block logo %}{{ logo('stacked') }}{% endblock %}
         </div>
     </div>
 
