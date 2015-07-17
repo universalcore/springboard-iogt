@@ -11,27 +11,27 @@
     input, select, textarea { font-size: 95%; font-family: Arial, Helvetica, sans-serif; }
     a { color: #9630c8; text-decoration: none; font-weight: bold; }
     .clr { width: 100%; height: 0px; clear: both; display: block; }
-    .purple { background: #514392; color: #fff; }
+    .purple { background: #4d4391; color: #fff; }
     .grey { background: #ededed; color: #666; }
 
 
 /*  HEADER  */
 
     #header { width: 100%; background: #000; position: relative; z-index: 100000; }
-        #header .logo { background-color: #514392; }
+        #header .logo { background-color: #4d4391; }
         #header .logo a { margin: 0; display: block; line-height: 0; }
         #header .logo-stacked { padding: 24px; }
         #header .logo-stacked img { width: 50%; }
         #header .logo-long { padding: 14px 24px; }
         #header .logo-long img { width: 66%;}
         #header .drop { display: none; }
-        #header .lang {width: 100%; line-height: 20px; padding: 9px 24px; display: block; background: #2d2d2d; color: #514392; }
+        #header .lang {width: 100%; line-height: 20px; padding: 9px 24px; display: block; background: #2d2d2d; color: #4d4391; }
             #header .lang a {color: #fff; font-weight: normal; }
 
 
 /*  SUBMENU  */
 
-    #submenu .h1 { background: #514392; color: #fff; }
+    #submenu .h1 { background: #4d4391; color: #fff; }
     #submenu ul { list-style: none; padding: 0; margin: 0;}
     #submenu li { background: #ededed; }
     #submenu li a{ display: block; border-bottom: solid 1px #fff; padding: 14px 24px;}
@@ -77,50 +77,47 @@
                 .articles .article img { width: 100%; margin: 24px 0; display: block; }
 
         /* Content section-specific */
-        .section-title { margin: 0; padding: 0; background-color: #514392; }
+        .section-title { margin: 0; padding: 0; background-color: #4d4391; }
             .section-title div { margin: 0; padding: 24px 24px; line-height: 32px; font-size: 200%; font-weight: bold; }
             .section-title a { color: #fff; }
         .section-banner { padding: 0; margin: 0; }
             .section-banner img { width: 100%; padding: 0; margin: 0; display: block; }
 
         /* Facts For Life */
-        .articles .ffl a { color: #32bac2; }
-        .section-title.ffl div { background-color: #32bac2; }
+        .articles .ffl a { color: #00bfc6; }
+        .section-title.ffl div { background-color: #00bfc6; }
 
         /* Barefoot Law */
-        .articles .barefootlaw a { color: #6ec17c; }
-        .section-title.barefootlaw div { background-color: #6ec17c; }
+        .articles .barefootlaw a { color: #6ec17f; }
+        .section-title.barefootlaw div { background-color: #6ec17f; }
 
         /* Mariestopes */
-        .articles .mariestopes a { color: #e04a5a; }
-        .section-title.mariestopes div { background-color: #e04a5a; }
+        .articles .mariestopes a { color: #e24256; }
+        .section-title.mariestopes div { background-color: #e24256; }
 
         /* Straight Talk */
-        .articles .straighttalk a { color: #c977b2; }
-        .section-title.straighttalk div { background-color: #c977b2; }
+        .articles .straighttalk a { color: #cb78b3; }
+        .section-title.straighttalk div { background-color: #cb78b3; }
 
         /* U-report */
-        .articles .ureport a { color: #f18054; }
-        .section-title.ureport div { background-color: #f18054; }
+        .articles .ureport a { color: #ff7e4e; }
+        .section-title.ureport div { background-color: #ff7e4e; }
 
         /* Ebola */
-        .articles .ebola a { color: #fdbe61; }
-        .section-title.ebola div { background-color: #fdbe61; }
+        .articles .ebola a { color: #ffbe61; }
+        .section-title.ebola div { background-color: #ffbe61; }
+
+        /* Connect Smart */
+        .articles .connectsmart a { color: #f38aa5; }
+        .section-title.connectsmart div { background-color: #f38aa5; }
+
+        /* HIV */
+        .articles .hiv a { color: #4f946e; }
+        .section-title.hiv div { background-color: #4f946e; }
 
         /* Personae */
         .personae { padding: 0; margin: 0; }
             .personae a { display: block; padding: 0.4em 24px; }
-
-/* CALL TO ACTION */
-
-    .cta .h2 {padding: 24px;}
-    .cta .ffl .h2 a{color: #32bac2;}
-    .cta .ebola .h2 a{color: #fdbe61;}
-    .cta .barefootlaw .h2 a{color: #6ec17c;}
-    .cta .mariestopes .h2 a{color: #e04a5a;}
-    .cta .straighttalk .h2 a{color: #c977b2;}
-    .cta .ureport .h2 a{color:#f18054;}
-    .cta .ebola .h2 a{color: #fdbe61;}
 
 /* PERSONA*/
     #content ul.personae{list-style: none; padding: 13px 0px;}
@@ -129,7 +126,7 @@
 /*  FOOTER  */
 
     #footer { padding: 24px; position: relative; }
-    #footer a { color: #514392; }
+    #footer a { color: #4d4391; }
 
 
 /*  RETINA (because it's nice when you work on something that looks good)  */
