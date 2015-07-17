@@ -83,14 +83,14 @@
 
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
-    #content .home .articles .ffl:after {background-color:#32bac2; }
-    #content .home .articles .barefootlaw:after {background-color:#6ec17c;}
-    #content .home .articles .mariestopes:after {background-color:#e04a5a; }
-    #content .home .articles .straighttalk:after {background-color:#c977b2; }
-    #content .home .articles .ureport:after {background-color:#f18054; }
-    #content .home .articles .ebola:after {background-color:#fdbe61; }
-    #content .home .articles .connectsmart:after {background-color:#6ec17c; }
-    #content .home .articles .hiv:after {background-color:#c977b2; }
+    #content .home .articles .ffl:after {background-color:#00bfc6; }
+    #content .home .articles .barefootlaw:after {background-color:#6ec17f;}
+    #content .home .articles .mariestopes:after {background-color:#e24256; }
+    #content .home .articles .straighttalk:after {background-color:#cb78b3; }
+    #content .home .articles .ureport:after {background-color:#ff7e4e; }
+    #content .home .articles .ebola:after {background-color:#ffbe61; }
+    #content .home .articles .connectsmart:after {background-color:#f38aa5; }
+    #content .home .articles .hiv:after {background-color:#4f946e; }
 
     #content .section-title.h1 {padding: 0;}
 
