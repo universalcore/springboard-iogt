@@ -37,5 +37,6 @@ def main(global_config, **settings):
         override_with='springboard_iogt:templates/')
     config.add_static_view(
         'static', 'springboard_iogt:static', cache_max_age=3600)
+    config.add_translation_dirs('springboard_iogt:locale/')
 
     return config.make_wsgi_app()
