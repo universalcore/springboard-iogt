@@ -1,18 +1,17 @@
-# English (United Kingdom) translations for springboard_iogt.
+# French (France) translations for springboard_iogt.
 # Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-09-07 21:27+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en_GB <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2015-09-07 18:41+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -96,41 +95,41 @@ msgstr ""
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Oups, cette page ne semble plus exister."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:57
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "The Internet of Good Things"
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Explorez IoGT"
 
 #: springboard_iogt/templates/base.jinja2:51
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: springboard_iogt/templates/base.jinja2:58
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "À propos de Internet of Good Things"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Plus de %(category_title_link)"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Recommandé"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Qui êtes-vous?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Enfant"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Teenager"
@@ -138,15 +137,15 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent"
-msgstr ""
+msgstr "Parent"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Worker"
-msgstr ""
+msgstr "Travailleur"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Passez"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -155,12 +154,12 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Précédent"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6

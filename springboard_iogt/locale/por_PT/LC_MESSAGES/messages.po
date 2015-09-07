@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-07 19:00+0200\n"
-"PO-Revision-Date: 2015-07-20 12:00+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-09-07 21:27+0200\n"
+"PO-Revision-Date: 2015-09-07 19:03+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: pt_PT <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +95,7 @@ msgstr ""
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Desculpe, não conseguimos encontrar a página."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:57
@@ -109,7 +108,7 @@ msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:51
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
 #: springboard_iogt/templates/base.jinja2:58
 msgid "About Internet of Good Things"
@@ -118,19 +117,19 @@ msgstr ""
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Mais (category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Recomendado"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Quem é você?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Criança"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Teenager"
@@ -138,7 +137,7 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent"
-msgstr ""
+msgstr "Parente"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Worker"
@@ -146,7 +145,7 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Pular"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -155,16 +154,16 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Seguinte"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "Trazido a você por %(owner)s"
 

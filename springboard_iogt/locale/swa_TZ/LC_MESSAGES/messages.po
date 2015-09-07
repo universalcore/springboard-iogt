@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-07 19:00+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-09-07 21:27+0200\n"
+"PO-Revision-Date: 2015-09-07 19:11+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: sw_TZ <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +95,7 @@ msgstr ""
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Samahani, hatuwezi kupata ukurasa huo."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:57
@@ -109,7 +108,7 @@ msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:51
 msgid "Home"
-msgstr ""
+msgstr "Anza Mwanzo"
 
 #: springboard_iogt/templates/base.jinja2:58
 msgid "About Internet of Good Things"
@@ -122,15 +121,15 @@ msgstr ""
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Pendekezwa"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Wewe ni nani?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Mtoto"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Teenager"
@@ -138,7 +137,7 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent"
-msgstr ""
+msgstr "Mzazi"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Worker"
@@ -146,7 +145,7 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Epa"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -155,16 +154,16 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Nyuma"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Mbele"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "Imeletwa kwenu na (owner)s"
 
