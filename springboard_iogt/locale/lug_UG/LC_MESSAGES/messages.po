@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-07 18:26+0200\n"
+"POT-Creation-Date: 2015-09-07 19:00+0200\n"
 "PO-Revision-Date: 2015-09-07 18:26+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: lg_UG <LL@li.org>\n"
@@ -22,51 +22,75 @@ msgstr ""
 msgid "U-report"
 msgstr ""
 
-#: springboard_iogt/utils.py:22
-msgid "Barefoot Law"
+#: springboard_iogt/utils.py:20
+msgid "Become a U-Reporter & start sharing!"
 msgstr ""
 
 #: springboard_iogt/utils.py:23
+msgid "Barefoot Law"
+msgstr ""
+
+#: springboard_iogt/utils.py:24
 msgid "Your Rights"
 msgstr ""
 
-#: springboard_iogt/utils.py:26
+#: springboard_iogt/utils.py:25
+msgid "Free legal information & support"
+msgstr ""
+
+#: springboard_iogt/utils.py:28
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:27
+#: springboard_iogt/utils.py:29
 msgid "My Family"
 msgstr ""
 
 #: springboard_iogt/utils.py:30
+msgid "Matters about the family"
+msgstr ""
+
+#: springboard_iogt/utils.py:33
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:31
+#: springboard_iogt/utils.py:34
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:34
-msgid "Ebola Response"
-msgstr ""
-
 #: springboard_iogt/utils.py:35
-msgid "StopEbola"
+msgid "Collaborating together with the youth"
 msgstr ""
 
 #: springboard_iogt/utils.py:38
-msgid "Facts For Life"
+msgid "Ebola Response"
 msgstr ""
 
 #: springboard_iogt/utils.py:39
+msgid "StopEbola"
+msgstr ""
+
+#: springboard_iogt/utils.py:40
+msgid "Get information about Ebola"
+msgstr ""
+
+#: springboard_iogt/utils.py:43
+msgid "Facts For Life"
+msgstr ""
+
+#: springboard_iogt/utils.py:44
 msgid "Facts for Life"
 msgstr ""
 
-#: springboard_iogt/utils.py:42 springboard_iogt/utils.py:43
+#: springboard_iogt/utils.py:45
+msgid "Save and improve the lives of children"
+msgstr ""
+
+#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "HIV"
 msgstr ""
 
-#: springboard_iogt/utils.py:46 springboard_iogt/utils.py:47
+#: springboard_iogt/utils.py:53 springboard_iogt/utils.py:54
 msgid "Connect Smart"
 msgstr ""
 

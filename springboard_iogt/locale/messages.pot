@@ -1,18 +1,18 @@
-# Swahili (Tanzania) translations for springboard_iogt.
+# Translations template for springboard_iogt.
 # Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-09-07 19:00+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: sw_TZ <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
