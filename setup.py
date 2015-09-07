@@ -35,7 +35,7 @@ setup(name='springboard_iogt',
               'main = springboard_iogt.application:main',
           ],
       },
-      message_extractors={'.': [
+      message_extractors={'springboard_iogt': [
           ('**.py', 'python', None),
           ('**.jinja2', 'jinja2', None),
       ]})
