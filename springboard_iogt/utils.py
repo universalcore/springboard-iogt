@@ -46,11 +46,13 @@ class ContentSection(object):
         }),
         ('hiv', {
             'owner': _('HIV'),
-            'title': _('HIV')
+            'title': _('HIV'),
+            'descriptor': ''
         }),
         ('connectsmart', {
             'owner': _('Connect Smart'),
             'title': _('Connect Smart'),
+            'descriptor': ''
         })
     ])
 
@@ -59,6 +61,7 @@ class ContentSection(object):
         self.data = self.__class__.DATA[slug]
         self.owner = self.data['owner']
         self.title = self.data['title']
+        self.descriptor = self.data['descriptor']
 
     def set_indexes(self, s_obj):
         indexes = s_obj.get_indexes()
