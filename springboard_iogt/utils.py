@@ -16,27 +16,33 @@ class ContentSection(object):
     DATA = OrderedDict([
         ('ureport', {
             'owner': _('U-report'),
-            'title': _('U-report')
+            'title': _('U-report'),
+            'descriptor': _('Become a U-Reporter & start sharing!')
         }),
         ('barefootlaw', {
             'owner': _('Barefoot Law'),
-            'title': _('Your Rights')
+            'title': _('Your Rights'),
+            'descriptor': _('Free legal information & support')
         }),
         ('mariestopes', {
             'owner': _('Marie Stopes'),
-            'title': _('My Family')
+            'title': _('My Family'),
+            'descriptor': _('Matters about the family')
         }),
         ('straighttalk', {
             'owner': _('Straight Talk'),
-            'title': _('Health Talk')
+            'title': _('Health Talk'),
+            'descriptor': _('Collaborating together with the youth')
         }),
         ('ebola', {
             'owner': _('Ebola Response'),
-            'title': _('StopEbola')
+            'title': _('StopEbola'),
+            'descriptor': _('Get information about Ebola')
         }),
         ('ffl', {
             'owner': _('Facts For Life'),
-            'title': _('Facts for Life')
+            'title': _('Facts for Life'),
+            'descriptor': _('Save and improve the lives of children')
         }),
         ('hiv', {
             'owner': _('HIV'),
