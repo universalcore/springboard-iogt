@@ -47,12 +47,12 @@ class ContentSection(object):
         ('hiv', {
             'owner': _('HIV'),
             'title': _('HIV'),
-            'descriptor': ''
+            'descriptor': _('Love, relationships, sex and gender')
         }),
         ('connectsmart', {
             'owner': _('Connect Smart'),
             'title': _('Connect Smart'),
-            'descriptor': ''
+            'descriptor': _('Learn about the internet')
         })
     ])
 

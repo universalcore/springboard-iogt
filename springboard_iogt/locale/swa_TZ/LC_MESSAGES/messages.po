@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-07 21:27+0200\n"
+"POT-Creation-Date: 2015-09-08 09:29+0200\n"
 "PO-Revision-Date: 2015-09-07 19:11+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: sw_TZ <LL@li.org>\n"
@@ -89,8 +89,16 @@ msgstr ""
 msgid "HIV"
 msgstr ""
 
+#: springboard_iogt/utils.py:50
+msgid "Love, relationships, sex and gender"
+msgstr ""
+
 #: springboard_iogt/utils.py:53 springboard_iogt/utils.py:54
 msgid "Connect Smart"
+msgstr ""
+
+#: springboard_iogt/utils.py:55
+msgid "Learn about the internet"
 msgstr ""
 
 #: springboard_iogt/templates/404.jinja2:5
