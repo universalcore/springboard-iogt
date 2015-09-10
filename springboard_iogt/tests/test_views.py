@@ -21,6 +21,9 @@ class TestIoGTViews(SpringboardTestCase):
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
             'unicore.content_repo_urls': self.workspace.working_dir,
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nebola = http://za.ebola.qa-hub.unicore.io/'
         })
 
     def tearDown(self):
@@ -41,8 +44,9 @@ class TestIoGTViews(SpringboardTestCase):
             primary_category=category.uuid,
             featured=True)
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': 'ffl\nureport'
-        })
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nebola = http://za.ebola.qa-hub.unicore.io/'})
         re_page_url = re.compile(r'/page/.{32}/')
         re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
@@ -52,6 +56,14 @@ class TestIoGTViews(SpringboardTestCase):
         html = response.html
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
         self.assertEqual(len(html.find_all('a', href=re_section_url)), 4)
+        self.assertEqual(len(html.find_all(
+            'a',
+            text='Make sure your family stays healthy with Facts for Life',
+            href='http://za.ffl.qa-hub.unicore.io/')), 1)
+        self.assertEqual(len(html.find_all(
+            'a',
+            text='Find out how to treat and stop Ebola',
+            href='http://za.ebola.qa-hub.unicore.io/')), 1)
 
     def test_persona_tween(self):
         app = self.mk_app(
@@ -171,6 +183,24 @@ class TestIoGTViews(SpringboardTestCase):
         section_url_tags = html.find_all('a', href=re.compile(
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         self.assertEqual(len(section_url_tags), 2)
+
+
+def test_content_section_listing_overrides(self):
+        self.mk_workspace(name='ffl')
+        self.mk_workspace(name='ebola')
+
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': 'ffl',
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nebola = http://za.ebola.qa-hub.unicore.io/'})
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+        override_url_tags = html.find_all('a', href=re.compile(
+            r'http://za.(ebola|ffl).qa-hub.unicore.io/'))
+        self.assertEqual(len(section_url_tags), len(ContentSection.SLUGS) - 2)
+        self.assertEqual(len(override_url_tags), 2)
 
     def test_language_visibility(self):
         settings = {
