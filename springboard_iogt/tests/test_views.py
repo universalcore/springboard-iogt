@@ -21,6 +21,9 @@ class TestIoGTViews(SpringboardTestCase):
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
             'unicore.content_repo_urls': self.workspace.working_dir,
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nebola = http://za.ebola.qa-hub.unicore.io/'
         })
 
     def tearDown(self):
@@ -28,21 +31,17 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_index_view(self):
         ws_ffl = self.mk_workspace(name='ffl')
-        ws_ureport = self.mk_workspace(name='ureport')
         [category] = self.mk_categories(ws_ffl, count=1)
         self.mk_pages(
             ws_ffl, count=1,
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid,
             featured=True)
-        self.mk_pages(
-            ws_ureport, count=1,
-            created_at=datetime.utcnow().isoformat(),
-            primary_category=category.uuid,
-            featured=True)
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': 'ffl\nureport'
-        })
+            'unicore.content_repo_urls': '\n'.join(
+                [ws_ffl.working_dir]),
+            'iogt.content_section_url_overrides':
+                '\nureport = http://za.ureport.qa-hub.unicore.io/'})
         re_page_url = re.compile(r'/page/.{32}/')
         re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
@@ -50,8 +49,12 @@ class TestIoGTViews(SpringboardTestCase):
         response = app.get('/')
         self.assertEqual(response.status_int, 200)
         html = response.html
-        self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
-        self.assertEqual(len(html.find_all('a', href=re_section_url)), 4)
+        self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
+        self.assertEqual(len(html.find_all('a', href=re_section_url)), 2)
+        self.assertEqual(len(html.find_all(
+            'a',
+            text='U-report',
+            href='http://za.ureport.qa-hub.unicore.io/')), 2)
 
     def test_persona_tween(self):
         app = self.mk_app(
@@ -171,6 +174,27 @@ class TestIoGTViews(SpringboardTestCase):
         section_url_tags = html.find_all('a', href=re.compile(
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         self.assertEqual(len(section_url_tags), 2)
+
+    def test_content_section_listing_overrides(self):
+        self.mk_workspace(name='barefootlaw')
+        self.mk_workspace(name='mariestopes')
+        self.mk_workspace(name='connectsmart')
+        self.mk_workspace(name='straighttalk')
+
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls':
+                'barefootlaw\nmariestopes\n'
+                'connectsmart\nstraighttalk',
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nebola = http://za.ebola.qa-hub.unicore.io/'})
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+        override_url_tags = html.find_all('a', href=re.compile(
+            r'http://za.(ebola|ffl).qa-hub.unicore.io/'))
+        self.assertEqual(len(section_url_tags), 4)
+        self.assertEqual(len(override_url_tags), 2)
 
     def test_language_visibility(self):
         settings = {
