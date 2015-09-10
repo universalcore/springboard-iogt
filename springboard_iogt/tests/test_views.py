@@ -31,23 +31,17 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_index_view(self):
         ws_ffl = self.mk_workspace(name='ffl')
-        ws_ureport = self.mk_workspace(name='ureport')
         [category] = self.mk_categories(ws_ffl, count=1)
         self.mk_pages(
             ws_ffl, count=1,
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid,
             featured=True)
-        self.mk_pages(
-            ws_ureport, count=1,
-            created_at=datetime.utcnow().isoformat(),
-            primary_category=category.uuid,
-            featured=True)
         app = self.mk_app(self.workspace, main=main, settings={
             'unicore.content_repo_urls': '\n'.join(
-                [ws_ffl.working_dir, ws_ureport.working_dir]),
+                [ws_ffl.working_dir]),
             'iogt.content_section_url_overrides':
-                '\nffl = http://za.ffl.qa-hub.unicore.io/'})
+                '\nureport = http://za.ureport.qa-hub.unicore.io/'})
         re_page_url = re.compile(r'/page/.{32}/')
         re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
@@ -55,17 +49,12 @@ class TestIoGTViews(SpringboardTestCase):
         response = app.get('/')
         self.assertEqual(response.status_int, 200)
         html = response.html
-        self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
-        print response
+        self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
         self.assertEqual(len(html.find_all('a', href=re_section_url)), 2)
         self.assertEqual(len(html.find_all(
             'a',
-            text='Make sure your family stays healthy with Facts for Life',
-            href='http://za.ffl.qa-hub.unicore.io/')), 1)
-        self.assertEqual(len(html.find_all(
-            'a',
-            text='Find out how to treat and stop Ebola',
-            href='http://za.ebola.qa-hub.unicore.io/')), 1)
+            text='U-report',
+            href='http://za.ureport.qa-hub.unicore.io/')), 2)
 
     def test_persona_tween(self):
         app = self.mk_app(
@@ -191,12 +180,10 @@ class TestIoGTViews(SpringboardTestCase):
         self.mk_workspace(name='mariestopes')
         self.mk_workspace(name='connectsmart')
         self.mk_workspace(name='straighttalk')
-        self.mk_workspace(name='ffl')
-        self.mk_workspace(name='ebola')
 
         app = self.mk_app(self.workspace, main=main, settings={
             'unicore.content_repo_urls':
-                'ffl\nebola\nbarefootlaw\nmariestopes\n'
+                'barefootlaw\nmariestopes\n'
                 'connectsmart\nstraighttalk',
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'

@@ -49,6 +49,9 @@
             <li class="{{section.slug}}"><a href="{{ section_url }}">{{ section.title }}<p>{{section.descriptor}}</p></a>
             </li>
         {% endfor %}
+        {% for section in content_section_url_overrides_data_list %}
+        <li class="{{section.slug}}"><a href="{{ section.url }}">{{ section.data.title }}<p>{{section.data.descriptor}}</p></a>
+        {% endfor %}
             <li class="home"><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         </ul>
         {% endblock %}

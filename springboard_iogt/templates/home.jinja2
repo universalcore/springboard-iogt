@@ -1,12 +1,11 @@
 {% extends "base.jinja2" %}
-{% from "molecules/page_listing.jinja2" import page_listing_with_section %}
-{% from "molecules/link_listing.jinja2" import link_listing %}
+{% from "molecules/page_listing.jinja2" import page_listing_with_section, page_listing_override %}
 
 {% block content %}
 <div>
 
     <div class="h1"><div class="detail">{% trans %}Recommended{% endtrans %}</div></div>
-    
+
     <div class="home">
     {% set pages=all_pages|recent_pages(language) %}
     <div class="articles">
@@ -17,19 +16,13 @@
             {{ page_listing_with_section(page) }}
         {% endif %}
     {% endfor %}
-    </div>
 
-    {# Call-to-action for FFL and Ebola #}
-        <div class="cta">
-        {% set ffl_url=content_section_url_overrides.get('ffl') %}
-        {% if ffl_url %}
-        {{ link_listing(_('Make sure your family stays healthy with Facts for Life'), ffl_url, 'ffl') }}
-        {% endif %}
-        {% set ebola_url=content_section_url_overrides.get('ebola') %}
-        {% if ebola_url %}
-        {{ link_listing(_('Find out how to treat and stop Ebola'), ebola_url, 'ebola') }}
-        {% endif %}
-        </div>
+    {# Call-to-action for overrides #}
+    {% for section in content_section_url_overrides_data_list %}
+    {{ page_listing_override(section) }}
+    {% endfor %}
+
+    </div>
     </div>
 </div>
 {% endblock %}

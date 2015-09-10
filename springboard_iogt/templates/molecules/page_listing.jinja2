@@ -37,3 +37,19 @@
         {% endif %}
     </div>
 {%- endmacro %}
+
+
+{% macro page_listing_override(section, extra_classes="") -%}
+<div class="listing {{ section.slug }} {{ extra_classes }}">
+    <div class="h2">
+        <a href="{{ section.url }}">{{section.data.title}}</a>
+    </div>
+
+    <div>{{ section.data.descriptor }}</div>
+    <div class="clr"></div>
+
+    <div class="section-link">
+        <a href="{{ section.url }}">{{ section.data.title }}</a>
+    </div>
+</div>
+{%- endmacro %}
