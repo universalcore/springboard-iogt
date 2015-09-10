@@ -44,9 +44,10 @@ class TestIoGTViews(SpringboardTestCase):
             primary_category=category.uuid,
             featured=True)
         app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join(
+                [ws_ffl.working_dir, ws_ureport.working_dir]),
             'iogt.content_section_url_overrides':
-                '\nffl = http://za.ffl.qa-hub.unicore.io/'
-                '\nebola = http://za.ebola.qa-hub.unicore.io/'})
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'})
         re_page_url = re.compile(r'/page/.{32}/')
         re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
@@ -55,7 +56,8 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(response.status_int, 200)
         html = response.html
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 2)
-        self.assertEqual(len(html.find_all('a', href=re_section_url)), 4)
+        print response
+        self.assertEqual(len(html.find_all('a', href=re_section_url)), 2)
         self.assertEqual(len(html.find_all(
             'a',
             text='Make sure your family stays healthy with Facts for Life',
@@ -184,13 +186,18 @@ class TestIoGTViews(SpringboardTestCase):
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         self.assertEqual(len(section_url_tags), 2)
 
-
-def test_content_section_listing_overrides(self):
+    def test_content_section_listing_overrides(self):
+        self.mk_workspace(name='barefootlaw')
+        self.mk_workspace(name='mariestopes')
+        self.mk_workspace(name='connectsmart')
+        self.mk_workspace(name='straighttalk')
         self.mk_workspace(name='ffl')
         self.mk_workspace(name='ebola')
 
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': 'ffl',
+            'unicore.content_repo_urls':
+                'ffl\nebola\nbarefootlaw\nmariestopes\n'
+                'connectsmart\nstraighttalk',
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
                 '\nebola = http://za.ebola.qa-hub.unicore.io/'})
@@ -199,7 +206,7 @@ def test_content_section_listing_overrides(self):
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         override_url_tags = html.find_all('a', href=re.compile(
             r'http://za.(ebola|ffl).qa-hub.unicore.io/'))
-        self.assertEqual(len(section_url_tags), len(ContentSection.SLUGS) - 2)
+        self.assertEqual(len(section_url_tags), 4)
         self.assertEqual(len(override_url_tags), 2)
 
     def test_language_visibility(self):
