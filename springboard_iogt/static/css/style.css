@@ -88,16 +88,16 @@
         .section-title.ffl div { background-color: #00bfc6; }
 
         /* Barefoot Law */
-        .articles .barefootlaw a { color: #6ec17f; }
-        .section-title.barefootlaw div { background-color: #6ec17f; }
+        .articles .yourrights a { color: #6ec17f; }
+        .section-title.yourrights div { background-color: #6ec17f; }
 
         /* Mariestopes */
-        .articles .mariestopes a { color: #e24256; }
-        .section-title.mariestopes div { background-color: #e24256; }
+        .articles .myfamily a { color: #e24256; }
+        .section-title.myfamily div { background-color: #e24256; }
 
         /* Straight Talk */
-        .articles .straighttalk a { color: #cb78b3; }
-        .section-title.straighttalk div { background-color: #cb78b3; }
+        .articles .healthtalk  a { color: #cb78b3; }
+        .section-title.healthtalk  div { background-color: #cb78b3; }
 
         /* U-report */
         .articles .ureport a { color: #ff7e4e; }

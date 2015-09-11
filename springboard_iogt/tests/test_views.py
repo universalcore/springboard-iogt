@@ -176,15 +176,15 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(section_url_tags), 2)
 
     def test_content_section_listing_overrides(self):
-        self.mk_workspace(name='barefootlaw')
-        self.mk_workspace(name='mariestopes')
+        self.mk_workspace(name='yourrights')
+        self.mk_workspace(name='myfamily')
         self.mk_workspace(name='connectsmart')
-        self.mk_workspace(name='straighttalk')
+        self.mk_workspace(name='healthtalk')
 
         app = self.mk_app(self.workspace, main=main, settings={
             'unicore.content_repo_urls':
-                'barefootlaw\nmariestopes\n'
-                'connectsmart\nstraighttalk',
+                'yourrights\nmyfamily\n'
+                'connectsmart\nhealthtalk',
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
                 '\nebola = http://za.ebola.qa-hub.unicore.io/'})

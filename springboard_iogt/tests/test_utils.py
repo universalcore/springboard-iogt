@@ -12,7 +12,7 @@ class TestUtils(SpringboardTestCase):
         testing.tearDown()
 
     def test_content_section(self):
-        workspace1 = self.mk_workspace(name='barefootlaw')
+        workspace1 = self.mk_workspace(name='yourrights')
         workspace2 = self.mk_workspace(name='ffl')
         testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
@@ -22,7 +22,7 @@ class TestUtils(SpringboardTestCase):
         views = IoGTViews(self.mk_request())
 
         self.assertTrue(ContentSection.exists(
-            'barefootlaw', views.all_pages.get_indexes()))
+            'yourrights', views.all_pages.get_indexes()))
         section_obj = ContentSection('ffl')
         self.assertEqual(section_obj.slug, 'ffl')
         self.assertEqual(

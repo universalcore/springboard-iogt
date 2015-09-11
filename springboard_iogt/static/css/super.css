@@ -43,11 +43,11 @@
         background-image: url("img/arrow_red.png");
     }
 
-    #content .articles .barefootlaw .h1 .back{background-image: url("img/arrow_green_flipped.png")}
+    #content .articles .yourrights .h1 .back{background-image: url("img/arrow_green_flipped.png")}
     #content .articles .ebola .h1 .back{background-image: url("img/arrow_yellow_flipped.png");}
     #content .articles .ffl .h1 .back{background-image: url("img/arrow_turquoise_flipped.png");}
-    #content .articles .mariestopes .h1 .back{background-image: url("img/arrow_red_flipped.png");}
-    #content .articles .straighttalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
+    #content .articles .myfamily.h1 .back{background-image: url("img/arrow_red_flipped.png");}
+    #content .articles .healthtalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
     #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange_flipped.png");}
     #content .articles .connectsmart .h1 .back{background-image: url("img/arrow_lightpink_flipped.png");}
     #content .articles .hiv .h1 .back{background-image: url("img/arrow_darkgreen_flipped.png");}
@@ -71,11 +71,11 @@
         font-size: 14px;
     }
 
-    #submenu .barefootlaw a{background-image: url("img/arrow_green.png")}
+    #submenu .yourrights a{background-image: url("img/arrow_green.png")}
     #submenu .ebola a{background-image: url("img/arrow_yellow.png");}
     #submenu .ffl a{background-image: url("img/arrow_turquoise.png");}
-    #submenu .mariestopes a{background-image: url("img/arrow_red.png");}
-    #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
+    #submenu .myfamily a{background-image: url("img/arrow_red.png");}
+    #submenu .healthtalk a{background-image: url("img/arrow_purple.png");}
     #submenu .ureport a{background-image: url("img/arrow_orange.png");}
     #submenu .connectsmart a{background-image: url("img/arrow_lightpink.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
@@ -84,9 +84,9 @@
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
     #content .home .articles .ffl:after {background-color:#00bfc6; }
-    #content .home .articles .barefootlaw:after {background-color:#6ec17f;}
-    #content .home .articles .mariestopes:after {background-color:#e24256; }
-    #content .home .articles .straighttalk:after {background-color:#cb78b3; }
+    #content .home .articles .yourrights:after {background-color:#6ec17f;}
+    #content .home .articles .myfamily:after {background-color:#e24256; }
+    #content .home .articles .healthtalk:after {background-color:#cb78b3; }
     #content .home .articles .ureport:after {background-color:#ff7e4e; }
     #content .home .articles .ebola:after {background-color:#ffbe61; }
     #content .home .articles .connectsmart:after {background-color:#f38aa5; }

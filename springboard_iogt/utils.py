@@ -19,17 +19,17 @@ class ContentSection(object):
             'title': _('U-report'),
             'descriptor': _('Become a U-Reporter & start sharing!')
         }),
-        ('barefootlaw', {
+        ('yourrights', {
             'owner': _('Barefoot Law'),
             'title': _('Your Rights'),
             'descriptor': _('Free legal information & support')
         }),
-        ('mariestopes', {
+        ('myfamily', {
             'owner': _('Marie Stopes'),
             'title': _('My Family'),
             'descriptor': _('Matters about the family')
         }),
-        ('straighttalk', {
+        ('healthtalk', {
             'owner': _('Straight Talk'),
             'title': _('Health Talk'),
             'descriptor': _('Collaborating together with the youth')
