@@ -43,4 +43,4 @@ def content_section(obj):
     match = CONTENT_SECTION_SLUG_RE.search(index)
     if not match:
         return None
-    return ContentSection(match.group('slug'))
+    return ContentSection._for(match.group('slug'))

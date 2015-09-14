@@ -172,9 +172,7 @@ class TestIoGTViews(SpringboardTestCase):
         })
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
-            r'/section/(%s)/' % '|'.join([
-                section.get('name')
-                for slug, section in ContentSection.DATA.items()])))
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         self.assertEqual(len(section_url_tags), 2)
 
     def test_content_section_listing_new_names(self):
@@ -185,9 +183,7 @@ class TestIoGTViews(SpringboardTestCase):
         })
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
-            r'/section/(%s)/' % '|'.join([
-                section.get('name')
-                for slug, section in ContentSection.DATA.items()])))
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
 
         self.assertEqual(len(section_url_tags), 2)
 
@@ -206,9 +202,7 @@ class TestIoGTViews(SpringboardTestCase):
                 '\nebola = http://za.ebola.qa-hub.unicore.io/'})
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
-            r'/section/(%s)/' % '|'.join([
-                section.get('name')
-                for slug, section in ContentSection.DATA.items()])))
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         override_url_tags = html.find_all('a', href=re.compile(
             r'http://za.(ebola|ffl).qa-hub.unicore.io/'))
         self.assertEqual(len(section_url_tags), 4)
@@ -277,4 +271,4 @@ class TestIoGTViews(SpringboardTestCase):
 
         app.get('/section/ffl/')
         data = mock_task.call_args[0][2]
-        self.assertEqual(data['dt'], 'Facts for Life')
+        self.assertEqual(data['dt'], 'Facts For Life')

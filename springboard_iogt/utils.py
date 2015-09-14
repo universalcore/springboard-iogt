@@ -46,7 +46,7 @@ class ContentSection(object):
         }),
         ('ffl', {
             'owner': _('Facts For Life'),
-            'title': _('Facts for Life'),
+            'title': _('Facts For Life'),
             'descriptor': _('Improve the lives of Children'),
             'name': 'ffl'
         }),
@@ -66,34 +66,39 @@ class ContentSection(object):
 
     def __init__(self, slug):
         self.slug = slug
-        [self.data] = [
-            data for _, data in self.__class__.DATA.items()
-            if data.get('name') == slug]
-        self.owner = self.data['owner']
+        self.data = self.__class__.DATA[slug]
         self.title = self.data['title']
+        self.owner = self.data['owner']
         self.descriptor = self.data['descriptor']
 
     def set_indexes(self, s_obj):
         indexes = s_obj.get_indexes()
-        indexes = filter(lambda index: self.slug in index, indexes)
+        indexes = filter(lambda index: self.data.get('name') in index, indexes)
         return s_obj.indexes(*indexes)
 
     @classmethod
     def exists(cls, name, indexes):
         return (
             name in [
-                section.get('name') for _section, section in cls.DATA.items()]
+                section.get('name') for _, section in cls.DATA.items()]
             and
             any(index for index in indexes if name in index))
 
     @classmethod
     def all(cls):
-        return [cls(section.get('name')) for slug, section in cls.DATA.items()]
+        return [cls(slug) for slug in cls.DATA.keys()]
 
     @classmethod
     def known(cls, indexes):
-        return [cls(section.get('name')) for slug, section in cls.DATA.items()
+        return [cls(slug) for slug, section in cls.DATA.items()
                 if cls.exists(section.get('name'), indexes)]
+
+    @classmethod
+    def _for(cls, name):
+        [obj] = [
+            cls(slug) for slug, data in cls.DATA.items()
+            if data.get('name') == name]
+        return obj
 
 
 def get_redirect_url(request, param_name='next', default_route='home'):

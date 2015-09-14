@@ -28,9 +28,8 @@ class TestUtils(SpringboardTestCase):
         self.assertEqual(
             section_obj.set_indexes(views.all_pages).get_indexes(),
             ['ffl-master'])
-        self.assertEqual(section_obj.title, 'Facts for Life')
+        self.assertEqual(section_obj.title, 'Facts For Life')
         self.assertEqual(section_obj.owner, 'Facts For Life')
-
         self.assertEqual(len(ContentSection.all()), len(ContentSection.DATA))
         self.assertEqual(len(ContentSection.known(
             indexes=['ffl', 'ureport', 'does-not-exist'])), 2)
