@@ -42,7 +42,7 @@ class ContentSection(object):
         ('ffl', {
             'owner': _('Facts For Life'),
             'title': _('Facts for Life'),
-            'descriptor': _('Save and improve the lives of children')
+            'descriptor': _('Improve the lives of Children')
         }),
         ('hiv', {
             'owner': _('HIV'),

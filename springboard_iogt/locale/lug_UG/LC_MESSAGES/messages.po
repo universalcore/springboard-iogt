@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-09 08:18+0200\n"
+"POT-Creation-Date: 2015-09-14 10:34+0200\n"
 "PO-Revision-Date: 2015-09-07 18:26+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: lg_UG <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgid "Facts for Life"
 msgstr ""
 
 #: springboard_iogt/utils.py:45
-msgid "Save and improve the lives of children"
+msgid "Improve the lives of Children"
 msgstr ""
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
@@ -107,7 +107,7 @@ msgid "We can't find that page, sorry."
 msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:57
+#: springboard_iogt/templates/base.jinja2:61
 msgid "The Internet of Good Things"
 msgstr ""
 
@@ -115,11 +115,11 @@ msgstr ""
 msgid "Explore IoGT"
 msgstr ""
 
-#: springboard_iogt/templates/base.jinja2:51
+#: springboard_iogt/templates/base.jinja2:55
 msgid "Home"
 msgstr ""
 
-#: springboard_iogt/templates/base.jinja2:58
+#: springboard_iogt/templates/base.jinja2:62
 msgid "About Internet of Good Things"
 msgstr ""
 
@@ -175,4 +175,7 @@ msgstr ""
 #, python-format
 msgid "Brought to you by %(owner)s"
 msgstr ""
+
+#~ msgid "Save and improve the lives of children"
+#~ msgstr ""
 
