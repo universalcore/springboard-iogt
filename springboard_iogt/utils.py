@@ -80,7 +80,7 @@ class ContentSection(object):
     def exists(cls, name, indexes):
         return (
             name in [
-                section.get('name') for _, section in cls.DATA.items()]
+                section.get('name') for slug, section in cls.DATA.items()]
             and
             any(index for index in indexes if name in index))
 

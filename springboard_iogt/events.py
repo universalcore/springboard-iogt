@@ -6,6 +6,7 @@ from springboard_iogt.utils import ContentSection
 @subscriber(BeforeRender)
 def add_content_section_context(event):
     index_prefixes = getattr(event.get('view'), 'all_index_prefixes', None)
+    print 'iii', index_prefixes
     event['content_sections'] = (ContentSection.known(index_prefixes)
                                  if index_prefixes
                                  else [])

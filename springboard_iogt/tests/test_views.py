@@ -166,9 +166,9 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_content_section_listing(self):
         self.mk_workspace(name='ffl')
-        self.mk_workspace(name='ureport')
+        self.mk_workspace(name='barefootlaw')
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': 'ffl\nureport'
+            'unicore.content_repo_urls': 'ffl\nbarefootlaw'
         })
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
@@ -256,19 +256,29 @@ class TestIoGTViews(SpringboardTestCase):
     @patch('unicore.google.tasks.pageview.delay')
     def test_section_ga_page_title(self, mock_task):
         ffl_workspace = self.mk_workspace(name='ffl')
+        bfl_workspace = self.mk_workspace(name='barefootlaw')
         [category] = self.mk_categories(ffl_workspace, count=1, position=1)
+        [category2] = self.mk_categories(bfl_workspace, count=1, position=1)
         [page] = self.mk_pages(
             ffl_workspace, count=1, position=1,
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid)
+        [page2] = self.mk_pages(
+            bfl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category2.uuid)
         app = self.mk_app(self.workspace, main=main, settings={
             'ga.profile_id': 'ID-000',
             'ga.persona_dimension_id': 'dimension0',
-            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
-                                                    ffl_workspace.working_dir])
+            'unicore.content_repo_urls': '\n'.join([ffl_workspace.working_dir,
+                                                    bfl_workspace.working_dir])
         })
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
         app.get('/section/ffl/')
         data = mock_task.call_args[0][2]
         self.assertEqual(data['dt'], 'Facts For Life')
+
+        app.get('/section/yourrights/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Your Rights')

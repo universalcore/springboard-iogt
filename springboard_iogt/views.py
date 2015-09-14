@@ -92,11 +92,13 @@ class IoGTViews(SpringboardViews):
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):
         slug = self.request.matchdict['slug']
-        indexes = self.all_pages.get_indexes()
-        if not ContentSection.exists(slug, indexes):
+
+        try:
+            section = ContentSection(slug)
+        except KeyError:
             raise HTTPNotFound
 
-        return self.context(section=ContentSection(slug))
+        return self.context(section=section)
 
     @ga_context(lambda context: {'dt': 'About', })
     @view_config(route_name='about',
