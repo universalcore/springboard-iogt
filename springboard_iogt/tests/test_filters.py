@@ -81,4 +81,4 @@ class TestFilters(SpringboardTestCase):
         page.es_meta = Mock(index='unicore-cms-content-ffl-za-qa')
         section_obj = filters.content_section(page)
         self.assertEqual(section_obj.slug, 'ffl')
-        self.assertEqual(section_obj.title, 'Facts for Life')
+        self.assertEqual(section_obj.title, 'Facts For Life')

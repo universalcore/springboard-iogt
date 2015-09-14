@@ -166,25 +166,37 @@ class TestIoGTViews(SpringboardTestCase):
 
     def test_content_section_listing(self):
         self.mk_workspace(name='ffl')
-        self.mk_workspace(name='ureport')
+        self.mk_workspace(name='barefootlaw')
         app = self.mk_app(self.workspace, main=main, settings={
-            'unicore.content_repo_urls': 'ffl\nureport'
+            'unicore.content_repo_urls': 'ffl\nbarefootlaw'
         })
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
         self.assertEqual(len(section_url_tags), 2)
 
+    def test_content_section_listing_new_names(self):
+        self.mk_workspace(name='ffl')
+        self.mk_workspace(name='unicore_frontend_barefootlaw_za')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': 'ffl\nunicore_frontend_barefootlaw_za'
+        })
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+
+        self.assertEqual(len(section_url_tags), 2)
+
     def test_content_section_listing_overrides(self):
-        self.mk_workspace(name='yourrights')
-        self.mk_workspace(name='myfamily')
+        self.mk_workspace(name='barefootlaw')
+        self.mk_workspace(name='mariestopes')
         self.mk_workspace(name='connectsmart')
-        self.mk_workspace(name='healthtalk')
+        self.mk_workspace(name='straighttalk')
 
         app = self.mk_app(self.workspace, main=main, settings={
             'unicore.content_repo_urls':
-                'yourrights\nmyfamily\n'
-                'connectsmart\nhealthtalk',
+                'barefootlaw\nmariestopes\n'
+                'connectsmart\nstraighttalk',
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
                 '\nebola = http://za.ebola.qa-hub.unicore.io/'})
@@ -244,19 +256,29 @@ class TestIoGTViews(SpringboardTestCase):
     @patch('unicore.google.tasks.pageview.delay')
     def test_section_ga_page_title(self, mock_task):
         ffl_workspace = self.mk_workspace(name='ffl')
+        bfl_workspace = self.mk_workspace(name='barefootlaw')
         [category] = self.mk_categories(ffl_workspace, count=1, position=1)
+        [category2] = self.mk_categories(bfl_workspace, count=1, position=1)
         [page] = self.mk_pages(
             ffl_workspace, count=1, position=1,
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid)
+        [page2] = self.mk_pages(
+            bfl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category2.uuid)
         app = self.mk_app(self.workspace, main=main, settings={
             'ga.profile_id': 'ID-000',
             'ga.persona_dimension_id': 'dimension0',
-            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
-                                                    ffl_workspace.working_dir])
+            'unicore.content_repo_urls': '\n'.join([ffl_workspace.working_dir,
+                                                    bfl_workspace.working_dir])
         })
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
 
         app.get('/section/ffl/')
         data = mock_task.call_args[0][2]
-        self.assertEqual(data['dt'], 'Facts for Life')
+        self.assertEqual(data['dt'], 'Facts For Life')
+
+        app.get('/section/yourrights/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Your Rights')
