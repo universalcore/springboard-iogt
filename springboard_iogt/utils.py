@@ -17,48 +17,58 @@ class ContentSection(object):
         ('ureport', {
             'owner': _('U-report'),
             'title': _('U-report'),
-            'descriptor': _('Become a U-Reporter & start sharing!')
+            'descriptor': _('Become a U-Reporter & start sharing!'),
+            'name': 'ureport'
         }),
         ('yourrights', {
             'owner': _('Barefoot Law'),
             'title': _('Your Rights'),
-            'descriptor': _('Free legal information & support')
+            'descriptor': _('Free legal information & support'),
+            'name': 'barefootlaw'
         }),
         ('myfamily', {
             'owner': _('Marie Stopes'),
             'title': _('My Family'),
-            'descriptor': _('Matters about the family')
+            'descriptor': _('Matters about the family'),
+            'name': 'mariestopes'
         }),
         ('healthtalk', {
             'owner': _('Straight Talk'),
             'title': _('Health Talk'),
-            'descriptor': _('Collaborating together with the youth')
+            'descriptor': _('Collaborating together with the youth'),
+            'name': 'straighttalk'
         }),
         ('ebola', {
             'owner': _('Ebola Response'),
             'title': _('StopEbola'),
-            'descriptor': _('Get information about Ebola')
+            'descriptor': _('Get information about Ebola'),
+            'name': 'ebola'
         }),
         ('ffl', {
             'owner': _('Facts For Life'),
             'title': _('Facts for Life'),
-            'descriptor': _('Improve the lives of Children')
+            'descriptor': _('Improve the lives of Children'),
+            'name': 'ffl'
         }),
         ('hiv', {
             'owner': _('HIV'),
             'title': _('HIV'),
-            'descriptor': _('Love, relationships, sex and gender')
+            'descriptor': _('Love, relationships, sex and gender'),
+            'name': 'hiv'
         }),
         ('connectsmart', {
             'owner': _('Connect Smart'),
             'title': _('Connect Smart'),
-            'descriptor': _('Learn about the internet')
+            'descriptor': _('Learn about the internet'),
+            'name': 'connectsmart'
         })
     ])
 
     def __init__(self, slug):
         self.slug = slug
-        self.data = self.__class__.DATA[slug]
+        [self.data] = [
+            data for _, data in self.__class__.DATA.items()
+            if data.get('name') == slug]
         self.owner = self.data['owner']
         self.title = self.data['title']
         self.descriptor = self.data['descriptor']
@@ -69,18 +79,21 @@ class ContentSection(object):
         return s_obj.indexes(*indexes)
 
     @classmethod
-    def exists(cls, slug, indexes):
-        return (slug in cls.DATA and
-                any(index for index in indexes if slug in index))
+    def exists(cls, name, indexes):
+        return (
+            name in [
+                section.get('name') for _section, section in cls.DATA.items()]
+            and
+            any(index for index in indexes if name in index))
 
     @classmethod
     def all(cls):
-        return [cls(slug) for slug in cls.DATA.keys()]
+        return [cls(section.get('name')) for slug, section in cls.DATA.items()]
 
     @classmethod
     def known(cls, indexes):
-        return [cls(slug) for slug in cls.DATA.keys()
-                if cls.exists(slug, indexes)]
+        return [cls(section.get('name')) for slug, section in cls.DATA.items()
+                if cls.exists(section.get('name'), indexes)]
 
 
 def get_redirect_url(request, param_name='next', default_route='home'):
