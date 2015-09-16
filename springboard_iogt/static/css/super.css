@@ -7,14 +7,14 @@
 
     .personae li{border-bottom: solid 2px #e4e4e4; }
     .personae a {
-        padding: 2em 6em;
+        padding: 2em 1em 2em 6em;
         background: transparent 10px 10px no-repeat;
     }
 
-    .personae .child a{background-image: url('img/persona_child.png');}
-    .personae .teenager a{background-image: url('img/persona_teenager.png');}
-    .personae .parent a{background-image: url('img/persona_parent.png');}
-    .personae .worker a{background-image: url('img/persona_worker.png');}
+    .personae .child a{background-image: url('img/persona_child2.png');}
+    .personae .teenager a{background-image: url('img/persona_teenager2.png');}
+    .personae .parent a{background-image: url('img/persona_parent2.png');}
+    .personae .worker a{background-image: url('img/persona_worker2.png');}
 
     #submenu .h1 {
         padding: 0;

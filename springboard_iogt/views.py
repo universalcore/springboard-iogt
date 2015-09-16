@@ -16,7 +16,7 @@ from springboard_iogt.utils import (
 
 ONE_YEAR = 31536000
 
-PERSONAE = {'CHILD', 'TEENAGER', 'PARENT', 'WORKER'}
+PERSONAE = {'CHILD', 'ADOLESCENT', 'PARENT', 'WORKER'}
 PERSONA_COOKIE_NAME = 'iogt-persona'
 PERSONA_SKIP_COOKIE_VALUE = '__skip__'
 PERSONA_REDIRECT_ROUTES = {'home', 'page', 'category', 'flat_page'}

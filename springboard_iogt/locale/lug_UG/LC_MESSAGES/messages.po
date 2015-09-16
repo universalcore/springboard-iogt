@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-14 10:34+0200\n"
+"POT-Creation-Date: 2015-09-16 15:24+0200\n"
 "PO-Revision-Date: 2015-09-07 18:26+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: lg_UG <LL@li.org>\n"
@@ -26,79 +26,75 @@ msgstr ""
 msgid "Become a U-Reporter & start sharing!"
 msgstr ""
 
-#: springboard_iogt/utils.py:23
+#: springboard_iogt/utils.py:24
 msgid "Barefoot Law"
 msgstr ""
 
-#: springboard_iogt/utils.py:24
+#: springboard_iogt/utils.py:25
 msgid "Your Rights"
 msgstr ""
 
-#: springboard_iogt/utils.py:25
+#: springboard_iogt/utils.py:26
 msgid "Free legal information & support"
 msgstr ""
 
-#: springboard_iogt/utils.py:28
+#: springboard_iogt/utils.py:30
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:29
+#: springboard_iogt/utils.py:31
 msgid "My Family"
 msgstr ""
 
-#: springboard_iogt/utils.py:30
+#: springboard_iogt/utils.py:32
 msgid "Matters about the family"
 msgstr ""
 
-#: springboard_iogt/utils.py:33
+#: springboard_iogt/utils.py:36
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:34
+#: springboard_iogt/utils.py:37
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:35
+#: springboard_iogt/utils.py:38
 msgid "Collaborating together with the youth"
 msgstr ""
 
-#: springboard_iogt/utils.py:38
+#: springboard_iogt/utils.py:42
 msgid "Ebola Response"
 msgstr ""
 
-#: springboard_iogt/utils.py:39
+#: springboard_iogt/utils.py:43
 msgid "StopEbola"
 msgstr ""
 
-#: springboard_iogt/utils.py:40
+#: springboard_iogt/utils.py:44
 msgid "Get information about Ebola"
 msgstr ""
 
-#: springboard_iogt/utils.py:43
+#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
 msgstr ""
 
-#: springboard_iogt/utils.py:44
-msgid "Facts for Life"
-msgstr ""
-
-#: springboard_iogt/utils.py:45
+#: springboard_iogt/utils.py:50
 msgid "Improve the lives of Children"
 msgstr ""
 
-#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "HIV"
 msgstr ""
 
-#: springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:56
 msgid "Love, relationships, sex and gender"
 msgstr ""
 
-#: springboard_iogt/utils.py:53 springboard_iogt/utils.py:54
+#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
 msgid "Connect Smart"
 msgstr ""
 
-#: springboard_iogt/utils.py:55
+#: springboard_iogt/utils.py:62
 msgid "Learn about the internet"
 msgstr ""
 
@@ -141,15 +137,15 @@ msgid "Child"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:10
-msgid "Teenager"
+msgid "Adolescent"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
-msgid "Parent"
+msgid "Parent / Caregiver"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:12
-msgid "Worker"
+msgid "Teacher / Health / Social Worker"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:15
@@ -177,5 +173,20 @@ msgid "Brought to you by %(owner)s"
 msgstr ""
 
 #~ msgid "Save and improve the lives of children"
+#~ msgstr ""
+
+#~ msgid "Facts for Life"
+#~ msgstr ""
+
+#~ msgid "Teenager"
+#~ msgstr ""
+
+#~ msgid "Parent"
+#~ msgstr ""
+
+#~ msgid "Worker"
+#~ msgstr ""
+
+#~ msgid "Adolescent "
 #~ msgstr ""
 
