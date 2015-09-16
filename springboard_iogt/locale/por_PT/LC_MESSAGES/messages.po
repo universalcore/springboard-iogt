@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 13:53+0200\n"
+"POT-Creation-Date: 2015-09-16 15:24+0200\n"
 "PO-Revision-Date: 2015-09-09 06:11+0000\n"
 "Last-Translator: Milton <milton@praekelt.com>\n"
 "Language-Team: pt_PT <LL@li.org>\n"
@@ -136,7 +136,7 @@ msgid "Child"
 msgstr "Criança"
 
 #: springboard_iogt/templates/personae.jinja2:10
-msgid "Adolescent "
+msgid "Adolescent"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
@@ -184,5 +184,8 @@ msgstr "Trazido a você por %(owner)s"
 #~ msgstr "Parente"
 
 #~ msgid "Worker"
+#~ msgstr ""
+
+#~ msgid "Adolescent "
 #~ msgstr ""
 
