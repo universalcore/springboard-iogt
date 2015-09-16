@@ -48,3 +48,4 @@ repositories:
   unicore_frontend_ffl_za: git@github.com:universalcore/unicore-cms-content-ffl-pk-qa.git
   unicore_frontend_mariestopes_za: git@github.com:universalcore/unicore-cms-content-mariestopes-za-qa.git
   unicore_frontend_straighttalk_za: git@github.com:universalcore/unicore-cms-content-straighttalk-za-qa.git
+  unicore_frontend_hiv_za: git@github.com:universalcore/unicore-cms-content-hiv-br-prod.git

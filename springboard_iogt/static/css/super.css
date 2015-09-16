@@ -50,7 +50,7 @@
     #content .articles .healthtalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
     #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange_flipped.png");}
     #content .articles .connectsmart .h1 .back{background-image: url("img/arrow_lightpink_flipped.png");}
-    #content .articles .hiv .h1 .back{background-image: url("img/arrow_darkgreen_flipped.png");}
+    #content .articles .allin .h1 .back{background-image: url("img/arrow_darkgreen_flipped.png");}
 
     .articles .detail { padding: 24px; }
 
@@ -79,7 +79,7 @@
     #submenu .ureport a{background-image: url("img/arrow_orange.png");}
     #submenu .connectsmart a{background-image: url("img/arrow_lightpink.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
-    #submenu .hiv a{background-image: url("img/arrow_darkgreen.png");}
+    #submenu .allin a{background-image: url("img/arrow_darkgreen.png");}
 
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
@@ -90,7 +90,7 @@
     #content .home .articles .ureport:after {background-color:#ff7e4e; }
     #content .home .articles .ebola:after {background-color:#ffbe61; }
     #content .home .articles .connectsmart:after {background-color:#f38aa5; }
-    #content .home .articles .hiv:after {background-color:#4f946e; }
+    #content .home .articles .allin:after {background-color:#4f946e; }
 
     #content .section-title.h1 {padding: 0;}
 

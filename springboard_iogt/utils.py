@@ -50,9 +50,9 @@ class ContentSection(object):
             'descriptor': _('Improve the lives of Children'),
             'name': 'ffl'
         }),
-        ('hiv', {
-            'owner': _('HIV'),
-            'title': _('HIV'),
+        ('allin', {
+            'owner': _('All IN'),
+            'title': _('All IN'),
             'descriptor': _('Love, relationships, sex and gender'),
             'name': 'hiv'
         }),
