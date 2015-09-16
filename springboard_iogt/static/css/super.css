@@ -7,7 +7,7 @@
 
     .personae li{border-bottom: solid 2px #e4e4e4; }
     .personae a {
-        padding: 2em 6em;
+        padding: 2em 1em 2em 6em;
         background: transparent 10px 10px no-repeat;
     }
 
