@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 16:51+0200\n"
-"PO-Revision-Date: 2015-09-16 12:30+0000\n"
-"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"POT-Creation-Date: 2015-09-16 17:21+0200\n"
+"PO-Revision-Date: 2015-09-16 15:19+0000\n"
+"Last-Translator: Milton <milton@praekelt.com>\n"
 "Language-Team: ar_AE <LL@li.org>\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n>=3 "
 "&& n<=10 ? 3 : n>=11 && n<=99 ? 4 : 5)\n"
@@ -122,7 +122,7 @@ msgstr "إنترنت الأمور الجيدة"
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr "المزيد %(category_title_links)s"
+msgstr "المزيد %(category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
@@ -138,7 +138,7 @@ msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "اليافع"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
