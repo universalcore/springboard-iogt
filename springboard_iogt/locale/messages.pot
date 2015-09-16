@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 14:52+0200\n"
+"POT-Creation-Date: 2015-09-16 15:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgid "Child"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:10
-msgid "Adolescent "
+msgid "Adolescent"
 msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
