@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 15:29+0200\n"
-"PO-Revision-Date: 2015-09-16 13:53+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-09-16 16:21+0200\n"
+"PO-Revision-Date: 2015-09-16 12:30+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: ar_AE <LL@li.org>\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n>=3 "
 "&& n<=10 ? 3 : n>=11 && n<=99 ? 4 : 5)\n"
@@ -73,15 +72,15 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Get information about Ebola"
-msgstr ""
+msgstr "احصل على معلومات عن الإيبولا"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
-msgstr ""
+msgstr "حقائق من أجل الحياة"
 
 #: springboard_iogt/utils.py:50
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "احفظ وحسّن حياة الأطفال"
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "All IN"
@@ -89,53 +88,53 @@ msgstr ""
 
 #: springboard_iogt/utils.py:56
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "الحب، العلاقات، الجنس والنوع الاجتماعي"
 
 #: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
 msgid "Connect Smart"
-msgstr ""
+msgstr "اشبك بذكاء"
 
 #: springboard_iogt/utils.py:62
 msgid "Learn about the internet"
-msgstr ""
+msgstr "تعرّف على الإنترنت"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "عفوا، لا نستطيع إيجاد الصفحة التي تبحث عنها"
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:61
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "إنترنت الأمور الجيدة"
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
-msgstr ""
+msgstr "تعرف على إنترنت الأمور الجيدة"
 
 #: springboard_iogt/templates/base.jinja2:55
 msgid "Home"
-msgstr ""
+msgstr "الصفحة الرئيسية"
 
 #: springboard_iogt/templates/base.jinja2:62
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "إنترنت الأمور الجيدة"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "المزيد %(category_title_links)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "مواضيع موصى به"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "من أنت؟"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
@@ -143,15 +142,15 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "الأب/ الأم / مقدم الرعاية"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "الأخصائي الاجتماعي / المعلم / العامل الصحي"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "تخطى"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -160,19 +159,19 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "السابق"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "التالي"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "هذه الصفحة برعاية %(owner)s"
 
-#~ msgid "HIV"
-#~ msgstr ""
+#~ msgid "Adolescent "
+#~ msgstr "اليافع"
 

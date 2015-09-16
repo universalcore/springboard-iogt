@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 15:29+0200\n"
-"PO-Revision-Date: 2015-09-09 06:11+0000\n"
-"Last-Translator: Milton <milton@praekelt.com>\n"
+"POT-Creation-Date: 2015-09-16 16:21+0200\n"
+"PO-Revision-Date: 2015-09-16 12:57+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
@@ -71,23 +71,23 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Get information about Ebola"
-msgstr ""
+msgstr "Informations sur Ebola"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
-msgstr ""
+msgstr "Savoir pour Sauver"
 
 #: springboard_iogt/utils.py:50
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Améliorer la vie des enfants"
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "All IN"
-msgstr ""
+msgstr "TOUS ENSEMBLE"
 
 #: springboard_iogt/utils.py:56
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Amour, relations, sexe et genres"
 
 #: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
 msgid "Connect Smart"
@@ -169,23 +169,14 @@ msgstr "Suivant"
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
-
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
+msgstr "Ce contenu vous est fourni par %(owner)s"
 
 #~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
+#~ msgstr "Savoir pour Sauver"
 
 #~ msgid "Parent"
 #~ msgstr "Parent"
 
 #~ msgid "Worker"
 #~ msgstr "Travailleur"
-
-#~ msgid "Adolescent "
-#~ msgstr ""
 

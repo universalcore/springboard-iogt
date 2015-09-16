@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 15:29+0200\n"
-"PO-Revision-Date: 2015-09-09 06:11+0000\n"
-"Last-Translator: Milton <milton@praekelt.com>\n"
+"POT-Creation-Date: 2015-09-16 16:21+0200\n"
+"PO-Revision-Date: 2015-09-15 09:25+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: pt_PT <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:25
 msgid "Your Rights"
-msgstr ""
+msgstr "Direitos da Criança"
 
 #: springboard_iogt/utils.py:26
 msgid "Free legal information & support"
@@ -67,19 +67,19 @@ msgstr ""
 
 #: springboard_iogt/utils.py:43
 msgid "StopEbola"
-msgstr ""
+msgstr "Factos: Cólera e Ébola"
 
 #: springboard_iogt/utils.py:44
 msgid "Get information about Ebola"
-msgstr ""
+msgstr "Informações sobre o Ébola"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
-msgstr ""
+msgstr "Saúde e Vida"
 
 #: springboard_iogt/utils.py:50
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Salvar e melhorar a vida das crianças"
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "All IN"
@@ -87,11 +87,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:56
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Amor, relacionamentos, sexo e gênero"
 
 #: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
 msgid "Connect Smart"
-msgstr ""
+msgstr "Conexão Inteligente"
 
 #: springboard_iogt/utils.py:62
 msgid "Learn about the internet"
@@ -104,11 +104,11 @@ msgstr "Desculpe, não conseguimos encontrar a página."
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:61
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "A Internet das Coisas Boas"
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Explorar IoGT"
 
 #: springboard_iogt/templates/base.jinja2:55
 msgid "Home"
@@ -116,7 +116,7 @@ msgstr "Início"
 
 #: springboard_iogt/templates/base.jinja2:62
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Sobre a Internet das Coisas Boas"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
@@ -171,21 +171,9 @@ msgstr "Seguinte"
 msgid "Brought to you by %(owner)s"
 msgstr "Trazido a você por %(owner)s"
 
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
-
 #~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
+#~ msgstr "Saúde e Vida"
 
 #~ msgid "Parent"
 #~ msgstr "Parente"
-
-#~ msgid "Worker"
-#~ msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
 

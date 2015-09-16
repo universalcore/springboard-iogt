@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 15:29+0200\n"
+"POT-Creation-Date: 2015-09-16 16:21+0200\n"
 "PO-Revision-Date: 2015-09-09 06:11+0000\n"
 "Last-Translator: Milton <milton@praekelt.com>\n"
 "Language-Team: sw_TZ <LL@li.org>\n"
@@ -171,21 +171,6 @@ msgstr "Mbele"
 msgid "Brought to you by %(owner)s"
 msgstr "Imeletwa kwenu na %(owner)s"
 
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
-
-#~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
-
 #~ msgid "Parent"
 #~ msgstr "Mzazi"
-
-#~ msgid "Worker"
-#~ msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
 

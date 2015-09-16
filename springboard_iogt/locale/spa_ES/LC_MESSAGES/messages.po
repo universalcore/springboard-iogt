@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 15:29+0200\n"
-"PO-Revision-Date: 2015-09-16 13:53+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-09-16 16:21+0200\n"
+"PO-Revision-Date: 2015-09-16 11:55+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: es_ES <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
@@ -72,15 +71,15 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Get information about Ebola"
-msgstr ""
+msgstr "Informations sur Ebola"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
-msgstr ""
+msgstr "Para la vida"
 
 #: springboard_iogt/utils.py:50
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Sauver la vie des enfants"
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "All IN"
@@ -100,7 +99,7 @@ msgstr ""
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Lo siento. No encontramos esa página."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:61
@@ -109,32 +108,32 @@ msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Explora IoGT"
 
 #: springboard_iogt/templates/base.jinja2:55
 msgid "Home"
-msgstr ""
+msgstr "Inicio"
 
 #: springboard_iogt/templates/base.jinja2:62
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Acerca de Internet of Good Things"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Más %(category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Recomendado"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "¿Quién eres?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Niño"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
@@ -142,15 +141,15 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Padre / Madre / Tutor"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Profesor / Trabajador sanitario / Trabajador social"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Omitir"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -159,19 +158,19 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "Contenido proporcionado por %(owner)s"
 
 #~ msgid "Adolescent "
-#~ msgstr ""
+#~ msgstr "Adolescente"
 
