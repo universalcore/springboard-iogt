@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-09-16 13:53+0200\n"
+"POT-Creation-Date: 2015-09-16 14:52+0200\n"
 "PO-Revision-Date: 2015-09-07 18:26+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: lg_UG <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgid "Improve the lives of Children"
 msgstr ""
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
-msgid "HIV"
+msgid "All IN"
 msgstr ""
 
 #: springboard_iogt/utils.py:56
@@ -185,5 +185,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Worker"
+#~ msgstr ""
+
+#~ msgid "HIV"
 #~ msgstr ""
 
