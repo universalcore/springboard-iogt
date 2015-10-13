@@ -78,7 +78,7 @@
 
         /* Content section-specific */
         .section-title { margin: 0; padding: 0; background-color: #4d4391; }
-            .section-title div { margin: 0; padding: 24px 24px; line-height: 32px; font-size: 200%; font-weight: bold; }
+            .section-title div { margin: 0; padding: 14px 14px 14px 14px; line-height: 32px; font-size: 200%; font-weight: bold; }
             .section-title a { color: #fff; }
         .section-banner { padding: 0; margin: 0; }
             .section-banner img { width: 100%; padding: 0; margin: 0; display: block; }
