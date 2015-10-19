@@ -103,9 +103,9 @@
         .articles .ureport a { color: #A4CE55; }
         .section-title.ureport div { background-color: #A4CE55; }
 
-        /* Ebola */
-        .articles .ebola a { color: #E24256; }
-        .section-title.ebola div { background-color: #E24256; }
+        /* emergency */
+        .articles .emergency a { color: #E24256; }
+        .section-title.emergency div { background-color: #E24256; }
 
         /* Connect Smart */
         .articles .connectsmart a { color: #6093CD; }
