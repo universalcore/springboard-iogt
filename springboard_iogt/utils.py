@@ -51,8 +51,8 @@ class ContentSection(object):
             'name': 'ffl'
         }),
         ('allin', {
-            'owner': _('All IN'),
-            'title': _('All IN'),
+            'owner': _('ALL IN'),
+            'title': _('ALL IN'),
             'descriptor': _('Love, relationships, sex and gender'),
             'name': 'hiv'
         }),
