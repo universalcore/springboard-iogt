@@ -17,5 +17,5 @@ def add_content_section_context(event):
         settings.get('iogt.content_section_url_overrides', ''))
     event['content_section_url_overrides'] = overrides
     event['content_section_url_overrides_data_list'] = [
-        {'url': url, 'slug': slug, 'data': ContentSection(slug)}
+        {'url': url, 'slug': slug, 'data': ContentSection(slug, localizer)}
         for slug, url in overrides.items()]
