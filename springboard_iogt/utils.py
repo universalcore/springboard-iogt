@@ -89,7 +89,7 @@ class ContentSection(object):
         return [cls(slug) for slug in cls.DATA.keys()]
 
     @classmethod
-    def known(cls, indexes):
+    def known(cls, indexes, localizer):    
         return [cls(slug) for slug, section in cls.DATA.items()
                 if cls.exists(section.get('name'), indexes)]
 
