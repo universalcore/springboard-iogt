@@ -4,6 +4,7 @@ import pkg_resources
 from pyramid.view import view_config
 from pyramid.events import NewRequest
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
+from pyramid.i18n import get_localizer
 
 from unicore.content.models import Page
 
@@ -91,10 +92,11 @@ class IoGTViews(SpringboardViews):
     @view_config(route_name='content_section',
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):
+        localizer = get_localizer(self.request)
         slug = self.request.matchdict['slug']
 
         try:
-            section = ContentSection(slug)
+            section = ContentSection(slug, localizer)
         except KeyError:
             raise HTTPNotFound
 
