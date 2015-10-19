@@ -38,10 +38,10 @@ class ContentSection(object):
             'descriptor': _('Collaborating together with the youth'),
             'name': 'straighttalk'
         }),
-        ('ebola', {
-            'owner': _('Ebola Response'),
-            'title': _('StopEbola'),
-            'descriptor': _('Get information about Ebola'),
+        ('emergency', {
+            'owner': _('Emergency'),
+            'title': _('Emergency information'),
+            'descriptor': _('Epidemics, disasters or conflicts'),
             'name': 'ebola'
         }),
         ('ffl', {

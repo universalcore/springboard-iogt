@@ -63,15 +63,15 @@ msgid "Collaborating together with the youth"
 msgstr ""
 
 #: springboard_iogt/utils.py:42
-msgid "Ebola Response"
+msgid "Emergency"
 msgstr ""
 
 #: springboard_iogt/utils.py:43
-msgid "StopEbola"
+msgid "Emergency information"
 msgstr ""
 
 #: springboard_iogt/utils.py:44
-msgid "Get information about Ebola"
+msgid "Epidemics, disasters or conflicts"
 msgstr ""
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
