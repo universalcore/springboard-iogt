@@ -91,10 +91,11 @@ class IoGTViews(SpringboardViews):
     @view_config(route_name='content_section',
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):
+        localizer = self.request.localizer
         slug = self.request.matchdict['slug']
 
         try:
-            section = ContentSection(slug)
+            section = ContentSection(slug, localizer)
         except KeyError:
             raise HTTPNotFound
 
