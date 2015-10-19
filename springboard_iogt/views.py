@@ -4,7 +4,6 @@ import pkg_resources
 from pyramid.view import view_config
 from pyramid.events import NewRequest
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
-from pyramid.i18n import get_localizer
 
 from unicore.content.models import Page
 

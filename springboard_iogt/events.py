@@ -1,7 +1,6 @@
 from pyramid.events import BeforeRender, subscriber
 from springboard.utils import config_dict
 from springboard_iogt.utils import ContentSection
-from pyramid.i18n import get_localizer
 
 
 @subscriber(BeforeRender)
