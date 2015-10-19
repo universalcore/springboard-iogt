@@ -64,12 +64,17 @@ class ContentSection(object):
         })
     ])
 
-    def __init__(self, slug):
+    def __init__(self, slug, localizer = None):
         self.slug = slug
         self.data = self.__class__.DATA[slug]
-        self.title = self.data['title']
-        self.owner = self.data['owner']
-        self.descriptor = self.data['descriptor']
+        if localizer:
+            self.title = localizer.translate(self.data['title'])
+            self.owner = localizer.translate(self.data['owner'])
+            self.descriptor = localizer.translate(self.data['descriptor'])
+        else:
+            self.title = self.data['title']
+            self.owner = self.data['owner']
+            self.descriptor = self.data['descriptor']
 
     def set_indexes(self, s_obj):
         indexes = s_obj.get_indexes()
@@ -90,7 +95,7 @@ class ContentSection(object):
 
     @classmethod
     def known(cls, indexes, localizer):    
-        return [cls(slug) for slug, section in cls.DATA.items()
+        return [cls(slug, localizer) for slug, section in cls.DATA.items()
                 if cls.exists(section.get('name'), indexes)]
 
     @classmethod
