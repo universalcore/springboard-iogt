@@ -64,7 +64,7 @@ class ContentSection(object):
         })
     ])
 
-    def __init__(self, slug, localizer = None):
+    def __init__(self, slug, localizer=None):
         self.slug = slug
         self.data = self.__class__.DATA[slug]
         if localizer:
@@ -94,7 +94,7 @@ class ContentSection(object):
         return [cls(slug) for slug in cls.DATA.keys()]
 
     @classmethod
-    def known(cls, indexes, localizer):    
+    def known(cls, indexes, localizer):
         return [cls(slug, localizer) for slug, section in cls.DATA.items()
                 if cls.exists(section.get('name'), indexes)]
 
