@@ -7,7 +7,7 @@ from pyramid.i18n import get_localizer
 @subscriber(BeforeRender)
 def add_content_section_context(event):
     index_prefixes = getattr(event.get('view'), 'all_index_prefixes', None)
-    localizer = get_localizer(event['request'])
+    localizer = event['request'].localizer
     event['content_sections'] = (ContentSection.known(index_prefixes,
                                                       localizer)
                                  if index_prefixes

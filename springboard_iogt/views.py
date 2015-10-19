@@ -92,7 +92,7 @@ class IoGTViews(SpringboardViews):
     @view_config(route_name='content_section',
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):
-        localizer = get_localizer(self.request)
+        localizer = self.request.localizer
         slug = self.request.matchdict['slug']
 
         try:
