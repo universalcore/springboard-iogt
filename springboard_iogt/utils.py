@@ -40,7 +40,7 @@ class ContentSection(object):
         }),
         ('emergency', {
             'owner': _('Emergency'),
-            'title': _('Emergency information'),
+            'title': _('Emergency Information'),
             'descriptor': _('Epidemics, disasters or conflicts'),
             'name': 'ebola'
         }),
