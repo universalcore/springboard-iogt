@@ -1,6 +1,7 @@
 # Custom ignore list
 ve/
 *.db
+*.rdb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

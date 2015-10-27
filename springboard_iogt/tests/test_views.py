@@ -23,7 +23,7 @@ class TestIoGTViews(SpringboardTestCase):
             'unicore.content_repo_urls': self.workspace.working_dir,
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
-                '\nebola = http://za.ebola.qa-hub.unicore.io/'
+                '\nemergency = http://za.ebola.qa-hub.unicore.io/'
         })
 
     def tearDown(self):
@@ -199,7 +199,7 @@ class TestIoGTViews(SpringboardTestCase):
                 'connectsmart\nstraighttalk',
             'iogt.content_section_url_overrides':
                 '\nffl = http://za.ffl.qa-hub.unicore.io/'
-                '\nebola = http://za.ebola.qa-hub.unicore.io/'})
+                '\nemergency = http://za.ebola.qa-hub.unicore.io/'})
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
             r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
