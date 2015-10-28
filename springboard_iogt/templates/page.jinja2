@@ -6,7 +6,7 @@
 
 {% block content %}
 <div>
-    {% set section = page|content_section %}
+    {% set section = page|content_section(request.localizer) %}
     {{ section_title(section) }}
 
     <div class="articles">
