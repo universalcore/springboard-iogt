@@ -99,9 +99,9 @@ class ContentSection(object):
                 if cls.exists(section.get('name'), indexes)]
 
     @classmethod
-    def _for(cls, name):
+    def _for(cls, name, localizer=None):
         [obj] = [
-            cls(slug) for slug, data in cls.DATA.items()
+            cls(slug, localizer) for slug, data in cls.DATA.items()
             if data.get('name') == name]
         return obj
 

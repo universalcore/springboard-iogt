@@ -38,9 +38,9 @@ def category_dict(s_categories, uuids):
                 for category in categories)
 
 
-def content_section(obj):
+def content_section(obj, localizer=None):
     index = obj.es_meta.index if obj.es_meta else ''
     match = CONTENT_SECTION_SLUG_RE.search(index)
     if not match:
         return None
-    return ContentSection._for(match.group('slug'))
+    return ContentSection._for(match.group('slug'), localizer)
