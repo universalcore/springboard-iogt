@@ -1,0 +1,179 @@
+# Portuguese (Portugal) translations for springboard_iogt.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the springboard_iogt
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-09-17 10:05+0200\n"
+"PO-Revision-Date: 2015-09-15 09:25+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"Language-Team: pt_PT <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
+msgid "U-report"
+msgstr ""
+
+#: springboard_iogt/utils.py:20
+msgid "Become a U-Reporter & start sharing!"
+msgstr ""
+
+#: springboard_iogt/utils.py:24
+msgid "Barefoot Law"
+msgstr ""
+
+#: springboard_iogt/utils.py:25
+msgid "Your Rights"
+msgstr "Direitos da Criança"
+
+#: springboard_iogt/utils.py:26
+msgid "Free legal information & support"
+msgstr ""
+
+#: springboard_iogt/utils.py:30
+msgid "Marie Stopes"
+msgstr ""
+
+#: springboard_iogt/utils.py:31
+msgid "My Family"
+msgstr ""
+
+#: springboard_iogt/utils.py:32
+msgid "Matters about the family"
+msgstr ""
+
+#: springboard_iogt/utils.py:36
+msgid "Straight Talk"
+msgstr ""
+
+#: springboard_iogt/utils.py:37
+msgid "Health Talk"
+msgstr ""
+
+#: springboard_iogt/utils.py:38
+msgid "Collaborating together with the youth"
+msgstr ""
+
+#: springboard_iogt/utils.py:42
+msgid "Ebola Response"
+msgstr ""
+
+#: springboard_iogt/utils.py:43
+msgid "StopEbola"
+msgstr "Factos: Cólera e Ébola"
+
+#: springboard_iogt/utils.py:44
+msgid "Get information about Ebola"
+msgstr "Informações sobre o Ébola"
+
+#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+msgid "Facts For Life"
+msgstr "Saúde e Vida"
+
+#: springboard_iogt/utils.py:50
+msgid "Improve the lives of Children"
+msgstr "Salvar e melhorar a vida das crianças"
+
+#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
+msgid "All IN"
+msgstr ""
+
+#: springboard_iogt/utils.py:56
+msgid "Love, relationships, sex and gender"
+msgstr "Amor, relacionamentos, sexo e gênero"
+
+#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
+msgid "Connect Smart"
+msgstr "Conexão Inteligente"
+
+#: springboard_iogt/utils.py:62
+msgid "Learn about the internet"
+msgstr ""
+
+#: springboard_iogt/templates/404.jinja2:5
+msgid "We can't find that page, sorry."
+msgstr "Desculpe, não conseguimos encontrar a página."
+
+#: springboard_iogt/templates/base.jinja2:10
+#: springboard_iogt/templates/base.jinja2:61
+msgid "The Internet of Good Things"
+msgstr "A Internet das Coisas Boas"
+
+#: springboard_iogt/templates/base.jinja2:45
+msgid "Explore IoGT"
+msgstr "Explorar IoGT"
+
+#: springboard_iogt/templates/base.jinja2:55
+msgid "Home"
+msgstr "Início"
+
+#: springboard_iogt/templates/base.jinja2:62
+msgid "About Internet of Good Things"
+msgstr "Sobre a Internet das Coisas Boas"
+
+#: springboard_iogt/templates/content_section.jinja2:29
+#, python-format
+msgid "More %(category_title_link)s"
+msgstr "Mais %(category_title_link)s"
+
+#: springboard_iogt/templates/home.jinja2:7
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: springboard_iogt/templates/personae.jinja2:6
+msgid "Who are you?"
+msgstr "Quem é você?"
+
+#: springboard_iogt/templates/personae.jinja2:9
+msgid "Child"
+msgstr "Criança"
+
+#: springboard_iogt/templates/personae.jinja2:10
+msgid "Adolescent"
+msgstr ""
+
+#: springboard_iogt/templates/personae.jinja2:11
+msgid "Parent / Caregiver"
+msgstr ""
+
+#: springboard_iogt/templates/personae.jinja2:12
+msgid "Teacher / Health / Social Worker"
+msgstr ""
+
+#: springboard_iogt/templates/personae.jinja2:15
+msgid "Skip"
+msgstr "Pular"
+
+#: springboard_iogt/templates/molecules/logo.jinja2:3
+msgid "IoGT logo"
+msgstr ""
+
+#: springboard_iogt/templates/molecules/pagination.jinja2:5
+#: springboard_iogt/templates/molecules/pagination.jinja2:7
+msgid "Previous"
+msgstr "Anterior"
+
+#: springboard_iogt/templates/molecules/pagination.jinja2:11
+#: springboard_iogt/templates/molecules/pagination.jinja2:13
+msgid "Next"
+msgstr "Seguinte"
+
+#: springboard_iogt/templates/molecules/section_heading.jinja2:4
+#: springboard_iogt/templates/molecules/section_heading.jinja2:6
+#, python-format
+msgid "Brought to you by %(owner)s"
+msgstr "Trazido a você por %(owner)s"
+
+#~ msgid "Facts for Life"
+#~ msgstr "Saúde e Vida"
+
+#~ msgid "Parent"
+#~ msgstr "Parente"
+

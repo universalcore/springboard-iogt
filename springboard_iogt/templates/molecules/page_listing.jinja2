@@ -13,7 +13,7 @@
         <img alt="{{ page.title }}" src="{{ page.image_host }}{{ page.image|thumbor(140) }}" srcset="{{page.image_host}}{{page.image|thumbor(320)}} 320w" sizes="100vw" />
     </a>
     {% endif %}
-    <p>{{ page.description|markdown }}</p>
+    <div>{{ page.description|markdown }}</div>
     <div class="clr"></div>
 {%- endmacro %}
 
@@ -36,4 +36,20 @@
         </div>
         {% endif %}
     </div>
+{%- endmacro %}
+
+
+{% macro page_listing_override(section, extra_classes="") -%}
+<div class="listing {{ section.slug }} {{ extra_classes }}">
+    <div class="h2">
+        <a href="{{ section.url }}">{{section.data.title}}</a>
+    </div>
+
+    <div>{{ section.data.descriptor }}</div>
+    <div class="clr"></div>
+
+    <div class="section-link">
+        <a href="{{ section.url }}">{{ section.data.title }}</a>
+    </div>
+</div>
 {%- endmacro %}

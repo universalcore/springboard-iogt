@@ -7,14 +7,14 @@
 
     .personae li{border-bottom: solid 2px #e4e4e4; }
     .personae a {
-        padding: 2em 6em;
+        padding: 2em 1em 2em 6em;
         background: transparent 10px 10px no-repeat;
     }
 
-    .personae .child a{background-image: url('img/persona_child.png');}
-    .personae .teenager a{background-image: url('img/persona_teenager.png');}
-    .personae .parent a{background-image: url('img/persona_parent.png');}
-    .personae .worker a{background-image: url('img/persona_worker.png');}
+    .personae .child a{background-image: url('img/persona_child2.png');}
+    .personae .teenager a{background-image: url('img/persona_teenager2.png');}
+    .personae .parent a{background-image: url('img/persona_parent2.png');}
+    .personae .worker a{background-image: url('img/persona_worker2.png');}
 
     #submenu .h1 {
         padding: 0;
@@ -43,12 +43,14 @@
         background-image: url("img/arrow_red.png");
     }
 
-    #content .articles .barefootlaw .h1 .back{background-image: url("img/arrow_green_flipped.png")}
-    #content .articles .ebola .h1 .back{background-image: url("img/arrow_yellow_flipped.png");}
-    #content .articles .ffl .h1 .back{background-image: url("img/arrow_turquoise_flipped.png");}
-    #content .articles .mariestopes .h1 .back{background-image: url("img/arrow_red_flipped.png");}
-    #content .articles .straighttalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
-    #content .articles .ureport .h1 .back{background-image: url("img/arrow_orange.png");}
+    #content .articles .yourrights .h1 .back{background-image: url("img/arrow_green_flipped.png")}
+    #content .articles .emergency .h1 .back{background-image: url("img/stop_ebola_flipped.png");}
+    #content .articles .ffl .h1 .back{background-image: url("img/facts_for_life_flipped.png");}
+    #content .articles .myfamily.h1 .back{background-image: url("img/arrow_red_flipped.png");}
+    #content .articles .healthtalk .h1 .back{background-image: url("img/arrow_purple_flipped.png");}
+    #content .articles .ureport .h1 .back{background-image: url("img/u_report_flipped.png");}
+    #content .articles .connectsmart .h1 .back{background-image: url("img/connect_smart_flipped.png");}
+    #content .articles .allin .h1 .back{background-image: url("img/hiv_all_in_flipped.png");}
 
     .articles .detail { padding: 24px; }
 
@@ -69,53 +71,28 @@
         font-size: 14px;
     }
 
-    #submenu .barefootlaw a{background-image: url("img/arrow_green.png")}
-    #submenu .ebola a{background-image: url("img/arrow_yellow.png");}
-    #submenu .ffl a{background-image: url("img/arrow_turquoise.png");}
-    #submenu .mariestopes a{background-image: url("img/arrow_red.png");}
-    #submenu .straighttalk a{background-image: url("img/arrow_purple.png");}
-    #submenu .ureport a{background-image: url("img/arrow_orange.png");}
+    #submenu .yourrights a{background-image: url("img/arrow_green.png")}
+    #submenu .emergency a{background-image: url("img/stop_ebola.png");}
+    #submenu .ffl a{background-image: url("img/facts_for_life.png");}
+    #submenu .myfamily a{background-image: url("img/arrow_red.png");}
+    #submenu .healthtalk a{background-image: url("img/arrow_purple.png");}
+    #submenu .ureport a{background-image: url("img/u_report.png");}
+    #submenu .connectsmart a{background-image: url("img/connect_smart.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
+    #submenu .allin a{background-image: url("img/hiv_all_in.png");}
 
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
-    #content .home .articles .ffl:after {background-color:#32bac2; }
-    #content .home .articles .barefootlaw:after {background-color:#6ec17c;}
-    #content .home .articles .mariestopes:after {background-color:#e04a5a; }
-    #content .home .articles .straighttalk:after {background-color:#c977b2; }
-    #content .home .articles .ureport:after {background-color:#f18054; }
-    #content .home .articles .ebola:after {background-color:#fdbe61; }
+    #content .home .articles .ffl:after {background-color:#00BFC6; }
+    #content .home .articles .yourrights:after {background-color:#6ec17f;}
+    #content .home .articles .myfamily:after {background-color:#e24256; }
+    #content .home .articles .healthtalk:after {background-color:#cb78b3; }
+    #content .home .articles .ureport:after {background-color:#A4CE55; }
+    #content .home .articles .emergency:after {background-color:#E24256; }
+    #content .home .articles .connectsmart:after {background-color:#6093CD; }
+    #content .home .articles .allin:after {background-color:#DF6859; }
 
-    .cta .h2 a {
-        padding: 10px 10px 10px 18px;
-        display: block;
-    }
-    .cta .ffl .h2 a{
-        color: white;
-        background-color: #32bac2;
-    }
-    .cta .barefootlaw .h2 a{
-        color: white;
-        background-color: #6ec17c;
-    }
-    .cta .mariestopes .h2 a{
-        color: white;
-        background-color: #e04a5a;
-    }
-    .cta .straighttalk .h2 a{
-        color: white;
-        background-color: #c977b2;
-    }
-    .cta .ureport .h2 a{
-        color: white;
-        background-color: #f18054;
-    }
-    .cta .ebola .h2 a{
-        color: white;
-        background-color: #fdbe61;
-    }
-
-    #content .section-title.h1 {padding: 12px 0 0 0;}
+    #content .section-title.h1 {padding: 0;}
 
     #content .h1.pad{padding: 14px 24px;}
 

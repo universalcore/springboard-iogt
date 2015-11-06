@@ -1,15 +1,22 @@
+import json
+import pkg_resources
+
 from pyramid.view import view_config
+from pyramid.events import NewRequest
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
+
+from unicore.content.models import Page
 
 from springboard.views.base import SpringboardViews
 
+from springboard.utils import ga_context
 from springboard_iogt.utils import (
     get_redirect_url, get_matching_route, update_query, ContentSection)
 
 
 ONE_YEAR = 31536000
 
-PERSONAE = {'CHILD', 'TEENAGER', 'PARENT', 'WORKER'}
+PERSONAE = {'CHILD', 'ADOLESCENT', 'PARENT', 'WORKER'}
 PERSONA_COOKIE_NAME = 'iogt-persona'
 PERSONA_SKIP_COOKIE_VALUE = '__skip__'
 PERSONA_REDIRECT_ROUTES = {'home', 'page', 'category', 'flat_page'}
@@ -32,6 +39,10 @@ def persona_tween_factory(handler, registry):
         route = get_matching_route(request)
         if route and route.name in PERSONA_REDIRECT_ROUTES:
             query = {'next': request.url}
+            # Fire NewRequest event here because it won't
+            # happen unless we call handler.
+            # NOTE: A NewResponse event will be fired.
+            request.registry.notify(NewRequest(request=request))
             return HTTPFound(request.route_url('personae', _query=query))
 
         return handler(request)
@@ -41,11 +52,13 @@ def persona_tween_factory(handler, registry):
 
 class IoGTViews(SpringboardViews):
 
+    @ga_context(lambda context: {'dt': 'Choose Persona', })
     @view_config(route_name='personae',
                  renderer='springboard_iogt:templates/personae.jinja2')
     def personae(self):
         return self.context()
 
+    @ga_context(lambda context: {'dt': 'Selected Persona', })
     @view_config(route_name='select_persona')
     def select_persona(self):
         slug = self.request.matchdict['slug'].upper()
@@ -64,6 +77,7 @@ class IoGTViews(SpringboardViews):
 
         return response
 
+    @ga_context(lambda context: {'dt': 'Skip Persona Selection', })
     @view_config(route_name='skip_persona_selection')
     def skip_persona_selection(self):
         # set cookie and redirect
@@ -73,12 +87,31 @@ class IoGTViews(SpringboardViews):
             max_age=ONE_YEAR)
         return response
 
+    @ga_context(lambda context: {'dt': context['section'].title, })
     @view_config(route_name='content_section',
                  renderer='springboard_iogt:templates/content_section.jinja2')
     def content_section(self):
+        localizer = self.request.localizer
         slug = self.request.matchdict['slug']
-        indexes = self.all_pages.get_indexes()
-        if not ContentSection.exists(slug, indexes):
+
+        try:
+            section = ContentSection(slug, localizer)
+        except KeyError:
             raise HTTPNotFound
 
-        return self.context(section=ContentSection(slug))
+        return self.context(section=section)
+
+    @ga_context(lambda context: {'dt': 'About', })
+    @view_config(route_name='about',
+                 renderer='springboard_iogt:templates/flat_page.jinja2')
+    def about(self):
+        filename = pkg_resources.resource_filename(
+            'springboard_iogt',
+            'static/other/about-%s.json' % (self.language, ))
+
+        try:
+            with open(filename) as f:
+                page = Page(json.load(f))
+            return self.context(page=page)
+        except IOError:
+            raise HTTPNotFound

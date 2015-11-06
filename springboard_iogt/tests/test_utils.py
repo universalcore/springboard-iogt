@@ -1,5 +1,7 @@
 from pyramid import testing
 
+from pyramid.i18n import make_localizer
+
 from springboard.tests import SpringboardTestCase
 
 from springboard_iogt.utils import ContentSection
@@ -28,5 +30,21 @@ class TestUtils(SpringboardTestCase):
         self.assertEqual(
             section_obj.set_indexes(views.all_pages).get_indexes(),
             ['ffl-master'])
-        self.assertEqual(section_obj.title, 'Facts for Life')
+        self.assertEqual(section_obj.title, 'Facts For Life')
         self.assertEqual(section_obj.owner, 'Facts For Life')
+        self.assertEqual(len(ContentSection.all()), len(ContentSection.DATA))
+        self.assertEqual(len(ContentSection.known(
+            indexes=['ffl', 'ureport', 'does-not-exist'])), 2)
+        self.assertEqual(len(ContentSection.known(
+            indexes=['ffl', 'barefootlaw', 'does-not-exist'])), 2)
+
+    def test_content_section_translations(self):
+        localizer = make_localizer(
+            current_locale_name='fre_FR',
+            translation_directories=['springboard_iogt/locale']
+        )
+
+        sections = ContentSection.known(indexes=['ffl'], localizer=localizer)
+        section_obj = sections[0]
+        self.assertEqual(section_obj.slug, 'ffl')
+        self.assertEqual(section_obj.title, 'Savoir pour Sauver')

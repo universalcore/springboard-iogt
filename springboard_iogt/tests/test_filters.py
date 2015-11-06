@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from mock import Mock
 
 from pyramid import testing
+from pyramid.i18n import make_localizer
 
 from springboard.tests import SpringboardTestCase
 from springboard.views.base import SpringboardViews
@@ -81,4 +82,19 @@ class TestFilters(SpringboardTestCase):
         page.es_meta = Mock(index='unicore-cms-content-ffl-za-qa')
         section_obj = filters.content_section(page)
         self.assertEqual(section_obj.slug, 'ffl')
-        self.assertEqual(section_obj.title, 'Facts for Life')
+        self.assertEqual(section_obj.title, 'Facts For Life')
+
+    def test_content_section_translation(self):
+        localizer = make_localizer(
+            current_locale_name='fre_FR',
+            translation_directories=['springboard_iogt/locale']
+        )
+
+        [page] = self.mk_pages(self.workspace, count=1)
+        section_obj = filters.content_section(page, localizer)
+        self.assertIs(section_obj, None)
+
+        page.es_meta = Mock(index='unicore-cms-content-ffl-za-qa')
+        section_obj = filters.content_section(page, localizer)
+        self.assertEqual(section_obj.slug, 'ffl')
+        self.assertEqual(section_obj.title, 'Savoir pour Sauver')

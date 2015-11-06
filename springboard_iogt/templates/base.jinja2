@@ -1,3 +1,5 @@
+{% from "molecules/logo.jinja2" import logo %}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -10,7 +12,7 @@
     <meta name="description" content="{{ description|default("") }}" />
     <meta name="keywords" content="{{ keywords|default("") }}" />
     <link href="{{'springboard:static/css/style.css'|static_url}}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="screen and (min-width: 20em)" href="{{'springboard:static/css/super.css'|static_url}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width: 20em)" href="{{'springboard:static/css/super.css'|static_url}}?v=20151013" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="header">
@@ -21,15 +23,15 @@
                 <span>
                     <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
                 </span>
-                <span> | </span>
+                {% if not loop.last %}<span> | </span>{% endif %}
             {% endfor %}
-            <span><a href="{{ 'locale_change'|route_url }}">&hellip;</a></span>
+            {% if display_languages|length + 1 < available_languages|length %}
+            <span> | </span><span><a href="{{ 'locale_change'|route_url }}">&hellip;</a></span>
+            {% endif %}
         </div>
         {% endif %}
         <div class="logo">
-            {% block logo %}
-            <a href="{{ 'home'|route_url }}" class="logo"><img alt="{{ _('IoGT logo') }}" src="{{ 'springboard:static/img/logo000000.jpg'|static_url }}" /></a>
-            {% endblock %}
+            {% block logo %}{{ logo('stacked') }}{% endblock %}
         </div>
     </div>
 
@@ -43,8 +45,12 @@
         <div class="h1"><div class="detail">{% trans %}Explore IoGT{% endtrans %}</div></div>
         <ul class="options">
         {% for section in content_sections %}
-            <li class="{{section.slug}}"><a href="{{ 'content_section'|route_url(slug=section.slug) }}">{{ section.title }}<p>{{section.descriptor}}</p></a>
+            {% set section_url=content_section_url_overrides.get(section.slug, 'content_section'|route_url(slug=section.slug)) %}
+            <li class="{{section.slug}}"><a href="{{ section_url }}">{{ section.title }}<p>{{section.descriptor}}</p></a>
             </li>
+        {% endfor %}
+        {% for section in content_section_url_overrides_data_list %}
+        <li class="{{section.slug}}"><a href="{{ section.url }}">{{ section.data.title }}<p>{{section.data.descriptor}}</p></a>
         {% endfor %}
             <li class="home"><a href="{{ 'home'|route_url }}">{{ _("Home") }}</a></li>
         </ul>
@@ -53,8 +59,7 @@
 
     <div id="footer">
         <div>&copy; {% trans %}The Internet of Good Things{% endtrans %}</div>
-        {# TODO flat page links for About #}
-        <div><span><a href="#">{{ _('About Internet of Good Things') }}</a></span></div>
+        <div><span><a href="{{ 'about'|route_url }}">{{ _('About Internet of Good Things') }}</a></span></div>
     </div>
 
 </body>

@@ -21,19 +21,27 @@ class TestIoGTViews(SpringboardTestCase):
         self.config = testing.setUp(settings={
             'unicore.repos_dir': self.working_dir,
             'unicore.content_repo_urls': self.workspace.working_dir,
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nemergency = http://za.ebola.qa-hub.unicore.io/'
         })
 
     def tearDown(self):
         testing.tearDown()
 
     def test_index_view(self):
-        [category] = self.mk_categories(self.workspace, count=1)
-        [page] = self.mk_pages(
-            self.workspace, count=1,
+        ws_ffl = self.mk_workspace(name='ffl')
+        [category] = self.mk_categories(ws_ffl, count=1)
+        self.mk_pages(
+            ws_ffl, count=1,
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid,
             featured=True)
-        app = self.mk_app(self.workspace, main=main)
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join(
+                [ws_ffl.working_dir]),
+            'iogt.content_section_url_overrides':
+                '\nureport = http://za.ureport.qa-hub.unicore.io/'})
         re_page_url = re.compile(r'/page/.{32}/')
         re_section_url = re.compile(r'/section/\w+/')
         app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
@@ -42,10 +50,17 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(response.status_int, 200)
         html = response.html
         self.assertEqual(len(html.find_all('a', href=re_page_url)), 1)
-        self.assertEqual(len(html.find_all('a', href=re_section_url)), 6)
+        self.assertEqual(len(html.find_all('a', href=re_section_url)), 2)
+        self.assertEqual(len(html.find_all(
+            'a',
+            text='U-report',
+            href='http://za.ureport.qa-hub.unicore.io/')), 2)
 
     def test_persona_tween(self):
-        app = self.mk_app(self.workspace, main=main)
+        app = self.mk_app(
+            self.workspace,
+            main=main,
+            settings={'ga.profile_id': 'ID-000'})
 
         response = app.get('/')
         self.assertEqual(response.status_int, 302)
@@ -150,11 +165,48 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(response.status_int, 200)
 
     def test_content_section_listing(self):
-        app = self.mk_app(self.workspace, main=main)
+        self.mk_workspace(name='ffl')
+        self.mk_workspace(name='barefootlaw')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': 'ffl\nbarefootlaw'
+        })
         html = app.get('/does/not/exists/', expect_errors=True).html
         section_url_tags = html.find_all('a', href=re.compile(
-            r'/section/(%s)/' % '|'.join(ContentSection.SLUGS)))
-        self.assertEqual(len(section_url_tags), len(ContentSection.SLUGS))
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+        self.assertEqual(len(section_url_tags), 2)
+
+    def test_content_section_listing_new_names(self):
+        self.mk_workspace(name='ffl')
+        self.mk_workspace(name='unicore_frontend_barefootlaw_za')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': 'ffl\nunicore_frontend_barefootlaw_za'
+        })
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+
+        self.assertEqual(len(section_url_tags), 2)
+
+    def test_content_section_listing_overrides(self):
+        self.mk_workspace(name='barefootlaw')
+        self.mk_workspace(name='mariestopes')
+        self.mk_workspace(name='connectsmart')
+        self.mk_workspace(name='straighttalk')
+
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls':
+                'barefootlaw\nmariestopes\n'
+                'connectsmart\nstraighttalk',
+            'iogt.content_section_url_overrides':
+                '\nffl = http://za.ffl.qa-hub.unicore.io/'
+                '\nemergency = http://za.ebola.qa-hub.unicore.io/'})
+        html = app.get('/does/not/exists/', expect_errors=True).html
+        section_url_tags = html.find_all('a', href=re.compile(
+            r'/section/(%s)/' % '|'.join(ContentSection.DATA.keys())))
+        override_url_tags = html.find_all('a', href=re.compile(
+            r'http://za.(ebola|ffl).qa-hub.unicore.io/'))
+        self.assertEqual(len(section_url_tags), 4)
+        self.assertEqual(len(override_url_tags), 2)
 
     def test_language_visibility(self):
         settings = {
@@ -171,3 +223,60 @@ class TestIoGTViews(SpringboardTestCase):
         app = self.mk_app(self.workspace, main=main, settings=settings)
         html = app.get('/does/not/exist/', expect_errors=True).html
         self.assertFalse(html.find('div', class_='lang'))
+
+    def test_about(self):
+        app = self.mk_app(self.workspace, main=main)
+        response = app.get('/about/')
+        self.assertEqual(response.status_int, 200)
+
+    @patch('unicore.google.tasks.pageview.delay')
+    def test_ga_page_titles(self, mock_task):
+        app = self.mk_app(
+            self.workspace, main=main,
+            settings={'ga.profile_id': 'ID-000',
+                      'ga.persona_dimension_id': 'dimension0'})
+
+        next_url = 'http://localhost/page/1234/'
+        querystring = urlencode({'next': next_url})
+
+        app.get('/persona/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Choose Persona')
+
+        app.get('/persona/worker/?%s' % querystring)
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Selected Persona')
+
+        app.get('/persona/skip/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Skip Persona Selection')
+
+    @patch('unicore.google.tasks.pageview.delay')
+    def test_section_ga_page_title(self, mock_task):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        bfl_workspace = self.mk_workspace(name='barefootlaw')
+        [category] = self.mk_categories(ffl_workspace, count=1, position=1)
+        [category2] = self.mk_categories(bfl_workspace, count=1, position=1)
+        [page] = self.mk_pages(
+            ffl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category.uuid)
+        [page2] = self.mk_pages(
+            bfl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category2.uuid)
+        app = self.mk_app(self.workspace, main=main, settings={
+            'ga.profile_id': 'ID-000',
+            'ga.persona_dimension_id': 'dimension0',
+            'unicore.content_repo_urls': '\n'.join([ffl_workspace.working_dir,
+                                                    bfl_workspace.working_dir])
+        })
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
+
+        app.get('/section/ffl/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Facts For Life')
+
+        app.get('/section/yourrights/')
+        data = mock_task.call_args[0][2]
+        self.assertEqual(data['dt'], 'Your Rights')

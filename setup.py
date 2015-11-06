@@ -17,9 +17,9 @@ setup(name='springboard_iogt',
       description='springboard_iogt',
       long_description=README,
       classifiers=[
-      "Programming Language :: Python",
-      "Topic :: Internet :: WWW/HTTP",
-      "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+          "Programming Language :: Python",
+          "Topic :: Internet :: WWW/HTTP",
+          "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
       author='',
       author_email='',
@@ -34,4 +34,8 @@ setup(name='springboard_iogt',
           'paste.app_factory': [
               'main = springboard_iogt.application:main',
           ],
-      })
+      },
+      message_extractors={'springboard_iogt': [
+          ('**.py', 'python', None),
+          ('**.jinja2', 'jinja2', None),
+      ]})

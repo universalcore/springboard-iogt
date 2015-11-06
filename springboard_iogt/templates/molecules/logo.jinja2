@@ -1,0 +1,4 @@
+{% macro logo(style='stacked') -%}
+{% set image_name=('logo000000.png' if style == 'stacked' else 'logo_long.png') %}
+<a href="{{ 'home'|route_url }}" class="logo-{{ style }}"><img alt="{{ _('IoGT logo') }}" src="{{ ('springboard:static/img/%s' % image_name)|static_url }}" /></a>
+{%- endmacro %}
