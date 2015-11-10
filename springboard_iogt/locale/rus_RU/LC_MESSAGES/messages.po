@@ -3,14 +3,13 @@
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-09 10:14+0200\n"
-"PO-Revision-Date: 2015-09-16 13:53+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"PO-Revision-Date: 2015-11-09 13:46+0000\n"
+"Last-Translator: tsepo <tsepo@praekelt.com>\n"
 "Language: ru_RU\n"
 "Language-Team: ru_RU <LL@li.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
@@ -74,7 +73,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "Конфликты, природные катастрофы или эпидемии"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
@@ -107,7 +106,7 @@ msgstr ""
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:61
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "Интернет полезных вещей"
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
@@ -118,8 +117,9 @@ msgid "Home"
 msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:62
+#, fuzzy
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Интернет полезных вещей"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
@@ -136,19 +136,19 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Ребенок"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "Подросток"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Родитель / Опекун"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Учитель/медработник/социальный работник"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
@@ -173,19 +173,4 @@ msgstr ""
 #, python-format
 msgid "Brought to you by %(owner)s"
 msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
-#~ msgid "StopEbola"
-#~ msgstr ""
-
-#~ msgid "Get information about Ebola"
-#~ msgstr ""
-
-#~ msgid "All IN"
-#~ msgstr ""
 

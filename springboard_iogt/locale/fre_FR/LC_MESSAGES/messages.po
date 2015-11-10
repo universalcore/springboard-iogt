@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-09 10:14+0200\n"
-"PO-Revision-Date: 2015-09-16 12:57+0000\n"
-"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"PO-Revision-Date: 2015-11-09 13:44+0000\n"
+"Last-Translator: tsepo <tsepo@praekelt.com>\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "Epidémies, catastrophes et conflits"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:62
 msgid "Learn about the internet"
-msgstr ""
+msgstr "10 règles d'or d'Internet"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
@@ -146,7 +146,7 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Professeur / Prof. de Santé / Trav. Sociaux"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
@@ -172,6 +172,12 @@ msgstr "Suivant"
 msgid "Brought to you by %(owner)s"
 msgstr "Ce contenu vous est fourni par %(owner)s"
 
+#~ msgid "Get information about Ebola"
+#~ msgstr "Informations sur Ebola"
+
+#~ msgid "All IN"
+#~ msgstr "TOUS ENSEMBLE"
+
 #~ msgid "Facts for Life"
 #~ msgstr "Savoir pour Sauver"
 
@@ -180,16 +186,4 @@ msgstr "Ce contenu vous est fourni par %(owner)s"
 
 #~ msgid "Worker"
 #~ msgstr "Travailleur"
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
-#~ msgid "StopEbola"
-#~ msgstr ""
-
-#~ msgid "Get information about Ebola"
-#~ msgstr "Informations sur Ebola"
-
-#~ msgid "All IN"
-#~ msgstr "TOUS ENSEMBLE"
 

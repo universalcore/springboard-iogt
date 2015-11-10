@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-09 10:14+0200\n"
-"PO-Revision-Date: 2015-09-09 06:11+0000\n"
-"Last-Translator: Milton <milton@praekelt.com>\n"
+"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"PO-Revision-Date: 2015-11-09 13:45+0000\n"
+"Last-Translator: tsepo <tsepo@praekelt.com>\n"
 "Language: sw_TZ\n"
 "Language-Team: sw_TZ <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "Migogoro, maafa, magonjwa ya milipuko"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
@@ -105,7 +105,7 @@ msgstr "Samahani, hatuwezi kupata ukurasa huo."
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:61
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "Intaneti ya Mambo Mazuri"
 
 #: springboard_iogt/templates/base.jinja2:45
 msgid "Explore IoGT"
@@ -117,7 +117,7 @@ msgstr "Anza Mwanzo"
 
 #: springboard_iogt/templates/base.jinja2:62
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Kuhusu Intaneti ya Mambo Mazuri"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
@@ -142,11 +142,11 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Mzazi / Mzazi Mwangalizi"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Mwalimu/Mhudumu wa Afya/Jamii"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
@@ -174,10 +174,4 @@ msgstr "Imeletwa kwenu na %(owner)s"
 
 #~ msgid "Parent"
 #~ msgstr "Mzazi"
-
-#~ msgid "Emergency information"
-#~ msgstr ""
-
-#~ msgid "All IN"
-#~ msgstr ""
 

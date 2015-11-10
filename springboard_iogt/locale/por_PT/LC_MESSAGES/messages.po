@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-09 10:14+0200\n"
-"PO-Revision-Date: 2015-09-15 09:25+0000\n"
-"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"PO-Revision-Date: 2015-11-09 13:43+0000\n"
+"Last-Translator: tsepo <tsepo@praekelt.com>\n"
 "Language: pt_PT\n"
 "Language-Team: pt_PT <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Se torne um U-Reporter e comece a compartilhar"
 
 #: springboard_iogt/utils.py:24
 msgid "Barefoot Law"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "epidemias, catástrofes ou Conflitos"
 
 #: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
 msgid "Facts For Life"
@@ -97,6 +97,8 @@ msgstr "Conexão Inteligente"
 #: springboard_iogt/utils.py:62
 msgid "Learn about the internet"
 msgstr ""
+"Navegar em segurança na Internet ou Veja 10 dicas para navegar na "
+"Internet de forma segura"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
@@ -172,21 +174,15 @@ msgstr "Seguinte"
 msgid "Brought to you by %(owner)s"
 msgstr "Trazido a você por %(owner)s"
 
-#~ msgid "Facts for Life"
-#~ msgstr "Saúde e Vida"
-
-#~ msgid "Parent"
-#~ msgstr "Parente"
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
 #~ msgid "StopEbola"
 #~ msgstr "Factos: Cólera e Ébola"
 
 #~ msgid "Get information about Ebola"
 #~ msgstr "Informações sobre o Ébola"
 
-#~ msgid "All IN"
-#~ msgstr ""
+#~ msgid "Facts for Life"
+#~ msgstr "Saúde e Vida"
+
+#~ msgid "Parent"
+#~ msgstr "Parente"
 
