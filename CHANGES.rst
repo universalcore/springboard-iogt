@@ -1,11 +1,16 @@
 CHANGELOG
 =========
 
-1.0.0
+1.0.3
 -----
-- initial release
-- pypi installable version
+- use latest springboard version
+- fixes unknown locales breaking
 
 1.0.2
 -----
 - category names are correctly translated on article pages
+
+1.0.0
+-----
+- initial release
+- pypi installable version
