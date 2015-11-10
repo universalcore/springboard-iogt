@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+1.0.3
+-----
+- use latest springboard version
+- fixes unknown locales breaking
+
 1.0.2
 -----
 - category names are correctly translated on article pages
