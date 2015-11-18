@@ -21,7 +21,12 @@
             <span>{{ language|display_language_name }}</span><span> | </span>
             {% for lang_code in display_languages %}
                 <span>
-                    <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
+                    {# 'page' is only set for actual article pages #}
+                    {% if page %}
+                      <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
+                    {% else %}
+                      <a href="{{ 'locale_matched'|route_url(language=lang_code, _query={'next':request.path}) }}">{{ lang_code|display_language_name }}</a>
+                    {% endif %}
                 </span>
                 {% if not loop.last %}<span> | </span>{% endif %}
             {% endfor %}
