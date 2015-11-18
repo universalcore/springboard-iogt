@@ -21,6 +21,7 @@
             <span>{{ language|display_language_name }}</span><span> | </span>
             {% for lang_code in display_languages %}
                 <span>
+                    {# 'page' is only set for actual article pages #}
                     {% if page %}
                       <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
                     {% else %}
