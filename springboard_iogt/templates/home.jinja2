@@ -11,9 +11,9 @@
     <div class="articles">
     {% for page in pages %}
         {% if loop.first %}
-            {{ page_listing_with_section(page, "full-image", image_first=false) }}
+            {{ page_listing_with_section(page, "full-image", image_first=false, localizer=request.localizer) }}
         {% else %}
-            {{ page_listing_with_section(page) }}
+            {{ page_listing_with_section(page, localizer=request.localizer) }}
         {% endif %}
     {% endfor %}
 
