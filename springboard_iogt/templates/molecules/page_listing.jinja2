@@ -41,11 +41,17 @@
 
 {% macro page_listing_override(section, extra_classes="") -%}
 <div class="listing {{ section.slug }} {{ extra_classes }}">
+  {% if section.data.banner_url %}
+  <a href="{{ section.url }}">
+  <img style="width:100%" src="{{section.data.banner_url|static_url}}" alt="{{section.data.title}}"/>
+  </a>
+  {% else %}
     <div class="h2">
         <a href="{{ section.url }}">{{section.data.title}}</a>
     </div>
 
     <div>{{ section.data.descriptor }}</div>
+  {% endif %}
     <div class="clr"></div>
 
     <div class="section-link">

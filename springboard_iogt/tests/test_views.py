@@ -54,7 +54,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all(
             'a',
             text='U-report',
-            href='http://za.ureport.qa-hub.unicore.io/')), 2)
+            href='http://za.ureport.qa-hub.unicore.io/')), 1)
 
     def test_persona_tween(self):
         app = self.mk_app(
