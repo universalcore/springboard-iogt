@@ -26,8 +26,8 @@
 {%- endmacro %}
 
 
-{% macro page_listing_with_section(page, extra_classes="", image_first=true) -%}
-    {% set section = page|content_section %}
+{% macro page_listing_with_section(page, extra_classes="", image_first=true, localizer=None) -%}
+    {% set section = page|content_section(localizer) %}
     <div class="listing {{ section.slug }} {{ extra_classes }}">
         {{ page_listing_inner(page, image_first=image_first) }}
         {% if section %}
