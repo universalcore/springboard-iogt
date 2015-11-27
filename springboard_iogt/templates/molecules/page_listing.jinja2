@@ -43,7 +43,7 @@
 <div class="listing {{ section.slug }} {{ extra_classes }}">
   {% if section.data.banner_url %}
   <a href="{{ section.url }}">
-  <img style="width:100%" src="{{section.data.banner_url|static_url}}" alt="{{section.data.title}}"/>
+  <img src="{{section.data.banner_url|static_url}}" alt="{{section.data.title}}"/>
   </a>
   {% else %}
     <div class="h2">

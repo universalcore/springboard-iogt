@@ -101,6 +101,7 @@
 
         /* U-report */
         .articles .ureport a { color: #A4CE55; }
+        .articles .listing.ureport a img {width: 100%;}
         .section-title.ureport div { background-color: #A4CE55; }
 
         /* emergency */
