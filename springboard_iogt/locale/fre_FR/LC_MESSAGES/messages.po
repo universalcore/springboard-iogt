@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-10 13:02+0200\n"
-"PO-Revision-Date: 2015-11-09 13:44+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2015-11-27 15:20+0200\n"
+"PO-Revision-Date: 2015-11-27 13:16+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Votre voix compte"
 
 #: springboard_iogt/utils.py:24
 msgid "Barefoot Law"
@@ -32,11 +32,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:25
 msgid "Your Rights"
-msgstr ""
+msgstr "Droits de l'enfant"
 
 #: springboard_iogt/utils.py:26
 msgid "Free legal information & support"
-msgstr ""
+msgstr "Connais et défends tes droits!"
 
 #: springboard_iogt/utils.py:30
 msgid "Marie Stopes"
@@ -84,7 +84,7 @@ msgstr "Améliorer la vie des enfants"
 
 #: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
 msgid "ALL IN"
-msgstr ""
+msgstr "TOUS ENSEMBLE"
 
 #: springboard_iogt/utils.py:56
 msgid "Love, relationships, sex and gender"
@@ -103,19 +103,19 @@ msgid "We can't find that page, sorry."
 msgstr "Oups, cette page ne semble plus exister."
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:61
+#: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
 msgstr "The Internet of Good Things"
 
-#: springboard_iogt/templates/base.jinja2:45
+#: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
 msgstr "Explorez IoGT"
 
-#: springboard_iogt/templates/base.jinja2:55
+#: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
 msgstr "Accueil"
 
-#: springboard_iogt/templates/base.jinja2:62
+#: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr "À propos de Internet of Good Things"
 

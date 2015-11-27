@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"POT-Creation-Date: 2015-11-27 15:20+0200\n"
 "PO-Revision-Date: 2015-09-16 15:19+0000\n"
 "Last-Translator: Milton <milton@praekelt.com>\n"
 "Language: ar_AE\n"
@@ -104,19 +104,19 @@ msgid "We can't find that page, sorry."
 msgstr "عفوا، لا نستطيع إيجاد الصفحة التي تبحث عنها"
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:61
+#: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
 msgstr "إنترنت الأمور الجيدة"
 
-#: springboard_iogt/templates/base.jinja2:45
+#: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
 msgstr "تعرف على إنترنت الأمور الجيدة"
 
-#: springboard_iogt/templates/base.jinja2:55
+#: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#: springboard_iogt/templates/base.jinja2:62
+#: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr "إنترنت الأمور الجيدة"
 

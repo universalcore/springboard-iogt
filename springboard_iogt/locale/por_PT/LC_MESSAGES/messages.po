@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-10 13:02+0200\n"
+"POT-Creation-Date: 2015-11-27 15:20+0200\n"
 "PO-Revision-Date: 2015-11-09 13:43+0000\n"
 "Last-Translator: tsepo <tsepo@praekelt.com>\n"
 "Language: pt_PT\n"
@@ -105,19 +105,19 @@ msgid "We can't find that page, sorry."
 msgstr "Desculpe, não conseguimos encontrar a página."
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:61
+#: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
 msgstr "A Internet das Coisas Boas"
 
-#: springboard_iogt/templates/base.jinja2:45
+#: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
 msgstr "Explorar IoGT"
 
-#: springboard_iogt/templates/base.jinja2:55
+#: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
 msgstr "Início"
 
-#: springboard_iogt/templates/base.jinja2:62
+#: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr "Sobre a Internet das Coisas Boas"
 
