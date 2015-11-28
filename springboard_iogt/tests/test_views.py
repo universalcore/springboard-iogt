@@ -60,7 +60,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all(
             'a',
             text='U-report',
-            href='http://za.ureport.qa-hub.unicore.io/')), 2)
+            href='http://za.ureport.qa-hub.unicore.io/')), 1)
 
         # change locale to French
         app.get('/locale/fre_FR/')
