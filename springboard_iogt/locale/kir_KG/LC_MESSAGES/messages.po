@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-11 16:38+0200\n"
-"PO-Revision-Date: 2015-11-27 14:18+0000\n"
+"POT-Creation-Date: 2015-12-11 17:32+0200\n"
+"PO-Revision-Date: 2015-12-11 15:23+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ky_KG\n"
 "Language-Team: ky_KG <LL@li.org>\n"
@@ -130,7 +130,7 @@ msgstr "Сунушталат"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Сиз кимсиз?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
@@ -150,7 +150,7 @@ msgstr "Мугалим/Медицина кызматкери/Социалдык 
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Өткөрүп жибериӊиз"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
