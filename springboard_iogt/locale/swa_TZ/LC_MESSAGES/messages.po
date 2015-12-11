@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-27 15:20+0200\n"
-"PO-Revision-Date: 2015-11-09 13:45+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2015-12-11 16:38+0200\n"
+"PO-Revision-Date: 2015-12-10 16:45+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: sw_TZ\n"
 "Language-Team: sw_TZ <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -24,79 +24,79 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Jinsi ya kuwa U-Ripota"
 
-#: springboard_iogt/utils.py:24
+#: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
 msgstr ""
 
-#: springboard_iogt/utils.py:25
+#: springboard_iogt/utils.py:26
 msgid "Your Rights"
 msgstr ""
 
-#: springboard_iogt/utils.py:26
+#: springboard_iogt/utils.py:27
 msgid "Free legal information & support"
 msgstr ""
 
-#: springboard_iogt/utils.py:30
+#: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:31
+#: springboard_iogt/utils.py:32
 msgid "My Family"
 msgstr ""
 
-#: springboard_iogt/utils.py:32
+#: springboard_iogt/utils.py:33
 msgid "Matters about the family"
 msgstr ""
 
-#: springboard_iogt/utils.py:36
+#: springboard_iogt/utils.py:37
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:37
+#: springboard_iogt/utils.py:38
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:38
+#: springboard_iogt/utils.py:39
 msgid "Collaborating together with the youth"
 msgstr ""
 
-#: springboard_iogt/utils.py:42
+#: springboard_iogt/utils.py:43
 msgid "Emergency"
 msgstr ""
 
-#: springboard_iogt/utils.py:43
-msgid "Emergency Information"
-msgstr ""
-
 #: springboard_iogt/utils.py:44
+msgid "Emergency Information"
+msgstr "Taarifa za dharura"
+
+#: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
 msgstr "Migogoro, maafa, magonjwa ya milipuko"
 
-#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
-msgstr ""
+msgstr "Ukweli kuhusu maisha"
 
-#: springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Boresha maisha ya watoto"
 
-#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
-msgstr ""
+msgstr "ALL IN"
 
-#: springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Mapenzi, mahusiano, jinsia"
 
-#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr ""
+msgstr "Tumia mtandao salama"
 
-#: springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
-msgstr ""
+msgstr "Jifunze mambo 10 muhimu kuhusu mitandao"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
@@ -109,7 +109,7 @@ msgstr "Intaneti ya Mambo Mazuri"
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Vinjari Mtandao wa Mambo Mazuri "
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
@@ -138,7 +138,7 @@ msgstr "Mtoto"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "Kijana"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
@@ -146,7 +146,7 @@ msgstr "Mzazi / Mzazi Mwangalizi"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr "Mwalimu/Mhudumu wa Afya/Jamii"
+msgstr "Mwalimu / Mhudumu wa Afya / Jamii"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"

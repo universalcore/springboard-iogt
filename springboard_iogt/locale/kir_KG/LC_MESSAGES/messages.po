@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-27 15:20+0200\n"
-"PO-Revision-Date: 2015-11-09 14:09+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2015-12-11 16:38+0200\n"
+"PO-Revision-Date: 2015-11-27 14:18+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ky_KG\n"
 "Language-Team: ky_KG <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -20,83 +20,83 @@ msgstr ""
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 msgid "U-report"
-msgstr ""
+msgstr "U-Report"
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Ю-репортер болуп, бөлүш"
 
-#: springboard_iogt/utils.py:24
+#: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
 msgstr ""
 
-#: springboard_iogt/utils.py:25
-msgid "Your Rights"
-msgstr ""
-
 #: springboard_iogt/utils.py:26
+msgid "Your Rights"
+msgstr "Сенин укуктарың"
+
+#: springboard_iogt/utils.py:27
 msgid "Free legal information & support"
 msgstr ""
 
-#: springboard_iogt/utils.py:30
+#: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:31
+#: springboard_iogt/utils.py:32
 msgid "My Family"
 msgstr ""
 
-#: springboard_iogt/utils.py:32
+#: springboard_iogt/utils.py:33
 msgid "Matters about the family"
 msgstr ""
 
-#: springboard_iogt/utils.py:36
+#: springboard_iogt/utils.py:37
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:37
+#: springboard_iogt/utils.py:38
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:38
+#: springboard_iogt/utils.py:39
 msgid "Collaborating together with the youth"
 msgstr ""
 
-#: springboard_iogt/utils.py:42
+#: springboard_iogt/utils.py:43
 msgid "Emergency"
 msgstr ""
 
-#: springboard_iogt/utils.py:43
+#: springboard_iogt/utils.py:44
 msgid "Emergency Information"
 msgstr "Камкордук жөнүндө маалымат"
 
-#: springboard_iogt/utils.py:44
+#: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
 msgstr "Согуш-тартыш, табигый катаклизмдер жана эпидемиялар"
 
-#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
-msgstr ""
+msgstr "Өмүр үчүн фактылар"
 
-#: springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Балдардын жашоосун жакшыга өзгөртөт"
 
-#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
-msgstr ""
+msgstr "Баарыбыз бирге өспүрүмдөрдүн жана балдардын жардамы менен"
 
-#: springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Сүйүү, секс, жыныс, мамиле түзүү  "
 
-#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr ""
+msgstr "Акылың менен байланыш!"
 
-#: springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
-msgstr ""
+msgstr "10 эӊ мыкты интернет кеӊештерин билип ал! "
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
@@ -105,19 +105,19 @@ msgstr ""
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "Жакшы нерселердин интернети"
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Жакшы нерселердин интернети жөнүндө билип ал"
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr ""
+msgstr "Жаш бала"
 
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Жакшы нерселердин интернети жөнүндө"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
@@ -126,7 +126,7 @@ msgstr ""
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Сунушталат"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
@@ -134,19 +134,19 @@ msgstr ""
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Жаш бала"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "θспүрүм"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Ата-энелер / Камкор"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Мугалим/Медицина кызматкери/Социалдык ишкер"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
