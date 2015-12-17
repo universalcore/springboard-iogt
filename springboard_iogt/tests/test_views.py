@@ -59,7 +59,7 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all('a', href=re_section_url)), 2)
         self.assertEqual(len(html.find_all(
             'a',
-            text='U-report',
+            text='U-Report',
             href='http://za.ureport.qa-hub.unicore.io/')), 1)
 
         # change locale to French
