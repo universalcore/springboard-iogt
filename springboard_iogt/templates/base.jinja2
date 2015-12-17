@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta name="description" content="{{ description|default("") }}" />
     <meta name="keywords" content="{{ keywords|default("") }}" />
-    <link href="{{'springboard:static/css/style.css'|static_url}}" rel="stylesheet" type="text/css" />
+    <link href="{{'springboard:static/css/style.css'|static_url}}?v=20151127" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width: 20em)" href="{{'springboard:static/css/super.css'|static_url}}?v=20151013" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -21,7 +21,12 @@
             <span>{{ language|display_language_name }}</span><span> | </span>
             {% for lang_code in display_languages %}
                 <span>
-                    <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
+                    {# 'page' is only set for actual article pages #}
+                    {% if page %}
+                      <a href="{{ 'locale_matched'|route_url(language=lang_code) }}">{{ lang_code|display_language_name }}</a>
+                    {% else %}
+                      <a href="{{ 'locale_matched'|route_url(language=lang_code, _query={'next':request.path}) }}">{{ lang_code|display_language_name }}</a>
+                    {% endif %}
                 </span>
                 {% if not loop.last %}<span> | </span>{% endif %}
             {% endfor %}

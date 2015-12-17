@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-10 13:02+0200\n"
-"PO-Revision-Date: 2015-11-09 13:46+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2015-12-17 12:56+0200\n"
+"PO-Revision-Date: 2015-11-27 14:13+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ru_RU\n"
 "Language-Team: ru_RU <LL@li.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
@@ -20,104 +20,103 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-msgid "U-report"
+msgid "U-Report"
 msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Стань Ю-Репортером и начинай делиться"
 
-#: springboard_iogt/utils.py:24
+#: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
 msgstr ""
 
-#: springboard_iogt/utils.py:25
+#: springboard_iogt/utils.py:26
 msgid "Your Rights"
 msgstr ""
 
-#: springboard_iogt/utils.py:26
+#: springboard_iogt/utils.py:27
 msgid "Free legal information & support"
 msgstr ""
 
-#: springboard_iogt/utils.py:30
+#: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:31
+#: springboard_iogt/utils.py:32
 msgid "My Family"
 msgstr ""
 
-#: springboard_iogt/utils.py:32
+#: springboard_iogt/utils.py:33
 msgid "Matters about the family"
 msgstr ""
 
-#: springboard_iogt/utils.py:36
+#: springboard_iogt/utils.py:37
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:37
+#: springboard_iogt/utils.py:38
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:38
+#: springboard_iogt/utils.py:39
 msgid "Collaborating together with the youth"
 msgstr ""
 
-#: springboard_iogt/utils.py:42
+#: springboard_iogt/utils.py:43
 msgid "Emergency"
 msgstr ""
 
-#: springboard_iogt/utils.py:43
-msgid "Emergency Information"
-msgstr ""
-
 #: springboard_iogt/utils.py:44
+msgid "Emergency Information"
+msgstr "Информация о безопасности"
+
+#: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
 msgstr "Конфликты, природные катастрофы или эпидемии"
 
-#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
-msgstr ""
+msgstr "Факты для жизни"
 
-#: springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Изменить жизнь детей к лучшему"
 
-#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
-msgstr ""
+msgstr "ВСЕ ВМЕСТЕ"
 
-#: springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Любовь, секс, пол, взаимоотношения"
 
-#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr ""
+msgstr "Подключайся с умом!"
 
-#: springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
-msgstr ""
+msgstr "Узнай топ 10 интернет советов!  "
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
 msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:61
+#: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
 msgstr "Интернет полезных вещей"
 
-#: springboard_iogt/templates/base.jinja2:45
+#: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Узнайте больше об \"Интернете полезных  вещей\""
 
-#: springboard_iogt/templates/base.jinja2:55
+#: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr ""
+msgstr "Главная страница"
 
-#: springboard_iogt/templates/base.jinja2:62
-#, fuzzy
+#: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr "Интернет полезных вещей"
 
@@ -128,7 +127,7 @@ msgstr ""
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Рекомендуется"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
@@ -173,4 +172,7 @@ msgstr ""
 #, python-format
 msgid "Brought to you by %(owner)s"
 msgstr ""
+
+#~ msgid "U-report"
+#~ msgstr ""
 

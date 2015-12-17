@@ -15,10 +15,11 @@ _ = translation_string_factory
 class ContentSection(object):
     DATA = OrderedDict([
         ('ureport', {
-            'owner': _('U-report'),
-            'title': _('U-report'),
+            'owner': _('U-Report'),
+            'title': _('U-Report'),
             'descriptor': _('Become a U-Reporter & start sharing!'),
-            'name': 'ureport'
+            'name': 'ureport',
+            'banner_url': 'springboard_iogt:static/img/ureport_banner.jpg'
         }),
         ('yourrights', {
             'owner': _('Barefoot Law'),
@@ -67,6 +68,7 @@ class ContentSection(object):
     def __init__(self, slug, localizer=None):
         self.slug = slug
         self.data = self.__class__.DATA[slug]
+        self.banner_url = self.data.get('banner_url')
         if localizer:
             self.title = localizer.translate(self.data['title'])
             self.owner = localizer.translate(self.data['owner'])

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-10 13:02+0200\n"
-"PO-Revision-Date: 2015-11-09 13:44+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2015-12-17 12:56+0200\n"
+"PO-Revision-Date: 2015-12-10 16:43+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
@@ -19,82 +19,82 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-msgid "U-report"
+msgid "U-Report"
 msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Votre voix compte"
 
-#: springboard_iogt/utils.py:24
+#: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
 msgstr ""
 
-#: springboard_iogt/utils.py:25
-msgid "Your Rights"
-msgstr ""
-
 #: springboard_iogt/utils.py:26
-msgid "Free legal information & support"
-msgstr ""
+msgid "Your Rights"
+msgstr "Droits de l'enfant"
 
-#: springboard_iogt/utils.py:30
+#: springboard_iogt/utils.py:27
+msgid "Free legal information & support"
+msgstr "Connais et défends tes droits!"
+
+#: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
 msgstr ""
 
-#: springboard_iogt/utils.py:31
+#: springboard_iogt/utils.py:32
 msgid "My Family"
 msgstr ""
 
-#: springboard_iogt/utils.py:32
+#: springboard_iogt/utils.py:33
 msgid "Matters about the family"
 msgstr ""
 
-#: springboard_iogt/utils.py:36
+#: springboard_iogt/utils.py:37
 msgid "Straight Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:37
+#: springboard_iogt/utils.py:38
 msgid "Health Talk"
 msgstr ""
 
-#: springboard_iogt/utils.py:38
+#: springboard_iogt/utils.py:39
 msgid "Collaborating together with the youth"
 msgstr ""
 
-#: springboard_iogt/utils.py:42
+#: springboard_iogt/utils.py:43
 msgid "Emergency"
 msgstr ""
 
-#: springboard_iogt/utils.py:43
-msgid "Emergency Information"
-msgstr ""
-
 #: springboard_iogt/utils.py:44
+msgid "Emergency Information"
+msgstr "Situations d'urgence"
+
+#: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
 msgstr "Epidémies, catastrophes et conflits"
 
-#: springboard_iogt/utils.py:48 springboard_iogt/utils.py:49
+#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
 msgstr "Savoir pour Sauver"
 
-#: springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
 msgstr "Améliorer la vie des enfants"
 
-#: springboard_iogt/utils.py:54 springboard_iogt/utils.py:55
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
-msgstr ""
+msgstr "TOUS ENSEMBLE"
 
-#: springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
 msgstr "Amour, relations, sexe et genres"
 
-#: springboard_iogt/utils.py:60 springboard_iogt/utils.py:61
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr ""
+msgstr "Connect Smart"
 
-#: springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
 msgstr "10 règles d'or d'Internet"
 
@@ -103,19 +103,19 @@ msgid "We can't find that page, sorry."
 msgstr "Oups, cette page ne semble plus exister."
 
 #: springboard_iogt/templates/base.jinja2:10
-#: springboard_iogt/templates/base.jinja2:61
+#: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
 msgstr "The Internet of Good Things"
 
-#: springboard_iogt/templates/base.jinja2:45
+#: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
 msgstr "Explorez IoGT"
 
-#: springboard_iogt/templates/base.jinja2:55
+#: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
 msgstr "Accueil"
 
-#: springboard_iogt/templates/base.jinja2:62
+#: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr "À propos de Internet of Good Things"
 
@@ -138,11 +138,11 @@ msgstr "Enfant"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "Adolescent"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Parent / Tuteur"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
@@ -186,4 +186,7 @@ msgstr "Ce contenu vous est fourni par %(owner)s"
 
 #~ msgid "Worker"
 #~ msgstr "Travailleur"
+
+#~ msgid "U-report"
+#~ msgstr ""
 

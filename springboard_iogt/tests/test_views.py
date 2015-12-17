@@ -37,6 +37,12 @@ class TestIoGTViews(SpringboardTestCase):
             created_at=datetime.utcnow().isoformat(),
             primary_category=category.uuid,
             featured=True)
+        self.mk_pages(
+            ws_ffl, count=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category.uuid,
+            featured=True,
+            language='fre_FR')
         app = self.mk_app(self.workspace, main=main, settings={
             'unicore.content_repo_urls': '\n'.join(
                 [ws_ffl.working_dir]),
@@ -54,7 +60,15 @@ class TestIoGTViews(SpringboardTestCase):
         self.assertEqual(len(html.find_all(
             'a',
             text='U-report',
-            href='http://za.ureport.qa-hub.unicore.io/')), 2)
+            href='http://za.ureport.qa-hub.unicore.io/')), 1)
+
+        # change locale to French
+        app.get('/locale/fre_FR/')
+        response = app.get('/')
+        self.assertEqual(len(response.html.find_all(
+            'a',
+            text='Savoir pour Sauver',
+            href='http://localhost/section/ffl/')), 1)
 
     def test_persona_tween(self):
         app = self.mk_app(
