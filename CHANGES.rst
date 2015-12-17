@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+1.0.4
+-----
+- update u-report banner
+
 1.0.3
 -----
 - use latest springboard version
