@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-11 17:32+0200\n"
+"POT-Creation-Date: 2015-12-17 12:56+0200\n"
 "PO-Revision-Date: 2015-09-16 15:19+0000\n"
 "Last-Translator: Milton <milton@praekelt.com>\n"
 "Language: ar_AE\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-msgid "U-report"
+msgid "U-Report"
 msgstr ""
 
 #: springboard_iogt/utils.py:20
@@ -186,5 +186,8 @@ msgstr "هذه الصفحة برعاية %(owner)s"
 #~ msgstr "احصل على معلومات عن الإيبولا"
 
 #~ msgid "All IN"
+#~ msgstr ""
+
+#~ msgid "U-report"
 #~ msgstr ""
 

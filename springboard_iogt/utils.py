@@ -15,8 +15,8 @@ _ = translation_string_factory
 class ContentSection(object):
     DATA = OrderedDict([
         ('ureport', {
-            'owner': _('U-report'),
-            'title': _('U-report'),
+            'owner': _('U-Report'),
+            'title': _('U-Report'),
             'descriptor': _('Become a U-Reporter & start sharing!'),
             'name': 'ureport',
             'banner_url': 'springboard_iogt:static/img/ureport_banner.jpg'

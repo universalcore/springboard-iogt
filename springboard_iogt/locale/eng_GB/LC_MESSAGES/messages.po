@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-11 17:32+0200\n"
+"POT-Creation-Date: 2015-12-17 12:56+0200\n"
 "PO-Revision-Date: 2015-09-07 18:26+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_GB\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-msgid "U-report"
+msgid "U-Report"
 msgstr ""
 
 #: springboard_iogt/utils.py:20
@@ -201,5 +201,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "All IN"
+#~ msgstr ""
+
+#~ msgid "U-report"
 #~ msgstr ""
 
