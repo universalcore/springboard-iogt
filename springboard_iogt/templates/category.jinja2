@@ -9,7 +9,7 @@
 {% block content %}
 <div>
 
-    {% set section = category|content_section %}
+    {% set section = category|content_section(request.localizer) %}
     {{ section_title(section) }}
 
     <div class="articles">
