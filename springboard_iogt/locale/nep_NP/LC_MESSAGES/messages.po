@@ -1,18 +1,17 @@
-# Ganda (Uganda) translations for springboard_iogt.
+# Nepali (Nepal) translations for springboard_iogt.
 # Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-01-11 15:01+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: lg_UG\n"
-"Language-Team: lg_UG <LL@li.org>\n"
+"PO-Revision-Date: 2015-12-14 09:52+0000\n"
+"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"Language: ne_NP\n"
+"Language-Team: ne_NP <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,12 +19,13 @@ msgstr ""
 "Generated-By: Babel 2.1.1\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
+#, fuzzy
 msgid "U-Report"
-msgstr ""
+msgstr "यु-रिपोर्ट"
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "यु-रिपोर्टर बन्नुहोस् र साझा बनाउन थाल्नुहोस्"
 
 #: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:26
 msgid "Your Rights"
-msgstr ""
+msgstr "तपाईंको अधिकारहरू"
 
 #: springboard_iogt/utils.py:27
 msgid "Free legal information & support"
@@ -69,19 +69,19 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Emergency Information"
-msgstr ""
+msgstr "आपतकालीन जानकारीहरू"
 
 #: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "द्वन्द्व, प्रकोप वा महामारीहरू"
 
 #: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
-msgstr ""
+msgstr "स्वस्थ जीवनको सरल तरिका"
 
 #: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "बालबालिकाको जीवन सुधाराैं"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
@@ -89,69 +89,69 @@ msgstr ""
 
 #: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "प्रेम, सम्वन्धहरू, याैन र जेण्डर"
 
 #: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr ""
+msgstr "स्मार्ट रूपमा जोडिनुहोस्"
 
 #: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
-msgstr ""
+msgstr "शीर्ष १० इन्टरनेट उपायहरू सिक्नुहोस्"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "हामीले त्यो पाना भेट्न सकेनाैं, माफ गर्नुहोला ।"
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "राम्रो कुराहरूको इन्टरनेट"
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "आइअोजीटी अन्वेषण गर्नुहोस्"
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr ""
+msgstr "होम"
 
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "राम्रो कुराहरूको इन्टरनेटको बारेमा"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "थप (category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "सिफारिस गरिएको"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "तपाईं को हो?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "बालबालिका"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "किशोरकिशोरी"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "आमावुवा / हेरचाहकर्ता"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "शिक्षक/ स्वास्थ्य/ समाजसेवी"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "छोड्नुहोस्"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -160,49 +160,16 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "अघिल्लो"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "अर्को"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
-
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
-
-#~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
-
-#~ msgid "Parent"
-#~ msgstr ""
-
-#~ msgid "Worker"
-#~ msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
-#~ msgid "StopEbola"
-#~ msgstr ""
-
-#~ msgid "Get information about Ebola"
-#~ msgstr ""
-
-#~ msgid "All IN"
-#~ msgstr ""
-
-#~ msgid "U-report"
-#~ msgstr ""
+msgstr "(owner)हरूले तपाईंसम्म ल्याएको"
 
