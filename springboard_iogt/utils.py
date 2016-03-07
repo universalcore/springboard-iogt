@@ -24,7 +24,7 @@ class ContentSection(object):
         ('yourrights', {
             'owner': _('Barefoot Law'),
             'title': _('Your Rights'),
-            'descriptor': _('Free legal information & support'),
+            'descriptor': _('Know and use them!'),
             'name': 'barefootlaw'
         }),
         ('myfamily', {
@@ -87,8 +87,7 @@ class ContentSection(object):
     def exists(cls, name, indexes):
         return (
             name in [
-                section.get('name') for slug, section in cls.DATA.items()]
-            and
+                section.get('name') for slug, section in cls.DATA.items()] and
             any(index for index in indexes if name in index))
 
     @classmethod

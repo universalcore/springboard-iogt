@@ -1,22 +1,23 @@
 # Nepali (Nepal) translations for springboard_iogt.
-# Copyright (C) 2015 ORGANIZATION
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-01-11 15:01+0200\n"
-"PO-Revision-Date: 2015-12-14 09:52+0000\n"
-"Last-Translator: tsepo <tsepo@praekelt.com>\n"
+"POT-Creation-Date: 2016-03-07 16:54+0200\n"
+"PO-Revision-Date: 2016-03-01 19:30+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ne_NP\n"
 "Language-Team: ne_NP <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.2.0\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 #, fuzzy
@@ -36,7 +37,7 @@ msgid "Your Rights"
 msgstr "तपाईंको अधिकारहरू"
 
 #: springboard_iogt/utils.py:27
-msgid "Free legal information & support"
+msgid "Know and use them!"
 msgstr ""
 
 #: springboard_iogt/utils.py:31
@@ -171,5 +172,8 @@ msgstr "अर्को"
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr "(owner)हरूले तपाईंसम्म ल्याएको"
+msgstr "हरूले तपाईंसम्म ल्याएको %(owner)s"
+
+#~ msgid "Free legal information & support"
+#~ msgstr "थाहा पाउनुहोस् र प्रयोग गर्नुहोस्!"
 

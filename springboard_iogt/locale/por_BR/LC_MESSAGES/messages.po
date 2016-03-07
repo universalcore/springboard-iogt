@@ -1,4 +1,4 @@
-# Swahili (Tanzania) translations for springboard_iogt.
+# Portuguese (Brazil) translations for springboard_iogt.
 # Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-03-07 16:54+0200\n"
-"PO-Revision-Date: 2015-12-10 16:45+0000\n"
+"PO-Revision-Date: 2016-02-12 14:26+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
-"Language: sw_TZ\n"
-"Language-Team: sw_TZ <LL@li.org>\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,12 +20,13 @@ msgstr ""
 "Generated-By: Babel 2.2.0\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
+#, fuzzy
 msgid "U-Report"
-msgstr ""
+msgstr "U-Report"
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr "Jinsi ya kuwa U-Ripota"
+msgstr "Se torne um U-Reporter e comece a compartilhar"
 
 #: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
@@ -33,7 +34,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:26
 msgid "Your Rights"
-msgstr ""
+msgstr "Direitos das crianças"
 
 #: springboard_iogt/utils.py:27
 msgid "Know and use them!"
@@ -65,23 +66,23 @@ msgstr ""
 
 #: springboard_iogt/utils.py:43
 msgid "Emergency"
-msgstr ""
+msgstr "Emergência"
 
 #: springboard_iogt/utils.py:44
 msgid "Emergency Information"
-msgstr "Taarifa za dharura"
+msgstr "Informações sobre Emergência"
 
 #: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
-msgstr "Migogoro, maafa, magonjwa ya milipuko"
+msgstr "Conflitos, catástrofes ou epidemias"
 
 #: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
 msgid "Facts For Life"
-msgstr "Ukweli kuhusu maisha"
+msgstr "Saúde e Vida"
 
 #: springboard_iogt/utils.py:51
 msgid "Improve the lives of Children"
-msgstr "Boresha maisha ya watoto"
+msgstr "Melhorar a vida das crianças"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "ALL IN"
@@ -89,69 +90,69 @@ msgstr "ALL IN"
 
 #: springboard_iogt/utils.py:57
 msgid "Love, relationships, sex and gender"
-msgstr "Mapenzi, mahusiano, jinsia"
+msgstr "Amor, relacionamentos, sexo e gênero"
 
 #: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "Connect Smart"
-msgstr "Tumia mtandao salama"
+msgstr "Conexão Inteligente"
 
 #: springboard_iogt/utils.py:63
 msgid "Learn about the internet"
-msgstr "Jifunze mambo 10 muhimu kuhusu mitandao"
+msgstr "Navegar em segurança na Internet"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr "Samahani, hatuwezi kupata ukurasa huo."
+msgstr "Desculpe, não conseguimos encontrar a página."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
-msgstr "Intaneti ya Mambo Mazuri"
+msgstr "A Internet das Coisas Boas"
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr "Vinjari Mtandao wa Mambo Mazuri "
+msgstr "Explorar IoGT"
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr "Anza Mwanzo"
+msgstr "Início"
 
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
-msgstr "Kuhusu Intaneti ya Mambo Mazuri"
+msgstr "Sobre a Internet das Coisas Boas"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Mais %(category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr "Pendekezwa"
+msgstr "Recomendado"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr "Wewe ni nani?"
+msgstr "Quem é você?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr "Mtoto"
+msgstr "Criança"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr "Kijana"
+msgstr "Adolescente"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr "Mzazi / Mzazi Mwangalizi"
+msgstr "Pais / Cuidador (a)"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr "Mwalimu / Mhudumu wa Afya / Jamii"
+msgstr "Professor / Profissional de Saúde e Assistência Social"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr "Epa"
+msgstr "Pular"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -160,25 +161,19 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr "Nyuma"
+msgstr "Anterior"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr "Mbele"
+msgstr "Seguinte"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr "Imeletwa kwenu na %(owner)s"
-
-#~ msgid "Parent"
-#~ msgstr "Mzazi"
-
-#~ msgid "U-report"
-#~ msgstr ""
+msgstr "Trazido a você por %(owner)s"
 
 #~ msgid "Free legal information & support"
-#~ msgstr ""
+#~ msgstr "Os Direitos da Criança"
 
