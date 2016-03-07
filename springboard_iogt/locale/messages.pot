@@ -35,7 +35,7 @@ msgid "Your Rights"
 msgstr ""
 
 #: springboard_iogt/utils.py:27
-msgid "Free legal information & support"
+msgid "Know and use them!"
 msgstr ""
 
 #: springboard_iogt/utils.py:31

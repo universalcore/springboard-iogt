@@ -24,7 +24,7 @@ class ContentSection(object):
         ('yourrights', {
             'owner': _('Barefoot Law'),
             'title': _('Your Rights'),
-            'descriptor': _('Free legal information & support'),
+            'descriptor': _('Know and use them!'),
             'name': 'barefootlaw'
         }),
         ('myfamily', {
