@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-07 12:26+0200\n"
-"PO-Revision-Date: 2015-12-11 15:23+0000\n"
+"POT-Creation-Date: 2016-03-07 14:54+0200\n"
+"PO-Revision-Date: 2016-03-01 19:47+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ky_KG\n"
 "Language-Team: ky_KG <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.2.0\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
+#, fuzzy
 msgid "U-Report"
 msgstr "U-Report"
 
@@ -36,7 +37,7 @@ msgid "Your Rights"
 msgstr "Сенин укуктарың"
 
 #: springboard_iogt/utils.py:27
-msgid "Free legal information & support"
+msgid "Know and use them!"
 msgstr ""
 
 #: springboard_iogt/utils.py:31
@@ -123,7 +124,7 @@ msgstr "Жакшы нерселердин интернети жөнүндө"
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Дагы %(category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
@@ -160,16 +161,19 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Мурункусу"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Кийинкиси"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "ээси аркылуу берилди %(owner)s"
+
+#~ msgid "Free legal information & support"
+#~ msgstr "Өз укугуңду билип, пайдалан"
 

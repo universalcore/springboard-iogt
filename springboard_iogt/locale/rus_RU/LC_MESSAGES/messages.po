@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-07 12:26+0200\n"
-"PO-Revision-Date: 2015-11-27 14:13+0000\n"
+"POT-Creation-Date: 2016-03-07 14:54+0200\n"
+"PO-Revision-Date: 2016-03-01 19:16+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ru_RU\n"
 "Language-Team: ru_RU <LL@li.org>\n"
@@ -21,8 +21,9 @@ msgstr ""
 "Generated-By: Babel 2.2.0\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
+#, fuzzy
 msgid "U-Report"
-msgstr ""
+msgstr "U-Report"
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
@@ -34,10 +35,10 @@ msgstr ""
 
 #: springboard_iogt/utils.py:26
 msgid "Your Rights"
-msgstr ""
+msgstr "Твои права"
 
 #: springboard_iogt/utils.py:27
-msgid "Free legal information & support"
+msgid "Know and use them!"
 msgstr ""
 
 #: springboard_iogt/utils.py:31
@@ -102,7 +103,7 @@ msgstr "Узнай топ 10 интернет советов!  "
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Извините, мы не можем найти запрашиваемую вами страницу"
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
@@ -118,13 +119,14 @@ msgid "Home"
 msgstr "Главная страница"
 
 #: springboard_iogt/templates/base.jinja2:67
+#, fuzzy
 msgid "About Internet of Good Things"
 msgstr "Интернет полезных вещей"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "Еще %(category_title_link)s"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
@@ -132,7 +134,7 @@ msgstr "Рекомендуется"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Кто вы?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
@@ -152,7 +154,7 @@ msgstr "Учитель/медработник/социальный работн�
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Пропустить"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -161,19 +163,19 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Предыдущий"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Далее"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
+msgstr "Предоставлено %(owner)s"
 
-#~ msgid "U-report"
-#~ msgstr ""
+#~ msgid "Free legal information & support"
+#~ msgstr "Өз укугуңду билип, пайдалан"
 
