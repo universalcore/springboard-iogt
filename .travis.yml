@@ -13,8 +13,8 @@ install:
   - pip install -r requirements-dev.txt
   - pip install -e .
 script:
-  - flake8 springboard_iogt
-  - py.test springboard_iogt --cov springboard_iogt
+  - flake8
+  - py.test
 after_success:
   - coveralls
 deploy:
