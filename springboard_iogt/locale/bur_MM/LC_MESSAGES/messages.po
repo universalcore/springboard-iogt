@@ -1,23 +1,23 @@
-# Burmese (Myanmar (Burma)) translations for springboard_iogt.
-# Copyright (C) 2016 ORGANIZATION
+# Translations template for springboard_iogt.
+# Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-03-07 16:54+0200\n"
-"PO-Revision-Date: 2016-02-22 11:38+0000\n"
+"PO-Revision-Date: 2016-03-09 09:37+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
-"Language: my_MM\n"
-"Language-Team: my_MM <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: bur_MM\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 2.5.1.1\n"
 "Generated-By: Babel 2.2.0\n"
+"X-POOTLE-MTIME: 1457516239.666786\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 #, fuzzy
@@ -38,7 +38,7 @@ msgstr "သင့္အခြင့္အေရးမ်ား"
 
 #: springboard_iogt/utils.py:27
 msgid "Know and use them!"
-msgstr ""
+msgstr "၎တို႔ကုိသိၿပီး အသုံးခ်ပါ"
 
 #: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
@@ -120,8 +120,8 @@ msgstr "အဓိက စာမ်က္ႏွာ"
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr ""
-"အင္တာနက္၏ေကာင္းေသာအခ်က္မ်ား ႏွင့္ပတ္သက္သည့္အေၾကာင္းအရာမ်ား (The Internet "
-"of Good Things IoGT)"
+"အင္တာနက္၏ေကာင္းေသာအခ်က္မ်ား ႏွင့္ပတ္သက္သည့္အေၾကာင္းအရာမ်ား (The Internet of "
+"Good Things IoGT)"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
@@ -176,6 +176,8 @@ msgstr "ေနာက္ထပ္/လာမည့္၊"
 msgid "Brought to you by %(owner)s"
 msgstr "%(owner)s မွ စီစဥ္တင္ဆက္ျခင္းျဖစ္သည္၊"
 
+#~ msgid "U-report"
+#~ msgstr "U- အစီရင္ခံစာ"
+
 #~ msgid "Free legal information & support"
 #~ msgstr "၎တို႔ကုိသိၿပီး အသုံးခ်ပါ"
-
