@@ -139,7 +139,6 @@ msgid "Child"
 msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
-#, fuzzy
 msgid "Adolescent"
 msgstr "اليافع"
 
