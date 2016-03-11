@@ -1,26 +1,25 @@
-# Translations template for springboard_iogt.
-# Copyright (C) 2015 ORGANIZATION
+# Nepali (Nepal) translations for springboard_iogt.
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-07 16:54+0200\n"
+"POT-Creation-Date: 2016-03-09 18:47+0200\n"
 "PO-Revision-Date: 2016-03-09 09:39+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: nep_NP\n"
+"Language: ne_NP\n"
+"Language-Team: ne_NP <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 2.5.1.1\n"
 "Generated-By: Babel 2.2.0\n"
-"X-POOTLE-MTIME: 1457516369.148427\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-#, fuzzy
 msgid "U-Report"
 msgstr "यु-रिपोर्ट"
 
@@ -122,7 +121,6 @@ msgid "About Internet of Good Things"
 msgstr "राम्रो कुराहरूको इन्टरनेटको बारेमा"
 
 #: springboard_iogt/templates/content_section.jinja2:29
-#, python-format
 msgid "More %(category_title_link)s"
 msgstr "थप (category_title_link)s"
 
@@ -170,7 +168,6 @@ msgstr "अर्को"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
-#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr "हरूले तपाईंसम्म ल्याएको %(owner)s"
 
@@ -179,3 +176,4 @@ msgstr "हरूले तपाईंसम्म ल्याएको %(owne
 
 #~ msgid "Free legal information & support"
 #~ msgstr "थाहा पाउनुहोस् र प्रयोग गर्नुहोस्!"
+

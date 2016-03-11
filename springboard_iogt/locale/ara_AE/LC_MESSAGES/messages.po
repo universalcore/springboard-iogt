@@ -1,23 +1,24 @@
-# Translations template for springboard_iogt.
-# Copyright (C) 2015 ORGANIZATION
+# Arabic (United Arab Emirates) translations for springboard_iogt.
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-07 16:54+0200\n"
+"POT-Creation-Date: 2016-03-09 18:47+0200\n"
 "PO-Revision-Date: 2016-03-09 09:36+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ara_AE\n"
+"Language: ar_AE\n"
+"Language-Team: ar_AE <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n>=3 "
+"&& n<=10 ? 3 : n>=11 && n<=99 ? 4 : 5)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 2.5.1.1\n"
 "Generated-By: Babel 2.2.0\n"
-"X-POOTLE-MTIME: 1457516163.183723\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 msgid "U-Report"
@@ -121,7 +122,6 @@ msgid "About Internet of Good Things"
 msgstr "إنترنت الأمور الجيدة"
 
 #: springboard_iogt/templates/content_section.jinja2:29
-#, python-format
 msgid "More %(category_title_link)s"
 msgstr "المزيد %(category_title_link)s"
 
@@ -138,7 +138,6 @@ msgid "Child"
 msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
-#, fuzzy
 msgid "Adolescent"
 msgstr "اليافع"
 
@@ -170,7 +169,6 @@ msgstr "التالي"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
-#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr "هذه الصفحة برعاية %(owner)s"
 
@@ -182,3 +180,4 @@ msgstr "هذه الصفحة برعاية %(owner)s"
 
 #~ msgid "Adolescent "
 #~ msgstr "اليافع"
+
