@@ -21,7 +21,6 @@ msgstr ""
 "Generated-By: Babel 2.2.0\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
-#, fuzzy
 msgid "U-Report"
 msgstr "U-Report"
 
