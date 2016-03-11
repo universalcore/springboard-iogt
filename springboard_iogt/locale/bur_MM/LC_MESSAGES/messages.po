@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-09 18:47+0200\n"
+"POT-Creation-Date: 2016-03-11 14:46+0200\n"
 "PO-Revision-Date: 2016-03-09 09:37+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: my_MM\n"
@@ -123,6 +123,7 @@ msgstr ""
 "of Good Things IoGT)"
 
 #: springboard_iogt/templates/content_section.jinja2:29
+#, python-format
 msgid "More %(category_title_link)s"
 msgstr "ထပ္မံ၍ %(category_title_link)s မ်ား၊"
 
@@ -170,6 +171,7 @@ msgstr "ေနာက္ထပ္/လာမည့္၊"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
+#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr "%(owner)s မွ စီစဥ္တင္ဆက္ျခင္းျဖစ္သည္၊"
 

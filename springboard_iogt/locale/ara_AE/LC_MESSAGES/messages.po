@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-09 18:47+0200\n"
+"POT-Creation-Date: 2016-03-11 14:46+0200\n"
 "PO-Revision-Date: 2016-03-09 09:36+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ar_AE\n"
@@ -122,6 +122,7 @@ msgid "About Internet of Good Things"
 msgstr "إنترنت الأمور الجيدة"
 
 #: springboard_iogt/templates/content_section.jinja2:29
+#, python-format
 msgid "More %(category_title_link)s"
 msgstr "المزيد %(category_title_link)s"
 
@@ -169,6 +170,7 @@ msgstr "التالي"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
+#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr "هذه الصفحة برعاية %(owner)s"
 
