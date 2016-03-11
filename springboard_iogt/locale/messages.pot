@@ -167,7 +167,6 @@ msgstr ""
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
-#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr ""
 

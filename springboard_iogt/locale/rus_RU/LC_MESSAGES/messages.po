@@ -122,7 +122,6 @@ msgid "About Internet of Good Things"
 msgstr "Об \"Интернете полезных вещей\""
 
 #: springboard_iogt/templates/content_section.jinja2:29
-#, python-format
 msgid "More %(category_title_link)s"
 msgstr "Еще %(category_title_link)s"
 
@@ -170,7 +169,6 @@ msgstr "Далее"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
-#, python-format
 msgid "Brought to you by %(owner)s"
 msgstr "Предоставлено %(owner)s"
 
