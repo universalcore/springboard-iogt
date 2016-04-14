@@ -87,6 +87,10 @@
         .articles .ffl a { color: #00bfc6; }
         .section-title.ffl div { background-color: #00bfc6; }
 
+        /* Early Childhood Development */
+        .articles .ecd a { color: #F38AA5; }
+        .section-title.ecd div { background-color: #F38AA5; }
+
         /* Barefoot Law */
         .articles .yourrights a { color: #6ec17f; }
         .section-title.yourrights div { background-color: #6ec17f; }

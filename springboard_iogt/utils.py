@@ -45,6 +45,12 @@ class ContentSection(object):
             'descriptor': _('Epidemics, disasters or conflicts'),
             'name': 'ebola'
         }),
+        ('ecd', {
+            'owner': _('Early Childhood Development'),
+            'title': _('Early Childhood Development'),
+            'descriptor': _('Care for your Child Development'),
+            'name': 'Early Life Tips'
+        }),
         ('ffl', {
             'owner': _('Facts For Life'),
             'title': _('Facts For Life'),
