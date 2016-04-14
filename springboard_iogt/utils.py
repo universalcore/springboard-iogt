@@ -101,16 +101,13 @@ class ContentSection(object):
                 if cls.exists(section.get('name'), indexes)]
 
     @classmethod
-    def get_index(cls, name, indexes):
-        [index] = [index for index in indexes if name in index]
-        return index
-
-    @classmethod
     def known_indexes(cls, indexes, localizer=None):
-        return [
-            cls(slug, localizer, cls.get_index(section.get('name'), indexes))
-            for slug, section in cls.DATA.items()
-            if cls.exists(section.get('name'), indexes)]
+        sections = (
+            cls(slug, localizer, index)
+            for slug, section in cls.DATA.iteritems()
+            for index in matches(indexes, section['name']))
+
+        return sorted(sections, key=lambda k: k.index)
 
     @classmethod
     def _for(cls, name, localizer=None):
@@ -138,3 +135,7 @@ def update_query(url, query_list):
     query = parse_qsl(parts.query)
     query.extend(query_list)
     return urlunparse(parts[:4] + (urlencode(query), ) + parts[5:])
+
+
+def matches(strs, substr):
+    return (s for s in strs if substr in s)
