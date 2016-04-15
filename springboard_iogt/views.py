@@ -115,3 +115,9 @@ class IoGTViews(SpringboardViews):
             return self.context(page=page)
         except IOError:
             raise HTTPNotFound
+
+    @view_config(route_name='repos', renderer='json')
+    def repos(self):
+        return [
+            {'slug': s.slug, 'data': s.data, 'index': s.index}
+            for s in ContentSection.known_indexes(self.all_index_prefixes)]

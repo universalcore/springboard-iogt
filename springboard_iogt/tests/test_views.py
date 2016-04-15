@@ -313,3 +313,22 @@ class TestIoGTViews(SpringboardTestCase):
         html = app.get('/category/%s/' % category.uuid).html
         title_a = html.find('a', href='http://localhost/section/ffl/')
         self.assertIn('Savoir pour Sauver', title_a.text)
+
+    def test_repos_api(self):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
+        })
+
+        response = app.get('/repos.json').json
+        self.assertEqual(
+            response,
+            [{
+                u'index': u'ffl',
+                u'data': {
+                    u'owner': u'Facts For Life',
+                    u'descriptor': u'Improve the lives of Children',
+                    u'name': u'ffl',
+                    u'title': u'Facts For Life'},
+                u'slug': u'ffl'}])
