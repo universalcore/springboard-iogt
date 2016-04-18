@@ -81,11 +81,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:50
 msgid "Early Life Tips!"
-msgstr ""
+msgstr "Empieza Temprano"
 
 #: springboard_iogt/utils.py:51
 msgid "Care for your Child Development"
-msgstr ""
+msgstr "Cada Momento Cuenta"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
@@ -193,4 +193,3 @@ msgstr "Contenido proporcionado por %(owner)s"
 
 #~ msgid "Adolescent "
 #~ msgstr "Adolescente"
-
