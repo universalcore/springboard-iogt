@@ -47,9 +47,9 @@ class ContentSection(object):
         }),
         ('ecd', {
             'owner': _('Early Childhood Development'),
-            'title': _('Early Childhood Development'),
+            'title': _('Early Life Tips!'),
             'descriptor': _('Care for your Child Development'),
-            'name': 'Early Life Tips'
+            'name': 'ecd'
         }),
         ('ffl', {
             'owner': _('Facts For Life'),
