@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-11 14:46+0200\n"
+"POT-Creation-Date: 2016-04-18 16:49+0200\n"
 "PO-Revision-Date: 2016-03-09 09:38+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: fr_FR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.2.0\n"
+"Generated-By: Babel 2.3.3\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 msgid "U-Report"
@@ -75,27 +75,39 @@ msgstr "Situations d'urgence"
 msgid "Epidemics, disasters or conflicts"
 msgstr "Epidémies, catastrophes et conflits"
 
-#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:49
+msgid "Early Childhood Development"
+msgstr ""
+
+#: springboard_iogt/utils.py:50
+msgid "Early Life Tips!"
+msgstr ""
+
+#: springboard_iogt/utils.py:51
+msgid "Care for your Child Development"
+msgstr ""
+
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
 msgstr "Savoir pour Sauver"
 
-#: springboard_iogt/utils.py:51
+#: springboard_iogt/utils.py:57
 msgid "Improve the lives of Children"
 msgstr "Améliorer la vie des enfants"
 
-#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "ALL IN"
 msgstr "TOUS ENSEMBLE"
 
-#: springboard_iogt/utils.py:57
+#: springboard_iogt/utils.py:63
 msgid "Love, relationships, sex and gender"
 msgstr "Amour, relations, sexe et genres"
 
-#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:67 springboard_iogt/utils.py:68
 msgid "Connect Smart"
 msgstr "Connect Smart"
 
-#: springboard_iogt/utils.py:63
+#: springboard_iogt/utils.py:69
 msgid "Learn about the internet"
 msgstr "10 règles d'or d'Internet"
 

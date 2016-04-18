@@ -51,6 +51,7 @@
     #content .articles .ureport .h1 .back{background-image: url("img/u_report_flipped.png");}
     #content .articles .connectsmart .h1 .back{background-image: url("img/connect_smart_flipped.png");}
     #content .articles .allin .h1 .back{background-image: url("img/hiv_all_in_flipped.png");}
+    #content .articles .ecd .h1 .back{background-image: url("img/early_childhood_development_flipped.png");}
 
     .articles .detail { padding: 24px; }
 
@@ -80,6 +81,7 @@
     #submenu .connectsmart a{background-image: url("img/connect_smart.png");}
     #submenu .home a{background-image: url("img/arrow_right_grey.png");}
     #submenu .allin a{background-image: url("img/hiv_all_in.png");}
+    #submenu .ecd a{background-image: url("img/early_childhood_development.png");}
 
     #content .home .articles .listing {position: relative;}
     #content .home .articles .listing:after {padding:0; margin:0; display:block; content: ""; width:93%; height:10px; position: absolute;right: 0;top:0;}
