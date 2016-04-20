@@ -46,3 +46,4 @@ repositories:
   unicore_frontend_ebola_i1: git@github.com:universalcore/unicore-cms-content-ebola-i1-prod.git
   unicore_frontend_ffl_i1: git@github.com:universalcore/unicore-cms-content-ffl-i1-prod.git
   unicore_frontend_hiv_i1: git@github.com:universalcore/unicore-cms-content-hiv-i1-prod.git
+  unicore_frontend_ecd_i1: git@github.com:universalcore/unicore-cms-content-ecd-i1-prod.git

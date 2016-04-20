@@ -1,4 +1,4 @@
-# English (United Kingdom) translations for springboard_iogt.
+# Burmese (Myanmar (Burma)) translations for springboard_iogt.
 # Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
@@ -6,13 +6,13 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-04-18 16:49+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en_GB\n"
-"Language-Team: en_GB <LL@li.org>\n"
+"PO-Revision-Date: 2016-03-09 09:37+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"Language: my_MM\n"
+"Language-Team: my_MM <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 msgid "U-Report"
-msgstr ""
+msgstr "U- အစီရင္ခံစာ"
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "U-သတင္းေပးသူအျဖစ္ပါ၀င္ၿပီး စတင္မွ်ေ၀ပါ"
 
 #: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
@@ -33,11 +33,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:26
 msgid "Your Rights"
-msgstr ""
+msgstr "သင့္အခြင့္အေရးမ်ား"
 
 #: springboard_iogt/utils.py:27
 msgid "Know and use them!"
-msgstr ""
+msgstr "၎တို႔ကုိသိၿပီး အသုံးခ်ပါ"
 
 #: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
@@ -69,11 +69,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Emergency Information"
-msgstr ""
+msgstr "အေရးေပၚသတင္းအခ်က္အလက္မ်ား"
 
 #: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "ပဋိပကၡမ်ား၊ ေဘးအႏၱရာယ္မ်ား သို႔မဟုတ္ ကူးစက္ျမန္ေရာဂါမ်ား"
 
 #: springboard_iogt/utils.py:49
 msgid "Early Childhood Development"
@@ -89,81 +89,83 @@ msgstr ""
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
-msgstr ""
+msgstr "ဘ၀တြက္တာသိမွတ္စရာ"
 
 #: springboard_iogt/utils.py:57
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "ကေလးမ်ား၏ဘ၀ ရွင္သန္တိုးတက္ေရး"
 
 #: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "ALL IN"
-msgstr ""
+msgstr "အားလံုးပါ၀င္ၾကပါစို႔ - ဆယ္ေက်ာ္သက္အရြယ္လူငယ္မ်ား ျဖင့္/အတြက္"
 
 #: springboard_iogt/utils.py:63
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "အခ်စ္ေရး၊ သမီးရည္းစားကိစၥမ်ား၊ လိင္ႏွင့္ က်ား-မေရးရာက႑"
 
 #: springboard_iogt/utils.py:67 springboard_iogt/utils.py:68
 msgid "Connect Smart"
-msgstr ""
+msgstr "အဆင့္မွီစြာဆက္သြယ္ျခင္း"
 
 #: springboard_iogt/utils.py:69
 msgid "Learn about the internet"
-msgstr ""
+msgstr "အင္တာနက္ဆိုင္ရာ သိမွတ္စရာအခ်က္(၁၀)ခ်က္ကို ေလ့လာျခင္း"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "၀မ္းနည္းပါသည္။ အဆိုပါစာမ်က္ႏွာကို ကၽြႏု္ပ္တို႔ ရွာမေတြ႔ပါ၊"
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
 msgid "The Internet of Good Things"
-msgstr ""
+msgstr "အင္တာနက္၏ေကာင္းေသာအခ်က္မ်ား"
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "IoGT ကိုစူးစမ္းေလ့လာျခင္း၊"
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr ""
+msgstr "အဓိက စာမ်က္ႏွာ"
 
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
 msgstr ""
+"အင္တာနက္၏ေကာင္းေသာအခ်က္မ်ား ႏွင့္ပတ္သက္သည့္အေၾကာင္းအရာမ်ား (The Internet "
+"of Good Things IoGT)"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "ထပ္မံ၍ %(category_title_link)s မ်ား၊"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "အႀကံျပဳေထာက္ခံျခင္း၊"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "သင္ဘယ္သူလဲ ?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "ကေလး"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "ဆယ္ေက်ာ္သက္အရြယ္လူငယ္"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "မိဘ / ျပဳစုေစာင့္ေရွာက္ေပးေနသူ"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "ဆရာ-ဆရာမ / က်န္းမာေရး / လူမႈေရးလုပ္သား"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "ေက်ာ္ရန္"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -172,52 +174,22 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "ယခင္/ၿပီးခဲ့ေသာ၊"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "ေနာက္ထပ္/လာမည့္၊"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
-
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
-
-#~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
-
-#~ msgid "Parent"
-#~ msgstr ""
-
-#~ msgid "Worker"
-#~ msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
-#~ msgid "StopEbola"
-#~ msgstr ""
-
-#~ msgid "Get information about Ebola"
-#~ msgstr ""
-
-#~ msgid "All IN"
-#~ msgstr ""
+msgstr "%(owner)s မွ စီစဥ္တင္ဆက္ျခင္းျဖစ္သည္၊"
 
 #~ msgid "U-report"
-#~ msgstr ""
+#~ msgstr "U- အစီရင္ခံစာ"
 
 #~ msgid "Free legal information & support"
-#~ msgstr ""
+#~ msgstr "၎တို႔ကုိသိၿပီး အသုံးခ်ပါ"
 

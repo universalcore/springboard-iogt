@@ -13,6 +13,21 @@ class TestUtils(SpringboardTestCase):
     def tearDown(self):
         testing.tearDown()
 
+    def serialize_section(self, section):
+        return {
+            'slug': section.slug,
+            'data': section.data,
+            'banner_url': section.banner_url,
+            'title': section.title,
+            'owner': section.owner,
+            'descriptor': section.descriptor
+        }
+
+    def assert_sections_equal(self, a, b):
+        self.assertEqual(
+            [self.serialize_section(s) for s in a],
+            [self.serialize_section(s) for s in b])
+
     def test_content_section(self):
         workspace1 = self.mk_workspace(name='barefootlaw')
         workspace2 = self.mk_workspace(name='ffl')
@@ -48,3 +63,32 @@ class TestUtils(SpringboardTestCase):
         section_obj = sections[0]
         self.assertEqual(section_obj.slug, 'ffl')
         self.assertEqual(section_obj.title, 'Savoir pour Sauver')
+
+    def test_known_indexes(self):
+        localizer = make_localizer(
+            current_locale_name='fre_FR',
+            translation_directories=['springboard_iogt/locale'])
+
+        self.assert_sections_equal(
+            ContentSection.known_indexes(['ffl', 'ureport'], localizer),
+            [ContentSection('ffl', localizer, 'ffl'),
+             ContentSection('ureport', localizer, 'ureport')])
+
+    def test_known_indexes_no_matches(self):
+        localizer = make_localizer(
+            current_locale_name='fre_FR',
+            translation_directories=['springboard_iogt/locale'])
+
+        self.assert_sections_equal(
+            ContentSection.known_indexes(['win', 'rar'], localizer),
+            [])
+
+    def test_known_indexes_multiple_matches(self):
+        localizer = make_localizer(
+            current_locale_name='fre_FR',
+            translation_directories=['springboard_iogt/locale'])
+
+        self.assert_sections_equal(
+            ContentSection.known_indexes(['fflazer', 'fflafel'], localizer),
+            [ContentSection('ffl', localizer, 'fflazer'),
+             ContentSection('ffl', localizer, 'fflafel')])

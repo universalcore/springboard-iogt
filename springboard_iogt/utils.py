@@ -24,7 +24,7 @@ class ContentSection(object):
         ('yourrights', {
             'owner': _('Barefoot Law'),
             'title': _('Your Rights'),
-            'descriptor': _('Free legal information & support'),
+            'descriptor': _('Know and use them!'),
             'name': 'barefootlaw'
         }),
         ('myfamily', {
@@ -44,6 +44,12 @@ class ContentSection(object):
             'title': _('Emergency Information'),
             'descriptor': _('Epidemics, disasters or conflicts'),
             'name': 'ebola'
+        }),
+        ('ecd', {
+            'owner': _('Early Childhood Development'),
+            'title': _('Early Life Tips!'),
+            'descriptor': _('Care for your Child Development'),
+            'name': 'ecd'
         }),
         ('ffl', {
             'owner': _('Facts For Life'),
@@ -65,10 +71,11 @@ class ContentSection(object):
         })
     ])
 
-    def __init__(self, slug, localizer=None):
+    def __init__(self, slug, localizer=None, index=None):
         self.slug = slug
         self.data = self.__class__.DATA[slug]
         self.banner_url = self.data.get('banner_url')
+        self.index = index
         if localizer:
             self.title = localizer.translate(self.data['title'])
             self.owner = localizer.translate(self.data['owner'])
@@ -87,8 +94,7 @@ class ContentSection(object):
     def exists(cls, name, indexes):
         return (
             name in [
-                section.get('name') for slug, section in cls.DATA.items()]
-            and
+                section.get('name') for slug, section in cls.DATA.items()] and
             any(index for index in indexes if name in index))
 
     @classmethod
@@ -99,6 +105,15 @@ class ContentSection(object):
     def known(cls, indexes, localizer=None):
         return [cls(slug, localizer) for slug, section in cls.DATA.items()
                 if cls.exists(section.get('name'), indexes)]
+
+    @classmethod
+    def known_indexes(cls, indexes, localizer=None):
+        sections = (
+            cls(slug, localizer, index)
+            for slug, section in cls.DATA.iteritems()
+            for index in matches(indexes, section['name']))
+
+        return sorted(sections, key=lambda k: k.index)
 
     @classmethod
     def _for(cls, name, localizer=None):
@@ -126,3 +141,7 @@ def update_query(url, query_list):
     query = parse_qsl(parts.query)
     query.extend(query_list)
     return urlunparse(parts[:4] + (urlencode(query), ) + parts[5:])
+
+
+def matches(strs, substr):
+    return (s for s in strs if substr in s)

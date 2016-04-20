@@ -294,3 +294,41 @@ class TestIoGTViews(SpringboardTestCase):
         app.get('/section/yourrights/')
         data = mock_task.call_args[0][2]
         self.assertEqual(data['dt'], 'Your Rights')
+
+    def test_category_translation(self):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        [category] = self.mk_categories(
+            ffl_workspace, count=1, position=1, language='fre_FR')
+        [page] = self.mk_pages(
+            ffl_workspace, count=1, position=1,
+            created_at=datetime.utcnow().isoformat(),
+            primary_category=category.uuid, language='fre_FR')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
+        })
+        app.set_cookie(PERSONA_COOKIE_NAME, PERSONA_SKIP_COOKIE_VALUE)
+
+        app.get('/locale/fre_FR/')
+        html = app.get('/category/%s/' % category.uuid).html
+        title_a = html.find('a', href='http://localhost/section/ffl/')
+        self.assertIn('Savoir pour Sauver', title_a.text)
+
+    def test_repos_api(self):
+        ffl_workspace = self.mk_workspace(name='ffl')
+        app = self.mk_app(self.workspace, main=main, settings={
+            'unicore.content_repo_urls': '\n'.join([self.workspace.working_dir,
+                                                    ffl_workspace.working_dir])
+        })
+
+        response = app.get('/repos.json').json
+        self.assertEqual(
+            response,
+            [{
+                u'index': u'ffl',
+                u'data': {
+                    u'owner': u'Facts For Life',
+                    u'descriptor': u'Improve the lives of Children',
+                    u'name': u'ffl',
+                    u'title': u'Facts For Life'},
+                u'slug': u'ffl'}])

@@ -1,14 +1,15 @@
 # Portuguese (Portugal) translations for springboard_iogt.
-# Copyright (C) 2015 ORGANIZATION
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: springboard_iogt 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-17 12:56+0200\n"
-"PO-Revision-Date: 2015-12-10 16:29+0000\n"
+"POT-Creation-Date: 2016-04-18 16:49+0200\n"
+"PO-Revision-Date: 2016-03-09 09:39+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: pt_PT\n"
 "Language-Team: pt_PT <LL@li.org>\n"
@@ -16,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.3.3\n"
 
 #: springboard_iogt/utils.py:18 springboard_iogt/utils.py:19
 msgid "U-Report"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr "Se torne um U-Reporter e comece a compartilhar"
+msgstr "A tua voz importa"
 
 #: springboard_iogt/utils.py:25
 msgid "Barefoot Law"
@@ -35,7 +36,7 @@ msgid "Your Rights"
 msgstr "Direitos da Criança"
 
 #: springboard_iogt/utils.py:27
-msgid "Free legal information & support"
+msgid "Know and use them!"
 msgstr "Os Direitos da Criança"
 
 #: springboard_iogt/utils.py:31
@@ -74,31 +75,41 @@ msgstr "Informações sobre Emergência"
 msgid "Epidemics, disasters or conflicts"
 msgstr "epidemias, catástrofes ou Conflitos"
 
-#: springboard_iogt/utils.py:49 springboard_iogt/utils.py:50
+#: springboard_iogt/utils.py:49
+msgid "Early Childhood Development"
+msgstr ""
+
+#: springboard_iogt/utils.py:50
+msgid "Early Life Tips!"
+msgstr ""
+
+#: springboard_iogt/utils.py:51
+msgid "Care for your Child Development"
+msgstr ""
+
+#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
 msgstr "Saúde e Vida"
 
-#: springboard_iogt/utils.py:51
+#: springboard_iogt/utils.py:57
 msgid "Improve the lives of Children"
 msgstr "Salvar e melhorar a vida das crianças"
 
-#: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
+#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "ALL IN"
 msgstr ""
 
-#: springboard_iogt/utils.py:57
+#: springboard_iogt/utils.py:63
 msgid "Love, relationships, sex and gender"
 msgstr "Amor, relacionamentos, sexo e gênero"
 
-#: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
+#: springboard_iogt/utils.py:67 springboard_iogt/utils.py:68
 msgid "Connect Smart"
 msgstr "Conexão Inteligente"
 
-#: springboard_iogt/utils.py:63
+#: springboard_iogt/utils.py:69
 msgid "Learn about the internet"
-msgstr ""
-"Navegar em segurança na Internet ou Veja 10 dicas para navegar na "
-"Internet de forma segura"
+msgstr "Navegar em segurança na internet"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
@@ -174,6 +185,9 @@ msgstr "Seguinte"
 msgid "Brought to you by %(owner)s"
 msgstr "Trazido a você por %(owner)s"
 
+#~ msgid "Free legal information & support"
+#~ msgstr "Os Direitos da Criança"
+
 #~ msgid "StopEbola"
 #~ msgstr "Factos: Cólera e Ébola"
 
@@ -185,7 +199,4 @@ msgstr "Trazido a você por %(owner)s"
 
 #~ msgid "Parent"
 #~ msgstr "Parente"
-
-#~ msgid "U-report"
-#~ msgstr ""
 

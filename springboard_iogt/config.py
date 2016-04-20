@@ -6,6 +6,7 @@ def includeme(config):
     config.add_route('select_persona', '/persona/{slug}/')
     config.add_route('about', '/about/')
     config.add_tween('springboard_iogt.views.persona_tween_factory')
+    config.add_route('repos', '/repos.json')
     config.scan('.views')
     config.scan('.events')
 
