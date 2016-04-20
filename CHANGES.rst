@@ -1,5 +1,8 @@
 CHANGELOG
 =========
+1.0.5
+-----
+- Added Early Childhood Development
 
 1.0.4
 -----
