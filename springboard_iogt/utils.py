@@ -19,7 +19,7 @@ class ContentSection(object):
             'title': _('U-Report'),
             'descriptor': _('Become a U-Reporter & start sharing!'),
             'name': 'ureport',
-            'banner_url': 'springboard_iogt:static/img/ureport_banner.jpg'
+            'banner_url': _('springboard_iogt:static/img/ureport_banner.jpg')
         }),
         ('yourrights', {
             'owner': _('Barefoot Law'),
