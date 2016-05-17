@@ -74,16 +74,17 @@ class ContentSection(object):
     def __init__(self, slug, localizer=None, index=None):
         self.slug = slug
         self.data = self.__class__.DATA[slug]
-        self.banner_url = self.data.get('banner_url')
         self.index = index
         if localizer:
             self.title = localizer.translate(self.data['title'])
             self.owner = localizer.translate(self.data['owner'])
             self.descriptor = localizer.translate(self.data['descriptor'])
+            self.banner_url = localizer.translate(self.data.get('banner_url'))
         else:
             self.title = self.data['title']
             self.owner = self.data['owner']
             self.descriptor = self.data['descriptor']
+            self.banner_url = self.data.get('banner_url')
 
     def set_indexes(self, s_obj):
         indexes = s_obj.get_indexes()
