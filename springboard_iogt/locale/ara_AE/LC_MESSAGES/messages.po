@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-08-02 15:26+0200\n"
-"PO-Revision-Date: 2016-07-08 07:28+0000\n"
+"POT-Creation-Date: 2016-08-08 12:01+0200\n"
+"PO-Revision-Date: 2016-08-08 09:43+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ar_AE\n"
 "Language-Team: ar_AE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr "Voice matters"
+msgstr ""
 
 #: springboard_iogt/utils.py:22
 msgid "springboard_iogt:static/img/ureport_banner.jpg"
@@ -154,6 +154,7 @@ msgid "Child"
 msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
+#, fuzzy
 msgid "Adolescent"
 msgstr "اليافع"
 
