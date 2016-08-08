@@ -1,15 +1,14 @@
 # French (France) translations for springboard_iogt.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-06-20 15:05+0200\n"
-"PO-Revision-Date: 2016-03-09 09:38+0000\n"
+"POT-Creation-Date: 2016-08-08 12:01+0200\n"
+"PO-Revision-Date: 2016-07-08 07:31+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
@@ -85,11 +84,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:50
 msgid "Early Life Tips!"
-msgstr ""
+msgstr "Petite enfance"
 
 #: springboard_iogt/utils.py:51
 msgid "Care for your Child Development"
-msgstr ""
+msgstr "Un bon départ pour la vie!"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"

@@ -1,15 +1,14 @@
 # Arabic (United Arab Emirates) translations for springboard_iogt.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-06-20 15:05+0200\n"
-"PO-Revision-Date: 2016-03-09 09:36+0000\n"
+"POT-Creation-Date: 2016-08-08 12:01+0200\n"
+"PO-Revision-Date: 2016-08-08 09:43+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language: ar_AE\n"
 "Language-Team: ar_AE <LL@li.org>\n"
@@ -86,11 +85,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:50
 msgid "Early Life Tips!"
-msgstr ""
+msgstr "نصائح للطفولة المبكرة"
 
 #: springboard_iogt/utils.py:51
 msgid "Care for your Child Development"
-msgstr ""
+msgstr "اهتمامكم بتطور طفلكم"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
@@ -155,6 +154,7 @@ msgid "Child"
 msgstr "الطفل"
 
 #: springboard_iogt/templates/personae.jinja2:10
+#, 
 msgid "Adolescent"
 msgstr "اليافع"
 

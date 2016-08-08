@@ -1,16 +1,15 @@
 # Spanish (Spain) translations for springboard_iogt.
-# Copyright (C) 2016 ORGANIZATION
+# Copyright (C) 2015 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-06-20 15:05+0200\n"
-"PO-Revision-Date: 2016-03-09 09:40+0000\n"
-"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"POT-Creation-Date: 2016-08-08 12:01+0200\n"
+"PO-Revision-Date: 2016-04-26 16:20+0000\n"
+"Last-Translator: Saeed <saeed@praekelt.com>\n"
 "Language: es_ES\n"
 "Language-Team: es_ES <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
