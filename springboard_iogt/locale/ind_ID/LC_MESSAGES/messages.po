@@ -1,19 +1,18 @@
-# Ganda (Uganda) translations for springboard_iogt.
+# Indonesian (Indonesia) translations for springboard_iogt.
 # Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the springboard_iogt
 # project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: springboard_iogt 1.0.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2016-11-21 16:57+0200\n"
-"PO-Revision-Date: 2015-09-07 18:26+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: lg_UG\n"
-"Language-Team: lg_UG <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2016-11-21 12:39+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"Language: id_ID\n"
+"Language-Team: id_ID <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +24,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:20
 msgid "Become a U-Reporter & start sharing!"
-msgstr ""
+msgstr "Menjadi U-Reporter dan multi berbagi!"
 
 #: springboard_iogt/utils.py:22
 msgid "springboard_iogt:static/img/ureport_banner.jpg"
@@ -37,11 +36,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:26
 msgid "Your Rights"
-msgstr ""
+msgstr "Hak Anda"
 
 #: springboard_iogt/utils.py:27
 msgid "Know and use them!"
-msgstr ""
+msgstr "Tahu dan Gunakan Mereka!"
 
 #: springboard_iogt/utils.py:31
 msgid "Marie Stopes"
@@ -73,11 +72,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:44
 msgid "Emergency Information"
-msgstr ""
+msgstr "Informasi Darurat"
 
 #: springboard_iogt/utils.py:45
 msgid "Epidemics, disasters or conflicts"
-msgstr ""
+msgstr "Konflik, bencana dan wabah"
 
 #: springboard_iogt/utils.py:49
 msgid "Early Childhood Development"
@@ -85,19 +84,19 @@ msgstr ""
 
 #: springboard_iogt/utils.py:50
 msgid "Early Life Tips!"
-msgstr ""
+msgstr "Tips untuk Hidup Baru!"
 
 #: springboard_iogt/utils.py:51
 msgid "Care for your Child Development"
-msgstr ""
+msgstr "Perawatan untuk Perkembangan Anak Anda"
 
 #: springboard_iogt/utils.py:55 springboard_iogt/utils.py:56
 msgid "Facts For Life"
-msgstr ""
+msgstr "Fakta untuk kehidupan"
 
 #: springboard_iogt/utils.py:57
 msgid "Improve the lives of Children"
-msgstr ""
+msgstr "Meningkatkan kehidupan anak-anak"
 
 #: springboard_iogt/utils.py:61 springboard_iogt/utils.py:62
 msgid "ALL IN"
@@ -105,7 +104,7 @@ msgstr ""
 
 #: springboard_iogt/utils.py:63
 msgid "Love, relationships, sex and gender"
-msgstr ""
+msgstr "Cinta, hubungan, seks dan Jenis Kelamin"
 
 #: springboard_iogt/utils.py:67 springboard_iogt/utils.py:68
 msgid "Connect Smart"
@@ -113,11 +112,11 @@ msgstr ""
 
 #: springboard_iogt/utils.py:69
 msgid "Learn about the internet"
-msgstr ""
+msgstr "Pelajari Tips Internet 10 teratas"
 
 #: springboard_iogt/templates/404.jinja2:5
 msgid "We can't find that page, sorry."
-msgstr ""
+msgstr "Kami tidak dapat menemukan halaman yang kamu cari, maaf."
 
 #: springboard_iogt/templates/base.jinja2:10
 #: springboard_iogt/templates/base.jinja2:66
@@ -126,48 +125,48 @@ msgstr ""
 
 #: springboard_iogt/templates/base.jinja2:50
 msgid "Explore IoGT"
-msgstr ""
+msgstr "Jelajahi IoGT"
 
 #: springboard_iogt/templates/base.jinja2:60
 msgid "Home"
-msgstr ""
+msgstr "Rumah"
 
 #: springboard_iogt/templates/base.jinja2:67
 msgid "About Internet of Good Things"
-msgstr ""
+msgstr "Tentang Internet of Good Things"
 
 #: springboard_iogt/templates/content_section.jinja2:29
 #, python-format
 msgid "More %(category_title_link)s"
-msgstr ""
+msgstr "%(category_title_link)s Lainnya"
 
 #: springboard_iogt/templates/home.jinja2:7
 msgid "Recommended"
-msgstr ""
+msgstr "Rekomendasi"
 
 #: springboard_iogt/templates/personae.jinja2:6
 msgid "Who are you?"
-msgstr ""
+msgstr "Siapa kamu?"
 
 #: springboard_iogt/templates/personae.jinja2:9
 msgid "Child"
-msgstr ""
+msgstr "Anak"
 
 #: springboard_iogt/templates/personae.jinja2:10
 msgid "Adolescent"
-msgstr ""
+msgstr "Remaja"
 
 #: springboard_iogt/templates/personae.jinja2:11
 msgid "Parent / Caregiver"
-msgstr ""
+msgstr "Orangtua / Pengasuh"
 
 #: springboard_iogt/templates/personae.jinja2:12
 msgid "Teacher / Health / Social Worker"
-msgstr ""
+msgstr "Tenaga Guru / Kesehatan / Sosial"
 
 #: springboard_iogt/templates/personae.jinja2:15
 msgid "Skip"
-msgstr ""
+msgstr "Lewatkan"
 
 #: springboard_iogt/templates/molecules/logo.jinja2:3
 msgid "IoGT logo"
@@ -176,52 +175,16 @@ msgstr ""
 #: springboard_iogt/templates/molecules/pagination.jinja2:5
 #: springboard_iogt/templates/molecules/pagination.jinja2:7
 msgid "Previous"
-msgstr ""
+msgstr "Sebelumnya"
 
 #: springboard_iogt/templates/molecules/pagination.jinja2:11
 #: springboard_iogt/templates/molecules/pagination.jinja2:13
 msgid "Next"
-msgstr ""
+msgstr "Berikutnya"
 
 #: springboard_iogt/templates/molecules/section_heading.jinja2:4
 #: springboard_iogt/templates/molecules/section_heading.jinja2:6
 #, python-format
 msgid "Brought to you by %(owner)s"
-msgstr ""
-
-#~ msgid "Save and improve the lives of children"
-#~ msgstr ""
-
-#~ msgid "Facts for Life"
-#~ msgstr ""
-
-#~ msgid "Teenager"
-#~ msgstr ""
-
-#~ msgid "Parent"
-#~ msgstr ""
-
-#~ msgid "Worker"
-#~ msgstr ""
-
-#~ msgid "Adolescent "
-#~ msgstr ""
-
-#~ msgid "Ebola Response"
-#~ msgstr ""
-
-#~ msgid "StopEbola"
-#~ msgstr ""
-
-#~ msgid "Get information about Ebola"
-#~ msgstr ""
-
-#~ msgid "All IN"
-#~ msgstr ""
-
-#~ msgid "U-report"
-#~ msgstr ""
-
-#~ msgid "Free legal information & support"
-#~ msgstr ""
+msgstr "Dipersembahkan ke anda oleh %(owner)s"
 
